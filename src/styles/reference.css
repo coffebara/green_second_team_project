@@ -1,0 +1,17 @@
+*{
+    margin: 0; padding: 0;
+}
+.Reference_main{
+    display: flex;
+    height: 100vh;
+}
+.Reference_nav{
+    width: 20%;
+    height: 100vh;
+    background-color: aqua;
+}
+.Reference_section{
+    width: 80%;
+    height: 100vh;
+    background-color: beige;
+}
