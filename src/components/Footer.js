@@ -1,29 +1,35 @@
 export default function Footer() {
     return (
-        <div id="Footer_bg">
-            <div id="Footer_setting">
+        <div >
+            <div  id="Footer_setting">
                 <>
+                <ul id="Footer_ul_img_setting">
+                    <li><img src={process.env.PUBLIC_URL+'logo192.png'} id="Footer_img"></img></li>
+                    <li><img src={process.env.PUBLIC_URL+'logo512.png'} id="Footer_img"></img></li>
+                </ul>
                 <ul id="Footer_ul_setting">
-                <span id="Footer_span">제목 1</span>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <li><span id="Footer_span">Support</span></li>
+                <li id="Cursor">Help</li>
+                <li id="Cursor">Advisories</li>
+                <li id="Cursor">Status</li>
+                <li id="Cursor">Contact npm</li>
                 </ul>
                 </>
                 <>
                 <ul id="Footer_ul_setting">
-                <span id="Footer_span">제목 2</span>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
+                <li><span id="Footer_span">Company</span></li>
+                <li id="Cursor">About</li>
+                <li id="Cursor">Blog</li>
+                <li id="Cursor">Press</li>
                 </ul>
                 </>
                 <>
                 <ul id="Footer_ul_setting">
-                <span id="Footer_span">제목 3</span>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
+                <li><span id="Footer_span">Terms & Policy</span></li>
+                <li id="Cursor">Policies</li>
+                <li id="Cursor">Terms of Use</li>
+                <li id="Cursor">Code of Conduct</li>
+                <li id="Cursor">Privacy</li>
                 </ul>
                 </>
                 </div>
