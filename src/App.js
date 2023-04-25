@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Banner from './components/Banner.js'
 import Footer from './components/Footer';
 import { Routes, Route, useNavigate} from "react-router-dom"
+import Reference from './pages/reference';
 
 
 
@@ -32,11 +33,9 @@ function App(){
                 <Footer/>
             </Container>
             <Routes>
-                {/* <Route path='/class' element={<Class/>}>
-                <Route path='/reference' element={<Reference/>}> */}
-                <Route path='/' element={<></>}>
+                <Route path='/class' element={<Footer/>}/>
+                <Route path='/reference' element={<Banner />}>
                 </Route>
-              
             </Routes> 
 
         </div>
