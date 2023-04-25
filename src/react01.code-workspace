@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../react01"
+		},
+		{
+			"path": "../../Users/Joon/git/projects"
+		},
+		{
+			"path": "../../Users/Joon/git/react-todo"
+		},
+		{
+			"path": "../../Users/Joon/Project"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"powershell.cwd": "c:\\Users\\Joon\\git\\projects"
+	}
+}
