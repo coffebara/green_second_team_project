@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+}
+/* 임시 nav 공간 */
+#cart_tmpNav{
+    height: 80px;
+    background-color: rgb(51, 51, 51);
+    color: #ffffff;
+}
+/* 타이틀 */
+#cart_title {
+    display: block;
+    height: 150px;
+    background-color: rgb(27, 31, 35);
+    color: white;
+}
+/* 카트 */
+#cart_content{
+    height: 500px;
+    display: flex;
+}
+/* .cart_grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+} */
+/* 왼쪽 리스트 */
+.cart_list{
+    /* grid-column: 1 / span 2; */
+    flex: 2;
+    background-color: red;
+    
+}
+/* 오른쪽 토탈 */
+.cart_total{
+    /* grid-column: 3 / span 1; */
+    flex:1;
+    background-color: yellow;
+}
+.cart_container{
+    height: 100%;
+    width: 1410px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: gray; */
+}
+
+/* 임시 footer 공간 */
+#cart_tmpFooter{
+    position: absolute;
+    bottom: 0;
+    height: 110px;
+    width: 100%;
+    background-color: black;
+}
