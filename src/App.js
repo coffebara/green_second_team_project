@@ -37,6 +37,8 @@ function App() {
                 <Route path='/reference' element={<Reference />} />
                 <Route path='/login' element={<></>} />
             </Routes>
+
+            
             <Footer />
         </div>
     )
