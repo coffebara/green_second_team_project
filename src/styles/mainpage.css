@@ -27,19 +27,18 @@
     
 }
 #Banner_bg2{
-  
+
     height: 500px;
     border-top: 1px solid rgb(221, 218, 218);
+    border-bottom: 1px solid rgb(221, 218, 218);
 }
 #Banner_Btn{
     cursor: pointer;   
     background-color: white;
     color: black;
 }
-#Footer_bg{
-    border-top: 1px solid rgb(221, 218, 218);
-    
-}
+
+
 #Footer_setting{
     display: flex;
 }
@@ -48,9 +47,24 @@ ul{
 }
 #Footer_ul_setting{
     width: 100% ;
+    padding: 20px 0px 0px 0px;
+}
+#Footer_ul_img_setting{
+    padding: 20px;
+}
+
+#Footer_img{
+    width: 60px;
 }
 
 #Footer_span{
     font-size: large;
     font-weight: bold;
+}
+li{
+    padding: 10px;
+}
+
+#Cursor{
+    cursor: pointer;
 }
