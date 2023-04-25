@@ -48,6 +48,9 @@ ul{
 }
 #Footer_ul_setting{
     width: 100% ;
-    background-color: black;
-    color: white;
+}
+
+#Footer_span{
+    font-size: large;
+    font-weight: bold;
 }
