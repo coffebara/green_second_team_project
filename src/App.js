@@ -3,10 +3,10 @@ import {Button,Navbar,Container,Nav} from 'react-bootstrap'
 import './App.css';
 import './styles/mainpage.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from './components/Login.js'
 import Banner from './components/Banner.js'
-import { Routes, Route, useNavigate} from "react-router-dom"
 import Footer from './components/Footer';
+import { Routes, Route, useNavigate} from "react-router-dom"
+
 
 
 
@@ -34,11 +34,11 @@ function App(){
             <Routes>
                 {/* <Route path='/class' element={<Class/>}>
                 <Route path='/reference' element={<Reference/>}> */}
-                <Route path='/login' element={<Login/>}>
+                <Route path='/' element={<></>}>
                 </Route>
-                <Route path='/login' element={<Login/>}>
-                </Route>
+              
             </Routes> 
 
         </div>
     )}
+    export default App;
