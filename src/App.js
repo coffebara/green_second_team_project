@@ -46,6 +46,7 @@ function App() {
         </Container>
       </Navbar>
 
+<<<<<<< HEAD
       <Routes>
         <Route path="/" element={<Banner />} />
         <Route path="/class" element={<Pages />} />
@@ -55,5 +56,18 @@ function App() {
       <Footer />
     </div>
   );
+=======
+            <Routes>
+            <Route path='/' element={  <Banner />} />
+                <Route path='/class' element={<Pages />} />
+                <Route path='/reference' element={<Reference />} />
+                <Route path='/login' element={<></>} />
+            </Routes>
+
+            
+            <Footer />
+        </div>
+    )
+>>>>>>> 573f75a0ca15f8bcbccf3da5e440c0108b0a3bcf
 }
 export default App;
