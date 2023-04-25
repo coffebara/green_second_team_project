@@ -15,3 +15,6 @@
     height: 100vh;
     background-color: beige;
 }
+.Reference_hidden{
+    display: none;
+}
