@@ -1,10 +1,17 @@
-import '../styles/reference.css'
+import '../styles/reference.css';
+import LeftSideMenu from '../components/Reperence/Lists';
+import RightSection from '../components/Reperence/RightSection';
+import Footer from '../components/Footer';
 function App() {
   return (
-    <div className="Reference_main">
-      <div className="Reference_nav">Hi</div>
-      <div className="Reference_section">Hi</div>
-    </div>
+    <>
+    {/* <Navbar /> */}
+      <div className="Reference_main">
+      <LeftSideMenu className="Reperence_left" />
+      <RightSection className="Reperence_right" />
+      </div>
+      <Footer />
+    </>
   );
 }
 

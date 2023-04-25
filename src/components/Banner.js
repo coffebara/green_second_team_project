@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import '../styles/Navbar.css'
 
 export default function Banner(){
     return(
