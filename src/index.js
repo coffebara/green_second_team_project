@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom"
 // import App from './nico/practice.js';
 // import App from './practice/MemoriesReminder/App.js';
 // import App from './card';
-import App from './pages/cart'
 
 
 const container = document.getElementById("root");
