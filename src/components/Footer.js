@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <div>
-            <div id="Footer_setting">
+        <div >
+            <div  id="Footer_setting">
                 <>
                 <ul id="Footer_ul_img_setting">
                     <li><img src={process.env.PUBLIC_URL+'logo192.png'} id="Footer_img"></img></li>

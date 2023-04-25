@@ -39,19 +39,22 @@
 }
 
 
+
 #Footer_setting{
     display: flex;
 }
 ul{
     list-style-type: none;
-}
-#Footer_ul_setting{
-    width: 100% ;
-    padding: 20px 0px 0px 0px;
+    width:  100%;
 }
 #Footer_ul_img_setting{
-    padding: 20px;
+    padding: 20px 
 }
+
+#Footer_ul_setting{
+    padding: 20px 
+}
+
 
 #Footer_img{
     width: 60px;
@@ -62,7 +65,7 @@ ul{
     font-weight: bold;
 }
 li{
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 #Cursor{
