@@ -5,14 +5,15 @@ import data from "../assets/data.js";
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
     const [course, setCourse] = useState(data);
-    // console.log(course);
-    const handleChange = (item, idx) => {
-        console.log(idx+ " : "+item.quantity);
-
-        }
-        // if (e.target.value < 0) {
-        //     console.log(e.index);
-        // }
+    // 변경된 수량을 반영하는 함수
+    const handleChange = (idx, quantity) => {
+        setCourse(current => {
+            const newCourse = [...current]
+            // 수량이 1밑으로 안떨어지게 하는 조건문
+            quantity < 1 ? quantity = 1 : newCourse[idx].quantity = quantity
+            return newCourse;
+        })
+    };
     return course.map((item, idx) => {
         return (
             <tr key={item.id}>
@@ -20,10 +21,9 @@ const CartList = () => {
                 <td>{item.title}</td>
                 <td>{item.price}</td>
                 <td>
-                    <input type="number" id="a" onChange={handleChange(item, idx)} value={item.quantity} />
+                    <input type="number" id="a" onChange={(e)=>handleChange(idx, e.target.value)} value={item.quantity} />
                 </td>
-                <td>{item.price * 1}</td>
-                {/* {console.log(a.value)} */}
+                <td>{item.price * item.quantity}</td>
             </tr>
         );
     });
