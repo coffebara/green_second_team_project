@@ -1,0 +1,28 @@
+{
+    "folders": [
+        {
+            "name": "Project",
+            "path": "../../Users/Joon/Project"
+        },
+        {
+            "name": "react01",
+            "path": "../../react01"
+        },
+        {
+            "name": "projects",
+            "path": "../../Users/Joon/git/projects"
+        },
+        {
+            "name": "react-todo",
+            "path": "../../Users/Joon/git/react-todo"
+        },
+        {
+            "name": "team",
+            "path": ".."
+        },
+        {
+            "name": "Next",
+            "path": "../../Next"
+        }
+    ]
+}

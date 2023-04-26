@@ -1,32 +1,40 @@
 export default function Footer() {
     return (
-        <div id="Footer_bg">
+        <div className="container">
             <div id="Footer_setting">
-                <>
-                <ul id="Footer_ul_setting">
-                제목 1
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                </ul>
-                </>
-                <>
-                <ul id="Footer_ul_setting">
-                제목 2
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                </ul>
-                </>
-                <>
-                <ul id="Footer_ul_setting">
-                제목 3
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                </ul>
-                </>
+                <div id="Footer_ul_setting">
+                    <ul>
+                        <li><img src={process.env.PUBLIC_URL + 'logo192.png'} id="Footer_img"></img></li>
+                        <li><img src={process.env.PUBLIC_URL + 'logo512.png'} id="Footer_img"></img></li>
+                    </ul>
                 </div>
+                <div id="Footer_ul_setting">
+                    <ul>
+                        <li><span id="Footer_span">Support</span></li>
+                        <li id="Cursor">Help</li>
+                        <li id="Cursor">Advisories</li>
+                        <li id="Cursor">Status</li>
+                        <li id="Cursor">Contact npm</li>
+                    </ul>
+                </div>
+                <div id="Footer_ul_setting">
+                    <ul>
+                        <li><span id="Footer_span">Company</span></li>
+                        <li id="Cursor">About</li>
+                        <li id="Cursor">Blog</li>
+                        <li id="Cursor">Press</li>
+                    </ul>
+                </div>
+                <div id="Footer_ul_setting">
+                    <ul>
+                        <li><span id="Footer_span">Terms & Policy</span></li>
+                        <li id="Cursor">Policies</li>
+                        <li id="Cursor">Terms of Use</li>
+                        <li id="Cursor">Code of Conduct</li>
+                        <li id="Cursor">Privacy</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
