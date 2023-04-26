@@ -9,6 +9,7 @@ import Reference from './pages/reference.js'
 import Pages from './pages/pages.js'
 
 import { Routes, Route, Link, useNavigate } from "react-router-dom"
+import Cart from './pages/cart';
 
 
 
@@ -33,11 +34,10 @@ function App() {
 
             <Routes>
             <Route path='/' element={  <Banner />} />
-                <Route path='/class' element={<Pages />} />
+                <Route path='/class' element={<Cart />} />
                 <Route path='/reference' element={<Reference />} />
                 <Route path='/login' element={<></>} />
             </Routes>
-            <Footer />
         </div>
     )
 }

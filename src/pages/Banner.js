@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 export default function Banner(){
     return(
@@ -13,6 +14,7 @@ export default function Banner(){
                <p>무슨말을 할까</p>
                 <Button variant="danger" >둘러보기</Button>
                 </div>
+            <Footer />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/cart.css'
+import Footer from "../components/Footer";
 
 function Cart() {
     return (
@@ -14,7 +15,7 @@ function Cart() {
                     <div className="cart_total">강의 토탈 장바구니zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</div>
                 </div>
             </section>
-            <footer id="cart_tmpFooter"></footer>
+            <Footer />
         </div>
     );
 }
