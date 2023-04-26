@@ -1,7 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+.Reference_main {
 
 .Reference_main {
     display: flex;
@@ -40,4 +45,7 @@
 }
 .Reference_hidden{
     display: none;
+}
+.Reference_navbar_list {
+    font-size: calc(1.1vw);
 }
