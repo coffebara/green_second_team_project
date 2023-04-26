@@ -1,9 +1,11 @@
 import { Button } from "react-bootstrap";
 import Footer from "../components/Footer";
+import Nav_Light from "../components/Nav_Light";
 
 export default function Banner(){
     return(
         <div>
+            <Nav_Light/>
             <div id="Banner_bg1"> 
                 <h2 id="Banner_bg_center1">강의 할인중  </h2>
                <div id="Banner_bg_center2">미안하다 이거 보여주려고 어그로끌었다..
@@ -25,6 +27,7 @@ export default function Banner(){
                <p>도망가~</p>
                </div>
                 </div>      
+                <Footer/>
         </div>
     )
 }
