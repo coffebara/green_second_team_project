@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/cart.css";
 import data from "../assets/data.js";
+import Footer from "../components/Footer";
 
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
@@ -84,7 +85,7 @@ function Cart() {
                     </div>
                 </div>
             </section>
-            <footer id="cart_tmpFooter">임시 푸터</footer>
+            <Footer />
         </div>
     );
 }

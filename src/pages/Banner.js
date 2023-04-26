@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 export default function Banner(){
     return(
@@ -23,6 +24,7 @@ export default function Banner(){
              
             
                 </div>
+            <Footer />
         </div>
     )
 }

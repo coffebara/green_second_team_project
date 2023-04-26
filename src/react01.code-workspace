@@ -1,22 +1,28 @@
 {
-	"folders": [
-		{
-			"path": "../../react01"
-		},
-		{
-			"path": "../../Users/Joon/git/projects"
-		},
-		{
-			"path": "../../Users/Joon/git/react-todo"
-		},
-		{
-			"path": "../../Users/Joon/Project"
-		},
-		{
-			"path": ".."
-		}
-	],
-	"settings": {
-		"powershell.cwd": "c:\\Users\\Joon\\git\\projects"
-	}
+    "folders": [
+        {
+            "name": "Project",
+            "path": "../../Users/Joon/Project"
+        },
+        {
+            "name": "react01",
+            "path": "../../react01"
+        },
+        {
+            "name": "projects",
+            "path": "../../Users/Joon/git/projects"
+        },
+        {
+            "name": "react-todo",
+            "path": "../../Users/Joon/git/react-todo"
+        },
+        {
+            "name": "team",
+            "path": ".."
+        },
+        {
+            "name": "Next",
+            "path": "../../Next"
+        }
+    ]
 }
