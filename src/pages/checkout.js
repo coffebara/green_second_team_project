@@ -4,8 +4,6 @@ import data from '../assets/data.js'
 
 
 
-
-
 function Checkout() {
     const [title, setTitle] = useState(data)
     console.log(title)
