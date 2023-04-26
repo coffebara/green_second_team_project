@@ -1,10 +1,13 @@
 
 import './App.css';
-import './styles/mainpage.css'
+import './styles/Nav.css'
+import './styles/Banner.css'
+import './styles/Footer.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Banner from './pages/Banner.js'
 import Cart from './pages/cart.js'
 import Reference from './pages/reference.js'
+// import App from './pages/login';
 
 
 import { Routes, Route} from "react-router-dom"

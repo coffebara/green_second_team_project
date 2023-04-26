@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import Footer from "../components/Footer";
+import Footer_Light from "../components/Footer_Light";
 import Nav_Light from "../components/Nav_Light";
 
 export default function Banner(){
@@ -27,7 +27,7 @@ export default function Banner(){
                <p>도망가~</p>
                </div>
                 </div>      
-                <Footer/>
+                <Footer_Light/>
         </div>
     )
 }

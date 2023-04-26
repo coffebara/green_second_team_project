@@ -1,0 +1,34 @@
+
+
+#Footer_setting {
+    display: flex;
+   
+   
+}
+
+ul {
+    list-style-type: none;
+}
+
+#Footer_ul_setting {
+  width: 100% ;
+  margin: 1em 0 4em;
+}
+
+
+#Footer_img {
+    width: 60px;
+}
+
+#Footer_span {
+    font-size: large;
+    font-weight: bold;
+}
+
+li {
+    padding: 10px 0px;
+}
+
+#Cursor {
+    cursor: pointer;
+}

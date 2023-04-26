@@ -1,0 +1,26 @@
+#NavSet_Light {
+    color: black;
+}
+
+#NavSet_Light:hover {
+    color: rgb(141, 138, 138);
+}
+
+
+
+
+
+#Nav_bg_Dark{
+    background-color:  rgb(48, 47, 47);;
+}
+#NavSet_brand_Dark{
+    color: white;
+}
+
+#NavSet_Dark{
+    color: white;
+}
+#NavSet_Dark:hover{
+    color: white;
+    text-decoration: underline;
+}
