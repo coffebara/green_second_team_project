@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/cart.css";
 import data from "../assets/data.js";
+import Nav_Dark from "../components/Nav_Dark.js";
 
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
@@ -32,9 +33,10 @@ const CartList = () => {
 function Cart() {
     return (
         <div>
+            <Nav_Dark/>
             {/* <nav id="cart_tmpNav">임시 nav입니다</nav> */}
             <section id="cart_title">
-                <div className="cart_container">배너 타이틀 신청하기</div>
+                <div className="cart_container">신청하기<br/>Step 1. 강의 선택</div>
             </section>
             <section id="cart_content">
                 <div className="cart_container cart_gridContainer">
