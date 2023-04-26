@@ -5,17 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Banner from "./pages/Banner.js";
 import Reference from "./pages/reference.js";
-import Pages from "./pages/pages.js";
-
-import { Navbar, Container, Nav } from 'react-bootstrap'
-import './App.css';
-import './styles/mainpage.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Footer from './components/Footer';
-import Banner from './pages/Banner.js'
-import Reference from './pages/reference.js'
-import Pages from './pages/pages.js'
-
+import Cart from "./pages/cart";
 import { Routes, Route, Link, useNavigate } from "react-router-dom"
 
 
