@@ -1,9 +1,12 @@
-
+.Darkmode{
+    background-color: rgb(48, 47, 47);
+    color: white;
+}
 
 #Footer_setting {
     display: flex;
-   
-   
+    flex-direction: row;
+    
 }
 
 ul {

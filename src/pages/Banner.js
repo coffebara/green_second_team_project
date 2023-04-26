@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
-import Footer_Light from "../components/Footer_Light";
-import Nav_Light from "../components/Nav_Light";
+import Footer_Light from "./Footer_Light";
+import Nav_Light from "./Nav_Light";
 
 export default function Banner(){
     return(

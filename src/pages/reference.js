@@ -1,7 +1,7 @@
 import '../styles/reference.css';
-import '../styles/mainpage.css'
+import '../styles/Nav.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav_Dark from "../components/Nav_Dark.js";
+import Nav_Dark from "./Nav_Dark.js";
 import ReferenceList from '../components/Reperence/Lists';
 import ReferenceContents from '../components/Reperence/Contents';
 
