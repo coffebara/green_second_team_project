@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/checkout.css";
 import data from '../assets/data.js'
-import Nav_Dark from "../components/Nav_Dark.js";
-import Nav_Light from "../components/Nav_Light.js";
-import Footer from "../components/Footer.js"
+import Nav_Dark from "../pages/Nav_Dark.js";
+import Nav_Light from "../pages/Nav_Light.js";
+import Footer_Light from "../pages/Footer_Light";
 
 
 
@@ -56,7 +56,7 @@ function Checkout() {
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer_Light/>
         </div>
     );
 }

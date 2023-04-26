@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/cart.css";
 import data from "../assets/data.js";
-import Nav_Dark from "../components/Nav_Dark.js";
-import Nav_Light from "../components/Nav_Light.js";
-import Footer from "../components/Footer.js"
+import Nav_Dark from "../pages/Nav_Dark.js";
+import Nav_Light from "../pages/Nav_Light.js";
+import Footer_Dark from "../pages/Footer_Dark.js"
 
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
@@ -96,7 +96,7 @@ function Cart() {
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer_Dark/>
         </div>
     );
 }
