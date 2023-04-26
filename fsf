@@ -1,0 +1,160 @@
+[33mcommit 10961ad0d8798b8efe5a77e2b5a6611c76f6bee1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Wed Apr 26 12:22:14 2023 +0900
+
+    이제 올라가나
+
+[33mcommit 4fc3cb6819d1b33eae9fd1b990bd91484428dfc2[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Wed Apr 26 11:50:06 2023 +0900
+
+    왜 안올라가질까
+
+[33mcommit 760f1a2322aa9fdac9ac0a6b6fd1a68430ddc91e[m
+Merge: c920492 3abc5b2
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Wed Apr 26 11:45:48 2023 +0900
+
+    sfsfsf
+
+[33mcommit c920492221e8c24a3c0b69e520fbe63913e0dd67[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Wed Apr 26 11:43:53 2023 +0900
+
+    1차 완성
+
+[33mcommit fd5e4e9b3e06b3b9196354b82375d6db8a62cb1c[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Wed Apr 26 11:43:04 2023 +0900
+
+    틀 완성
+
+[33mcommit 3abc5b21809ce6fd624678ab61434e9e1bd2302a[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: 32205c3 4cbcf28
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 15:49:44 2023 +0900
+
+    Merge branch 'main' of https://github.com/copybarabrabam/green-team-project2
+
+[33mcommit 32205c348450232d113e33f928006f9f61a35700[m
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 15:48:22 2023 +0900
+
+    병합
+
+[33mcommit 4cbcf28cd348b2fa1a8b58dd1c6cfd744ee9c52b[m
+Author: FeliceKP <qpalzm192837@naver.com>
+Date:   Tue Apr 25 15:48:18 2023 +0900
+
+    테스트
+
+[33mcommit a7a8d8353c4815ffccdbc115b379a588d402784a[m
+Merge: 3da47de 0c07474
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 15:43:50 2023 +0900
+
+    Merge branch 'main' of https://github.com/copybarabrabam/green-team-project2
+
+[33mcommit 3da47deeb7181397da4b16b06c1992f10ce5c33d[m
+Merge: 57e2b87 573f75a
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 15:43:44 2023 +0900
+
+    Merge branch 'main' of https://github.com/copybarabrabam/green-team-project2
+
+[33mcommit 0c074744cb138828cbf1a207cae652ffceac25b1[m
+Merge: f3e9dc1 573f75a
+Author: FeliceKP <qpalzm192837@naver.com>
+Date:   Tue Apr 25 15:43:02 2023 +0900
+
+    강의폴더 추가
+
+[33mcommit f3e9dc13a6064a4f346efa8a48370d0bed4b3c2b[m
+Author: FeliceKP <qpalzm192837@naver.com>
+Date:   Tue Apr 25 15:41:51 2023 +0900
+
+    강의폴더생성
+
+[33mcommit 57e2b878b7ce068dab9169ff40bef729e38d5487[m
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 15:40:29 2023 +0900
+
+    장바구니, 결제페이지 틀 작성 및 data.js 작성
+
+[33mcommit 573f75a0ca15f8bcbccf3da5e440c0108b0a3bcf[m
+Merge: 1a5a0d2 4eba8b3
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 15:17:36 2023 +0900
+
+    Merge branch 'main' of
+
+[33mcommit 1a5a0d21d8558fa636081c8b0139ac24410c753c[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 15:16:25 2023 +0900
+
+    데뷔 1일차
+
+[33mcommit 4eba8b34d4e5569a12d6d96fdcb89b850b0833ed[m
+Author: Joon Park <sargadil@gmail.com>
+Date:   Tue Apr 25 15:15:39 2023 +0900
+
+    ready2
+
+[33mcommit 7df892ab5e1aea3ff490a27a8abd62483037f53d[m
+Author: Joon Park <sargadil@gmail.com>
+Date:   Tue Apr 25 15:05:12 2023 +0900
+
+    ready
+
+[33mcommit a64a8dfc1e87d2142c8beb51cf62436af7935d7c[m
+Merge: 4c100d8 8b8e3ad
+Author: Joon Park <sargadil@gmail.com>
+Date:   Tue Apr 25 13:16:26 2023 +0900
+
+    Merge branch 'main' of
+
+[33mcommit 4c100d88caf1d3f24bbb54e6188680111dbfa3a2[m
+Author: Joon Park <sargadil@gmail.com>
+Date:   Tue Apr 25 13:14:24 2023 +0900
+
+    aa
+
+[33mcommit 8b8e3ad0fdcea3cd34d5fd93d78d1fd9f407530d[m
+Merge: 4025f28 4bb41b8
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 13:10:37 2023 +0900
+
+    MseddWerge branch 'main' of
+    https://github.com/copybarabrabam/green-team-project1
+
+[33mcommit 4025f28f65801ce6b9d57372b04eb996b02b0dc1[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 13:10:33 2023 +0900
+
+    깨달았다
+
+[33mcommit 4bb41b8e5cc883aa36ddcfa8c53fc5c3c47df2fe[m
+Merge: 40fa297 a674b24
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 11:09:35 2023 +0900
+
+    Merge branch 'main' of https://github.com/copybarabrabam/green-team-project2
+
+[33mcommit 40fa2978df414561240ea932c487b2f7137f323a[m
+Author: allready-dawn <qwshpke@naver.com>
+Date:   Tue Apr 25 11:08:18 2023 +0900
+
+    cart 페이지 추가
+
+[33mcommit a674b2463fa7873a7089bb0193d29c198cfb90d1[m
+Merge: 33589f3 b03d62d
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 11:05:09 2023 +0900
+
+    Merge branch 'main' of https://github.com/copybarabrabam/green-team-project2
+
+[33mcommit 33589f372010273d8737904365b0c798293da5f3[m
+Author: jayji5204 <jayji5204@naver.com>
+Date:   Tue Apr 25 11:05:06 2023 +0900
+
+    데뷔1일차

@@ -1,73 +1,111 @@
-.NavBtn{
+.NavBtn {
     background-color: white;
     color: black;
     border: white;
 }
-.NavBtn:hover{
+
+.NavBtn:hover {
     background-color: white;
     color: rgb(212, 206, 206);
     border: white;
 }
-#NavSet{
+
+#NavSet {
     color: black;
 }
-#NavSet:hover{
+
+#NavSet:hover {
     color: rgb(141, 138, 138);
 }
-#NavBtn{
+
+#NavBtn {
     background-color: black;
     color: white;
     border: 1px solid black;
     border-radius: 0;
 }
-#Banner_bg1{
 
-    height: 500px;
+#Banner_bg1 {
+    height: auto;
     border-top: 1px solid rgb(221, 218, 218);
-    
-}
-#Banner_bg2{
+    background-image: url("../assets/narutosasuke.png");
+    background-size: cover;
+    background-position: center;
 
-    height: 500px;
+}
+
+
+#Banner_bg2 {
+    height: auto;
     border-top: 1px solid rgb(221, 218, 218);
     border-bottom: 1px solid rgb(221, 218, 218);
 }
-#Banner_Btn{
-    cursor: pointer;   
+
+#Banner_Btn {
+    cursor: pointer;
     background-color: white;
     color: black;
 }
 
 
 
-#Footer_setting{
+#Footer_setting {
     display: flex;
+    flex-direction: row;
 }
-ul{
+
+ul {
     list-style-type: none;
-    width:  100%;
-}
-#Footer_ul_img_setting{
-    padding: 20px 
 }
 
-#Footer_ul_setting{
-    padding: 20px 
+#Footer_ul_setting {
+  width: 100% ;
+  margin: 1em 0 4em;
 }
 
 
-#Footer_img{
+#Footer_img {
     width: 60px;
 }
 
-#Footer_span{
+#Footer_span {
     font-size: large;
     font-weight: bold;
 }
-li{
+
+li {
     padding: 10px 0px;
 }
 
-#Cursor{
+#Cursor {
     cursor: pointer;
+}
+
+
+#Banner_bg_center1 {
+    margin: 2em 0 0.67em;
+}
+
+#Banner_bg_center2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 32rem;
+    line-height: 1.5;
+}
+
+#Banner_bg_center3 {
+    margin: 1em 0 0.67em;
+}
+
+
+#Banner_bg_center4 {
+    margin: 1em 0em 5em 0.67em;
+}
+
+#Banner_bg_center5{
+    margin: 5em 0em 2em 0em;
+}
+
+#Banner_bg_button {
+    margin: 1em 0 3em;
 }
