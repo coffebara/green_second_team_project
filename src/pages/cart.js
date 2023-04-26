@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import "../styles/cart.css";
 import data from "../assets/data.js";
-import Footer from "../components/Footer";
 
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
     const [course, setCourse] = useState(data);
     // console.log(course);
-    return course.map((a, idx) => {
+    const handleChange = (item, idx) => {
+        console.log(idx+ " : "+item.quantity);
+
+        }
+        // if (e.target.value < 0) {
+        //     console.log(e.index);
+        // }
+    return course.map((item, idx) => {
         return (
-            <tr key={course[idx].id}>
+            <tr key={item.id}>
                 <td>X</td>
-                <td>{course[idx].title}</td>
-                <td>{course[idx].price}</td>
-                <td><input type="number" id="a"/></td>
-                <td>{course[idx].price * 1}</td>
-                {console.log(a.value)}
+                <td>{item.title}</td>
+                <td>{item.price}</td>
+                <td>
+                    <input type="number" id="a" onChange={handleChange(item, idx)} value={item.quantity} />
+                </td>
+                <td>{item.price * 1}</td>
+                {/* {console.log(a.value)} */}
             </tr>
         );
     });
@@ -24,7 +32,7 @@ const CartList = () => {
 function Cart() {
     return (
         <div>
-            <nav id="cart_tmpNav">임시 nav입니다</nav>
+            {/* <nav id="cart_tmpNav">임시 nav입니다</nav> */}
             <section id="cart_title">
                 <div className="cart_container">배너 타이틀 신청하기</div>
             </section>
@@ -50,7 +58,7 @@ function Cart() {
                                         <td>1</td>
                                         <td>35,000</td>
                                     </tr> */}
-                                    {CartList()}
+                                    <CartList />
                                     <tr>
                                         <td colSpan="5">
                                             <div>
@@ -85,7 +93,7 @@ function Cart() {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <footer id="cart_tmpFooter">임시 푸터</footer> */}
         </div>
     );
 }
