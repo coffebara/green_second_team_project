@@ -1,51 +1,81 @@
 #Banner_bg1 {
     height: auto;
     border-top: 1px solid rgb(221, 218, 218);
-    background-image: url("../assets/narutosasuke.png");
-    background-size: cover;
-    background-position: center;
-
 }
 
-
-#Banner_bg2 {
-    height: auto;
-    border-top: 1px solid rgb(221, 218, 218);
-    border-bottom: 1px solid rgb(221, 218, 218);
-}
-
-#Banner_Btn {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-}
-
-
-
-#Banner_bg_center1 {
+#Banner_bg1_center1 {
     margin: 2em 0 0.67em;
 }
 
-#Banner_bg_center2 {
+#Banner_bg1_center2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 32rem;
     line-height: 1.5;
 }
 
-#Banner_bg_center3 {
-    margin: 1em 0 0.67em;
+#Banner_bg1_button {
+    margin: 2em 0 4em;
 }
 
 
-#Banner_bg_center4 {
-    margin: 1em 0em 5em 0.67em;
+
+#Banner_bg2 {
+    height: 600px;
+    background-color: darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-#Banner_bg_center5{
+#Banner_bg2_img {}
+
+#Banner_bg2_big_img_setting {
+    border-radius: 5%;
+}
+
+#Banner_bg2_small_img_setting {
+    background-color: white;
+    border-radius: 35%;
+}
+
+#Banner_bg2_setting {
+    margin: 0em 2em 0em;
+}
+
+#Banner_bg2_center1 {
+    text-align: justify;
+}
+
+#Banner_bg2_list>li {
+    padding: 0.5em 0em;
+}
+
+#Banner_bg2_button {
+    margin: 1em 0 3em;
+
+}
+
+
+
+#Banner_bg3 {
+    height: auto;
+    border-bottom: 1px solid rgb(221, 218, 218);
+}
+
+#Banner_bg3_center1 {
     margin: 5em 0em 2em 0em;
 }
 
-#Banner_bg_button {
-    margin: 1em 0 3em;
+#Banner_bg3_center2 {
+    margin: 1em 0 0.67em;
+}
+
+#Banner_bg3_center3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    max-width: 32rem;
+    line-height: 1.5;
 }
