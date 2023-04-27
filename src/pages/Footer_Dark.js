@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="container">
                 <div id="Footer_setting">
                     <div id="Footer_ul_detail_setting">
-                        <ul>
+                        <ul id="Footer_list_style">
                             <li><span id="Footer_span">ABOUT US</span></li>
                             <li id="Cursor_left">팀이름</li>
                             <li id="Cursor_left">팀장: </li>
@@ -19,13 +19,13 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div id="Footer_ul_setting">
-                        <ul>
+                        <ul id="Footer_list_style">
                             <li><img src={process.env.PUBLIC_URL + 'logo192.png'} id="Footer_img"></img></li>
                             <li><img src={process.env.PUBLIC_URL + 'logo512.png'} id="Footer_img"></img></li>
                         </ul>
                     </div>
                     <div id="Footer_ul_setting">
-                        <ul>
+                        <ul id="Footer_list_style">
                             <li><span id="Footer_span">NAVIGATION</span></li>
                             <li onClick={() => { navigate('/class') }} id="Cursor">강의</li>
                             <li onClick={() => { navigate('/reference') }} id="Cursor">레퍼런스</li>
@@ -33,7 +33,7 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div id="Footer_ul_setting">
-                        <ul>
+                        <ul id="Footer_list_style">
                             <li><span id="Footer_span">LEGAL</span></li>
                             <li id="Cursor">이용약관</li>
                             <li id="Cursor">개인정보취급방침</li>

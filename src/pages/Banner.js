@@ -5,6 +5,7 @@ import Footer_Light from "./Footer_Light";
 import Footer_Dark from "./Footer_Dark";
 import { useNavigate } from "react-router-dom"
 
+
 export default function Banner(){
     let navigate = useNavigate();
     return(
@@ -15,27 +16,29 @@ export default function Banner(){
                 Learn to code</h1>
                <div id="Banner_bg1_center2">코딩을 진짜로 만들어볼까요?<br/>
                 실제 서비스를 따라 만들면서 코딩을 배우세요</div>
-                <Button id="Banner_bg1_button" variant="outline-dark" onClick={()=>{navigate('/class')}} >시작하기→</Button>
+                <Button id="Banner_bg1_button" variant="outline-dark" onClick={()=>{navigate('/class')}} >시작하기 →</Button>
                 </div>
 
 
-            <div className="max-w-screen-lg w-full mx-auto"> 
+            <div  id="Banner_bg2"> 
                 <div id="Banner_bg2_img">
-                    <img src={process.env.PUBLIC_URL+'/NEXTjs.png'} width="400px" />
+                    <img src={process.env.PUBLIC_URL+'/NEXTjs.png'} id="Banner_bg2_big_img_setting" width="420px" height="320px" />
                 </div>
                 <div id="Banner_bg2_setting">
                 <h2>NEXT.js로 웹서비스 만들기</h2>
+                
                 <div id="Banner_bg2_center1">
-                <img src={process.env.PUBLIC_URL+'/HTML.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
-                <img src={process.env.PUBLIC_URL+'/CSS.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
-                <img src={process.env.PUBLIC_URL+'/JS.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
-                <ul>
+                <ul id="Banner_bg2_list"><li>
+                <img src={process.env.PUBLIC_URL+'/HTML.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
+                <img src={process.env.PUBLIC_URL+'/CSS.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
+                <img src={process.env.PUBLIC_URL+'/JS.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
+                </li>
                 <li>React기반 프레임 워크</li>
                 <li>풀스택 웹개발 가능</li>
                 <li>32개의 강의</li>
                 </ul>
                 </div>
-                <Button id="Banner_bg2_button" variant="outline-dark" >바로가기→</Button>
+                <Button id="Banner_bg2_button" variant="outline-dark" onClick={()=>{navigate('/sorry')}} >바로가기 →</Button>
                  </div>
                 </div>
           

@@ -7,7 +7,7 @@
     display: flex; 
 }
 
-ul {
+#Footer_list_style{
     list-style-type: none;
 }
 
@@ -33,7 +33,7 @@ ul {
     font-weight: bold;
 }
 
-li {
+#Footer_list_style>li {
     padding: 10px 0px;
 }
 
