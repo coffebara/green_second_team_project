@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styles/checkout.css";
 import data from '../assets/data.js'
+import Nav_Dark from "../pages/Nav_Dark.js";
+import Nav_Light from "../pages/Nav_Light.js";
+import Footer_Light from "../pages/Footer_Light";
 
 
 
@@ -9,7 +12,7 @@ function Checkout() {
     console.log(title)
     return (
         <div>
-            <nav id="checkout_tmpNav">임시 nav입니다</nav>
+            <Nav_Dark/>
             <section id="checkout_title">
                 <div className="checkout_container">배너 타이틀 결제하기</div>
             </section>
@@ -53,7 +56,7 @@ function Checkout() {
                     </div>
                 </div>
             </section>
-            <footer id="checkout_tmpFooter">임시 푸터</footer>
+            <Footer_Light/>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
-export default function Navi(){
+export default function Nav_Darl(){
     let navigate = useNavigate();
     return(
         <Navbar id="Nav_bg_Dark">

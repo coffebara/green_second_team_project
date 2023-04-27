@@ -1,28 +1,3 @@
-#NavSet_Light {
-    color: black;
-}
-
-#NavSet_Light:hover {
-    color: rgb(141, 138, 138);
-}
-
-
-
-#Nav_bg_Dark{
-    background-color:  rgb(48, 47, 47);;
-}
-#NavSet_brand_Dark{
-    color: white;
-}
-
-#NavSet_Dark{
-    color: white;
-}
-#NavSet_Dark:hover{
-    color: white;
-    text-decoration: underline;
-}
-
 #Banner_bg1 {
     height: auto;
     border-top: 1px solid rgb(221, 218, 218);
@@ -45,39 +20,6 @@
     color: black;
 }
 
-
-
-#Footer_setting {
-    display: flex;
-    flex-direction: row;
-}
-
-ul {
-    list-style-type: none;
-}
-
-#Footer_ul_setting {
-  width: 100% ;
-  margin: 1em 0 4em;
-}
-
-
-#Footer_img {
-    width: 60px;
-}
-
-#Footer_span {
-    font-size: large;
-    font-weight: bold;
-}
-
-li {
-    padding: 10px 0px;
-}
-
-#Cursor {
-    cursor: pointer;
-}
 
 
 #Banner_bg_center1 {

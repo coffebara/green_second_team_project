@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
-export default function App() {
+export default function Login() {
   return (
     <Container component="main" maxWidth="xs">
       <Box

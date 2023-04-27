@@ -1,12 +1,6 @@
 body {
     margin: 0;
 }
-/* 임시 nav 공간 */
-/* #cart_tmpNav {
-    height: 80px;
-    background-color: rgb(51, 51, 51);
-    color: #ffffff;
-} */
 /* 타이틀 */
 #cart_title {
     display: flex;
@@ -66,16 +60,6 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
-
-/* 임시 footer 공간 */
-/* #cart_tmpFooter {
-    position: absolute;
-    bottom: 0;
-    height: 110px;
-    width: 100%;
-    background-color: black;
-    color: #ffffff;
-} */
 
 /* grid-template-areas 사용법 .container {
     display: grid;

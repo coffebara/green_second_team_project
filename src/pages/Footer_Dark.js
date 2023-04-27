@@ -1,5 +1,6 @@
 export default function Footer() {
     return (
+        <div className="Darkmode">
         <div className="container">
             <div id="Footer_setting">
                 <div id="Footer_ul_setting">
@@ -35,6 +36,7 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
