@@ -9,6 +9,7 @@ import Cart from './pages/cart.js'
 import Reference from './pages/reference.js'
 import Checkout from "./pages/checkout.js";
 import Sorry from './pages/Sorry';
+import Lecture from './pages/lecture.js'
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function App() {
         <div className='App'>
             <Routes>
             <Route path='/' element={  <Banner />} />
-                <Route path="/class" element={<>강의 페이지</>} ></Route>
+                <Route path="/class" element={<Lecture/>} ></Route>
                 <Route path="detail" element={<>상세 페이지</>} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />

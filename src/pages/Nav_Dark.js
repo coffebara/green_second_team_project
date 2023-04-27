@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Button,Navbar, Container, Nav } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
 export default function Nav_Darl(){
     let navigate = useNavigate();
@@ -7,6 +7,7 @@ export default function Nav_Darl(){
                 <Container>
                     <Navbar.Brand href="/" id="NavSet_brand_Dark">npm</Navbar.Brand>
                     <Nav>
+                    <Button variant='outline-light'>라이트모드 ☆</Button>
                         <Nav.Link onClick={() => { navigate('/class') }} id="NavSet_Dark">강의</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/reference') }} id="NavSet_Dark">레퍼런스</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/login') }} id="NavSet_Dark">로그인</Nav.Link>
