@@ -6,7 +6,6 @@ import Footer_Dark from "./Footer_Dark";
 import { useNavigate } from "react-router-dom"
 
 
-
 export default function Banner(){
     let navigate = useNavigate();
     return(
