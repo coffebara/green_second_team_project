@@ -1,102 +1,83 @@
 import React, { useState } from 'react';
-import '../../styles/reference.css'
+import { useNavigate } from 'react-router-dom';
+import '../../styles/reference.css';
 
 const ReferenceList = () => {
+  let navigate = useNavigate();
   const [showNav, setShowNav] = useState(false);
   const [showNav2, setShowNav2] = useState(false);
 
-  const toggleNav = () => {
+  const toggleReact01 = () => {
     setShowNav(!showNav);
-    console.log(showNav);
   };
   const toggleNav2 = () => {
     setShowNav2(!showNav2);
-    console.log(showNav2);
   };
+  let react01 = [{id:0, value:'리액트란?', url:'/reference/react01'}, {id:1, value:'리액트의 특징', url:'/reference/react02'}];
+  let js01 = [{id:0, value:'JavaScript란?', url:'/reference/js01'}, {id:1, value:'JS변수', url:'/reference/js02'}, {id:2, value:'JS객체', url:'/reference/js03'}];
 
-  let list = (<div><nav
-    id="navbar-example3"
-    className="navbar navbar-dark bg-dark flex-column align-items-stretch"
-  >
-    <a className="navbar-brand Reference_navbar_title" href="#" onClick={toggleNav}>
-      React 이론
-    </a>
-    {showNav && (
-      <nav className="nav nav-pills flex-column">
-        <a className="nav-link Reference_navbar_list" href="#item-1">
-          리액트란?
+  let underlist01 = react01.map((list) => {
+    return (
+      <a className="nav-link Reference_navbar_list" key="id" onClick={
+        ()=>{navigate(list.url)}}>
+        {list.value}
+      </a>
+    );
+  });
+  let underlist02 = js01.map((list) => {
+    return (
+      <a className="nav-link Reference_navbar_list" key="id" onClick={
+        ()=>{navigate(list.url)}}>
+        {list.value}
+      </a>
+    );
+  });
+
+  let list = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          href="#"
+          onClick={toggleReact01}
+        >
+          React 이론
         </a>
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link Reference_navbar_list" href="#item-1-1">
-            리액트의 필요성
-          </a>
-        </nav>
-        <a className="nav-link Reference_navbar_list" href="#item-2">
-          리액트의 특징
-        </a>
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link Reference_navbar_list" href="#item-2-1">
-          Data Flow
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-2">
-          Component 기반 구조
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-3">
-          Virtual Dom
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-4">
-          Props and State
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-5">
-          JSX
-          </a>
-        </nav>
+        {showNav && (
+          <nav className="nav nav-pills flex-column">
+            {underlist01}
+          </nav>
+        )}
       </nav>
-    )}
-  </nav></div>)
-  let list2 = (<div><nav
-    id="navbar-example3"
-    className="navbar navbar-dark bg-dark flex-column align-items-stretch"
-  >
-    <a className="navbar-brand Reference_navbar_title" href="#" onClick={toggleNav2}>
-      React 이론
-    </a>
-    {showNav2 && (
-      <nav className="nav nav-pills flex-column">
-        <a className="nav-link Reference_navbar_list" href="#item-1">
-          리액트란?
+    </div>
+  );
+  let list2 = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          href="#"
+          onClick={toggleNav2}
+        >
+          JavaScript 이론
         </a>
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link Reference_navbar_list" href="#item-1-1">
-            리액트의 필요성
-          </a>
+        {showNav2 && (
+          <nav className="nav nav-pills flex-column">
+          {underlist02}
         </nav>
-        <a className="nav-link Reference_navbar_list" href="#item-2">
-          리액트의 특징
-        </a>
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link Reference_navbar_list" href="#item-2-1">
-          Data Flow
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-2">
-          Component 기반 구조
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-3">
-          Virtual Dom
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-4">
-          Props and State
-          </a>
-          <a className="nav-link Reference_navbar_list" href="#item-2-5">
-          JSX
-          </a>
-        </nav>
+        )}
       </nav>
-    )}
-  </nav></div>)
+    </div>
+  );
 
   return (
-    <div className='Reference_nav'>
+    <div className="Reference_nav">
       {list}
       {list2}
     </div>
