@@ -5,20 +5,18 @@ const ReferenceList = () => {
   const [showNav, setShowNav] = useState(false);
   const [showNav2, setShowNav2] = useState(false);
 
-  const toggleNav = () => {
+  const toggleReact01 = () => {
     setShowNav(!showNav);
-    console.log(showNav);
   };
   const toggleNav2 = () => {
     setShowNav2(!showNav2);
-    console.log(showNav2);
   };
 
   let list = (<div><nav
     id="navbar-example3"
     className="navbar navbar-dark bg-dark flex-column align-items-stretch"
   >
-    <a className="navbar-brand Reference_navbar_title" href="#" onClick={toggleNav}>
+    <a className="navbar-brand Reference_navbar_title" href="#" onClick={toggleReact01}>
       React 이론
     </a>
     {showNav && (
