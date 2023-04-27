@@ -9,9 +9,11 @@ const ReferenceList = () => {
 
   const toggleReact01 = () => {
     setShowNav(!showNav);
+    setShowNav2(false)
   };
   const toggleNav2 = () => {
     setShowNav2(!showNav2);
+    setShowNav(false)
   };
   let react01 = [{id:0, value:'리액트란?', url:'/reference/react01'}, {id:1, value:'리액트의 특징', url:'/reference/react02'}];
   let js01 = [{id:0, value:'JavaScript란?', url:'/reference/js01'}, {id:1, value:'JS변수', url:'/reference/js02'}, {id:2, value:'JS객체', url:'/reference/js03'}];
