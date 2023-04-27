@@ -10,7 +10,7 @@ import Reference from './pages/reference.js'
 import Checkout from "./pages/checkout.js";
 import Sorry from './pages/Sorry';
 
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
