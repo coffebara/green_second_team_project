@@ -21,7 +21,7 @@ function App() {
         <div className='App'>
             <Routes>
             <Route path='/' element={  <Banner />} />
-                <Route path="/class" element={<>강의 페이지</>} />
+                <Route path="/class" element={<>강의 페이지</>} ></Route>
                 <Route path="detail" element={<>상세 페이지</>} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />

@@ -1,29 +1,51 @@
 import { Button } from "react-bootstrap";
-import Footer_Light from "./Footer_Light";
 import Nav_Light from "./Nav_Light";
+import Nav_Dark from "./Nav_Dark";
+import Footer_Light from "./Footer_Light";
+import Footer_Dark from "./Footer_Dark";
+import { useNavigate } from "react-router-dom"
 
 export default function Banner(){
+    let navigate = useNavigate();
     return(
         <div>
             <Nav_Light/>
             <div id="Banner_bg1"> 
-                <h2 id="Banner_bg_center1">강의 할인중  </h2>
-               <div id="Banner_bg_center2">미안하다 이거 보여주려고 어그로끌었다..
-                나루토 사스케 싸움수준 ㄹㅇ실화냐? 진짜 세계관최강자들의 싸움이다.. 
-               그찐따같던 나루토가 맞나? 진짜 나루토는 전설이다..
-               진짜옛날에 맨날나루토봘는데 왕같은존재인 호카게 되서 세계최강 전설적인 영웅이된나루토보면 
-               진짜내가다 감격스럽고 나루토 노래부터 명장면까지 가슴울리는장면들이 뇌리에 스치면서 가슴이 웅장해진다.. </div>
-               <h2 id="Banner_bg_center3">강의에 대한 간략 내용</h2>
-               <div id="Banner_bg_center2">어떤 내용에 대한 강의 인지, 수준은 어떤지, 난이도는 어떤지
-               그리고 누가 하는지, 몇개의 챕터인지 이런거 등등</div>
-                <Button id="Banner_bg_button" variant="warning" >결제하기</Button>
+                <h1 id="Banner_bg1_center1">Clone Startups<br/>
+                Learn to code</h1>
+               <div id="Banner_bg1_center2">코딩을 진짜로 만들어볼까요?<br/>
+                실제 서비스를 따라 만들면서 코딩을 배우세요</div>
+                <Button id="Banner_bg1_button" variant="outline-dark" onClick={()=>{navigate('/class')}} >시작하기→</Button>
                 </div>
-                <div id="Banner_bg2">
-                    <div id="Banner_bg_center5">
+
+
+            <div className="max-w-screen-lg w-full mx-auto"> 
+                <div id="Banner_bg2_img">
+                    <img src={process.env.PUBLIC_URL+'/NEXTjs.png'} width="400px" />
+                </div>
+                <div id="Banner_bg2_setting">
+                <h2>NEXT.js로 웹서비스 만들기</h2>
+                <div id="Banner_bg2_center1">
+                <img src={process.env.PUBLIC_URL+'/HTML.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
+                <img src={process.env.PUBLIC_URL+'/CSS.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
+                <img src={process.env.PUBLIC_URL+'/JS.png'} id="Banner_bg2_img_setting" width="40px" height="40px" />
+                <ul>
+                <li>React기반 프레임 워크</li>
+                <li>풀스택 웹개발 가능</li>
+                <li>32개의 강의</li>
+                </ul>
+                </div>
+                <Button id="Banner_bg2_button" variant="outline-dark" >바로가기→</Button>
+                 </div>
+                </div>
+          
+
+                <div id="Banner_bg3">
+                    <div id="Banner_bg3_center1">
                     <img src={process.env.PUBLIC_URL+'/nugulman.png'} width="200px" />
                     </div>
-                <h2 id="Banner_bg_center6">우리에 대한 소개</h2>
-               <div id="Banner_bg_center4">는 너굴맨이 처리했으니 안심하라구
+                <h2 id="Banner_bg3_center2">우리에 대한 소개</h2>
+               <div id="Banner_bg3_center3">는 너굴맨이 처리했으니 안심하라구
                <p>도망가~</p>
                </div>
                 </div>      

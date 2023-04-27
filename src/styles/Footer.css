@@ -4,14 +4,19 @@
 }
 
 #Footer_setting {
-    display: flex;
-    flex-direction: row;
-    
+    display: flex; 
 }
 
 ul {
     list-style-type: none;
 }
+
+#Footer_ul_detail_setting {
+    text-align: left;
+    width: 100% ;
+    margin: 1em 0 4em;
+  }
+
 
 #Footer_ul_setting {
   width: 100% ;
@@ -34,4 +39,9 @@ li {
 
 #Cursor {
     cursor: pointer;
+}
+#Cursor_left{
+    cursor: pointer;
+    font-size: 12px;
+    padding: 1px 0px;
 }
