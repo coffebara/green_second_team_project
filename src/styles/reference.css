@@ -37,10 +37,8 @@
 
 .Reference_navbar_list {
     font-size: calc(1.1vw);
+    cursor: pointer;
 }
 .Reference_hidden{
     display: none;
-}
-.Reference_navbar_list {
-    font-size: calc(1.1vw);
 }
