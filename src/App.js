@@ -19,7 +19,7 @@ function App() {
                 <Route path="detail" element={<>상세 페이지</>} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />
-                <Route path='/reference' element={<Reference />} />
+                <Route path='/reference/*' element={<Reference />} />
                 <Route path='/login' element={<></>} />
                 <Route path="/*" element={<div>잘못된 경로임</div>} />
             </Routes>
