@@ -25,7 +25,8 @@
 
 
 #Footer_img {
-    width: 60px;
+    width: 8vh;
+    height: 8vh;
 }
 
 #Footer_span {
@@ -41,7 +42,6 @@
     cursor: pointer;
 }
 #Cursor_left{
-    cursor: pointer;
     font-size: 12px;
     padding: 1px 0px;
 }

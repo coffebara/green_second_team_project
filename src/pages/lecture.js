@@ -1,7 +1,9 @@
 import "../styles/lecture.css";
+import Nav from '../components/Nav_Light'
 
 function App() {
   return (
+    <div> <Nav/>
     <div className="lecture-App">
       <header className="lecture-App-header" />
       <div className="lecture-App-main">
@@ -47,6 +49,7 @@ function App() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
