@@ -32,23 +32,32 @@ function App() {
             <div className="lecture">
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/13f2HM.png" alt="html/css" />
+                <p>
+                  HTML/CSS All-in-one : 기초부터 Bootstrap, SASS, 고급 animation
+                  까지
+                </p>
               </div>
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/ssAmtL.png" alt="js 기초" />
+                <p>JavaScript 입문과 웹 UI개발</p>
               </div>
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/Snlkd5.png" alt="js ES6" />
+                <p>쉽게 이해하는 JavaScript 객체지향 & ES6 신문법</p>
               </div>
             </div>
             <div className="lecture">
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/MLthrr.png" alt="react" />
+                <p>React 리액트 기초부터 쇼핑몰 프로젝트까지!</p>
               </div>
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/GzWvjM.png" alt="node.js" />
+                <p>Node.js, MongoDB로 2시간 만에 빠르게 웹서비스 만들기</p>
               </div>
               <div className="App-lecture">
                 <img src="https://ifh.cc/g/krLoqY.png" alt="next.js" />
+                <p>Next.js로 웹서비스 만들기</p>
               </div>
             </div>
           </div>
