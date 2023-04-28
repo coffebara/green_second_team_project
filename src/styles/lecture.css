@@ -40,6 +40,7 @@
   text-align: left;
   font-size: 35px;
 }
+
 .lecture-App {
   margin-top: 50px;
 }
@@ -56,6 +57,10 @@
   display: flex;
   /* margin-left: 20px; */
   overflow: hidden;
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
