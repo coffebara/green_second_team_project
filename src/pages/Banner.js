@@ -16,22 +16,22 @@ export default function Banner(){
                 Learn to code</h1>
                <div id="Banner_bg1_center2">코딩을 진짜로 만들어볼까요?<br/>
                 실제 서비스를 따라 만들면서 코딩을 배우세요</div>
-                <Button id="Banner_bg1_button" variant="outline-dark" onClick={()=>{navigate('/class')}} >시작하기→</Button>
+                <Button id="Banner_bg1_button" variant="outline-dark" onClick={()=>{navigate('/class')}} >시작하기 →</Button>
                 </div>
 
 
             <div  id="Banner_bg2"> 
                 <div id="Banner_bg2_img">
-                    <img src={process.env.PUBLIC_URL+'/NEXTjs.png'} id="Banner_bg2_big_img_setting" width="420px" height="320px" />
+                    <img src={process.env.PUBLIC_URL+'/NEXTjs.png'} id="Banner_bg2_big_img_setting" width="360px" height="260px" />
                 </div>
                 <div id="Banner_bg2_setting">
-                <h2>NEXT.js로 웹서비스 만들기</h2>
+                <h4>NEXT.js로 웹서비스 만들기</h4>
                 
                 <div id="Banner_bg2_center1">
                 <ul id="Banner_bg2_list"><li>
-                <img src={process.env.PUBLIC_URL+'/HTML.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
-                <img src={process.env.PUBLIC_URL+'/CSS.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
-                <img src={process.env.PUBLIC_URL+'/JS.png'} id="Banner_bg2_small_img_setting" width="40px" height="40px" />
+                <img src={process.env.PUBLIC_URL+'/HTML.png'} id="Banner_bg2_small_img_setting" width="30vw" height="30vh" />
+                <img src={process.env.PUBLIC_URL+'/CSS.png'} id="Banner_bg2_small_img_setting" width="30vw" height="30vh" />
+                <img src={process.env.PUBLIC_URL+'/JS.png'} id="Banner_bg2_small_img_setting" width="30vw" height="30vh" />
                 </li>
                 <li>React기반 프레임 워크</li>
                 <li>풀스택 웹개발 가능</li>

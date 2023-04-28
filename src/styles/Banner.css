@@ -21,15 +21,13 @@
 
 
 #Banner_bg2 {
-    height: 600px;
+    height: 530px;
     background-color: darkgrey;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-
-#Banner_bg2_img {}
 
 #Banner_bg2_big_img_setting {
     border-radius: 5%;
@@ -41,7 +39,7 @@
 }
 
 #Banner_bg2_setting {
-    margin: 0em 2em 0em;
+    margin: 0em 2em -1.5em;
 }
 
 #Banner_bg2_center1 {
@@ -49,7 +47,7 @@
 }
 
 #Banner_bg2_list>li {
-    padding: 0.5em 0em;
+    padding: 0.3em 0em;
 }
 
 #Banner_bg2_button {
