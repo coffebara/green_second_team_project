@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   TextField,
@@ -7,11 +7,37 @@ import {
   Typography,
   Container,
   Avatar,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import { Link as RouterLink } from "react-router-dom";
+import Nav_Dark from "./Nav_Dark";
 
 export default function Register() {
+  const [email, setEmail] = useState("");
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSendLinkClick = (e) => {
+    e.preventDefault();
+    if (email === "") {
+      alert("이메일을 입력해주세요.");
+    } else {
+      setOpenDialog(true);
+    }
+  };
+
+  const handleDialogClose = () => {
+    setOpenDialog(false);
+  };
+
   return (
     <Container maxWidth="xs">
       <Box
@@ -37,16 +63,14 @@ export default function Register() {
             name="email"
             autoComplete="email"
             autoFocus
+            value={email}
+            onChange={handleEmailChange}
           />
-          {/* <Button fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-            이메일로 비밀번호 재설정 링크 보내기
-          </Button> */}
           <Button
-            // component={Link}
-            to="/login"
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            onClick={handleSendLinkClick}
           >
             이메일로 비밀번호 재설정 링크 보내기
           </Button>
@@ -63,6 +87,17 @@ export default function Register() {
             </Grid>
           </Grid>
         </form>
+        <Dialog open={openDialog} onClose={handleDialogClose}>
+          <DialogTitle>이메일 확인</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              입력하신 이메일: {email} 에 임시비밀번호를 전송하였습니다
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleDialogClose}>확인</Button>
+          </DialogActions>
+        </Dialog>
       </Box>
     </Container>
   );
