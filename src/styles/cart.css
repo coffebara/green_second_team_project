@@ -1,6 +1,12 @@
 body {
     margin: 0;
 }
+.cart_container {
+    /* height: 100%;  늘어남*/ 
+    width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
 /* 타이틀 */
 #cart_title {
     display: flex;
@@ -26,7 +32,7 @@ body {
 /* 왼쪽 리스트 */
 .cart_list {
     grid-area: left;
-    background-color: tomato;
+    /* background-color: tomato; */
     padding: 0 20px;
 }
 /* 왼쪽 리스트 테이블 */
@@ -38,28 +44,97 @@ body {
 .cart_table th {
     padding: 10px 0;
 }
+.cart_price{
+    color: #d61b1b;
+}
+.cart_input{
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+    width: 70px;
+    padding: 5px;
+}
+/* 왼쪽 테이블 간격 */
+#cart_thead th:first-child{
+    width: 5%;
+}
+#cart_thead th:nth-child(2){
+    width: 50%;
+}
+#cart_thead th:nth-child(3){
+    width: 15%;
+}
+#cart_thead th:nth-child(4){
+    width: 15%;
+}
+#cart_thead th:nth-child(5){
+    width: 15%;
+}
+/* 버튼 */
+.cart_coupon{
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+    width: 120px;
+    padding: 5px;
+    margin-right: 10px;
+}
+#cart_coupon_btn{
+    border: 1px solid #FF4949;
+    background-color: white;
+    color: #FF4949;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#cart_coupon_btn:hover{
+    background-color: #FF4949;
+    color: white;
+}
+
 
 .cart_table td {
-    border-top: 1px solid black;
+    border-top: 1px solid  rgba(0,0,0,.08);
     padding: 15px 0;
 }
 /* 오른쪽 토탈 */
 .cart_total {
     grid-area: right;
-    background-color: yellow;
-    padding: 0 20px;
-    height: 200px;
-    border: 1px solid black;
+    /* background-color: yellow; */
+    border: 1px solid rgba(0,0,0,.08);
+    margin-top: 10px;
+    padding: 30px 30px;
+    height: 280px;
+}
+.cart_total h4{
+    text-align-last: left;
+    /* margin-top: 20px; */
 }
 .total_price{
     text-align: right;
+    color: #d61b1b;
 }
-.cart_container {
-    /* height: 100%;  늘어남*/ 
-    width: 1400px;
-    margin-right: auto;
-    margin-left: auto;
+#cart_process_btn{
+    border: 1px solid #FF4949;
+    background-color: white;
+    color: #FF4949;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.1s;
 }
+#cart_process_btn:hover{
+    background-color: #FF4949;
+    color: white;
+}
+
 
 /* grid-template-areas 사용법 .container {
     display: grid;

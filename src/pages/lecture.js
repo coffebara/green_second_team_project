@@ -1,34 +1,54 @@
 import "../styles/lecture.css";
-function lecture() {
+
+function App() {
   return (
     <div className="lecture-App">
       <header className="lecture-App-header" />
       <div className="lecture-App-main">
-        <p>Front End</p>
-        <img
-          className="lecture-img"
-          src="https://ifh.cc/g/w1H4Fb.jpg"
-          width="800px"
-        />
-        <h1>여태까지 경험하지 못한 강의</h1>
-        <e>
-          혁신적인 아이디어로 다시 돌아온 <br />
-          it-da의 야심찬 프로젝트. 후회하지 않는 <br />
-          프론트엔드 강의들을 만나보세요.
-        </e>
-        <div className="lecture-lecture">
-          <div className="lecture-App-lecture"></div>
-          <div className="lecture-App-lecture"></div>
-          <div className="lecture-App-lecture"></div>
+        <div className="lecture-front">
+          <h1>Front End</h1>
         </div>
-        <div className="llecture-ecture">
-          <div className="lecture-App-lecture"></div>
-          <div className="lecture-App-lecture"></div>
-          <div className="lecture-App-lecture"></div>
+        <div>
+          <img src="https://ifh.cc/g/w1H4Fb.jpg" width="800px" />
+        </div>
+        <div className="lecture-mlyon">
+          <div className="lecture-varil">
+            <h2>여태까지 경험하지 못한 강의</h2>
+            <p>
+              새롭게 선보이는 it da의 강의 컨텐츠
+              <br />
+              이 컨텐츠를 가지고, 우리는 다시 한번 도약합니다.
+              <br />
+              품질 좋은 강의를 유지하기 위해 끊임 없이 노력하는
+              <br />
+              그야말로 it da의 최고의 콘텐츠 입니다.
+            </p>
+          </div>
+          <div className="lecture-varil2">
+            <p>
+              믿을 수 있는
+              <br />
+              강의
+              <br />
+              여기서 부터.
+            </p>
+          </div>
+        </div>
+        <div className="lecture-App">
+          <div className="lecture">
+            <div className="App-lecture"></div>
+            <div className="App-lecture"></div>
+            <div className="App-lecture"></div>
+          </div>
+          <div className="lecture">
+            <div className="App-lecture"></div>
+            <div className="App-lecture"></div>
+            <div className="App-lecture"></div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default lecture;
+export default App;

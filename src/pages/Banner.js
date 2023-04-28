@@ -1,8 +1,8 @@
 import { Button } from "react-bootstrap";
-import Nav_Light from "./Nav_Light";
-import Nav_Dark from "./Nav_Dark";
-import Footer_Light from "./Footer_Light";
-import Footer_Dark from "./Footer_Dark";
+import Nav_Light from "../components/Nav_Light";
+import Nav_Dark from "../components/Nav_Dark";
+import Footer_Light from "../components/Footer_Light";
+import Footer_Dark from "../components/Footer_Dark";
 import { useNavigate } from "react-router-dom"
 
 

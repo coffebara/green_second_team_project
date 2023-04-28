@@ -5,45 +5,57 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* justify-content: center; */
+  justify-content: center;
   color: white;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
-.lecture-App-main p {
-  font-size: 100px;
+.lecture-mlyon {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lecture-front h1 {
+  font-size: 80px;
   padding-top: 30px;
+  color: #f5f5f7;
 }
 
-.lecture-App-main h1 {
-  font-size: 50px;
-  /* padding-top: 400px; */
+.lecture-varil h2 {
+  font-size: 60px;
+  color: #d2d2d7;
 }
 
-.lecture-App-main e {
-  font-size: 30px;
-  color: #888888;
+.lecture-varil p {
+  font-size: 35px;
 }
 
-.lecture-App-lecture {
-  width: 450px;
-  height: 300px;
+.lecture-varil2 {
+  margin-top: 100px;
+}
+
+.lecture-varil2 p {
+  text-align: left;
+  font-size: 35px;
+}
+.lecture-App {
+  margin-top: 50px;
+}
+
+.App-lecture {
+  width: 350px;
+  height: 200px;
   background: #ffffff;
   border-radius: 10px;
-  float: left;
-  margin: 20px;
-  margin-top: 20px;
+  margin: 30px 20px 0px 20px;
 }
 
-.lecture-lecture {
+.lecture {
   display: flex;
-}
-
-.lecture-App-link {
-  color: #61dafb;
-}
-
-lecture-img {
-  margin-top: -100px;
+  /* margin-left: 20px; */
+  overflow: hidden;
 }
 
 @keyframes App-logo-spin {
