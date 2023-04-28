@@ -7,7 +7,6 @@ function App() {
     <div>
       <Nav />
       <div className="lecture-App">
-        <header className="lecture-App-header" />
         <div className="lecture-App-main">
           <div className="lecture-front">
             <h1>Front End</h1>
