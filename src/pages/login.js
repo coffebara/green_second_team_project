@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Nav_Dark from "../components/Nav_Dark";
 import LoginPage from "../components/login";
 import Register from "../components/register";
+import SignUp from "../components/SignUp";
 
 function Login() {
   return (
@@ -13,7 +14,8 @@ function Login() {
       <div className="Login_main">
         <LoginPage />
         <Routes>
-          <Route path="register" element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </div>
     </div>

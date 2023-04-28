@@ -13,6 +13,7 @@ import {
   Container,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function LoginPage() {
   return (
@@ -65,10 +66,11 @@ export default function LoginPage() {
 
         <Grid container>
           <Grid item xs>
-            <Link>Forgot Password? </Link>
+            {/* <Link>Forgot Password? </Link> */}
+            <RouterLink to="/register">비밀번호 찾기</RouterLink>
           </Grid>
           <Grid item>
-            <Link to="/register">Sign up</Link>
+            <RouterLink to="/SignUp">Sign up</RouterLink>
           </Grid>
         </Grid>
       </Box>

@@ -9,7 +9,7 @@ import {
   Avatar,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Register() {
   return (
@@ -42,7 +42,7 @@ export default function Register() {
             이메일로 비밀번호 재설정 링크 보내기
           </Button> */}
           <Button
-            component={Link}
+            // component={Link}
             to="/login"
             fullWidth
             variant="contained"
@@ -52,7 +52,12 @@ export default function Register() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Button color="primary" sx={{ mt: 1 }} href="/">
+              <Button
+                component={RouterLink}
+                to="/login"
+                color="primary"
+                sx={{ mt: 1 }}
+              >
                 로그인 페이지로 돌아가기
               </Button>
             </Grid>

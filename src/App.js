@@ -11,8 +11,10 @@ import Checkout from "./pages/checkout.js";
 import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
+import Register from "./components/register";
 
 import { Routes, Route } from "react-router-dom";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="/reference/*" element={<Reference />} />
         <Route path="/login/*" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
       </Routes>
