@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import { Link as RouterLink } from "react-router-dom";
+import Nav_Light from "./Nav_Light";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -38,7 +39,9 @@ export default function Register() {
   };
 
   return (
+    <div><Nav_Light/>
     <Container maxWidth="xs">
+      
       <Box
         sx={{
           marginTop: 8,
@@ -99,5 +102,6 @@ export default function Register() {
         </Dialog>
       </Box>
     </Container>
+    </div>
   );
 }
