@@ -1,6 +1,6 @@
 import "../styles/lecture.css";
 import Nav from "../components/Nav_Light";
-import Footer from "../components/footer_Light";
+import Footer from "../components/Footer_Light";
 
 function App() {
   return (
