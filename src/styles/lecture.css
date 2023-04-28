@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   justify-content: center;
   color: #000000;
@@ -10,7 +11,7 @@
 }
 
 .lecture-mlyon {
-  margin-top: 30px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,33 +28,35 @@
   /* color: #d2d2d7; */
 }
 
+.lecture-varil p {
+  font-size: 35px;
+}
+
 .lte {
   margin-top: 100px;
   margin-left: 35px;
 }
 
-.lecture-varil p {
-  font-size: 35px;
-}
-
 .App-lecture {
   width: 350px;
-  height: 200px;
+  height: 300px;
   background: #ffffff;
-  border-radius: 10px;
   margin: 30px 20px 0px 20px;
 }
 
 .App-lecture img {
   width: 350px;
   height: 200px;
-  overflow: hidden;
+  border-radius: 10px;
+}
+
+.App-lecture p:hover {
+  color: #ff0000;
 }
 
 .lecture {
   display: flex;
   /* margin-left: 20px; */
-  overflow: hidden;
 }
 
 .lecture-App-1 {
