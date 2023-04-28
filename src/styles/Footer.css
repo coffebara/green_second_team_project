@@ -1,10 +1,10 @@
-.Darkmode{
-    background-color: rgb(48, 47, 47);
-    color: white;
+#Footer_bg_color{
+    background-color: rgb(226, 226, 226);
+    
 }
-
 #Footer_setting {
     display: flex; 
+    
 }
 
 #Footer_list_style{

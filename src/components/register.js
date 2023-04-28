@@ -15,7 +15,6 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import { Link as RouterLink } from "react-router-dom";
-import Nav_Dark from "./Nav_Dark";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ export default function Register() {
   const handleSendLinkClick = (e) => {
     e.preventDefault();
     if (email === "") {
-      alert("이메일을 입력해주세요.");
+      alert("이메일을 입력 해주세요.");
     } else {
       setOpenDialog(true);
     }
