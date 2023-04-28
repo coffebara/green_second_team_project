@@ -11,7 +11,7 @@
 }
 
 .lecture-mlyon {
-  margin-top: 150px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,11 @@
   /* color: #d2d2d7; */
 }
 
+.lte {
+  margin-top: 100px;
+  margin-left: 35px;
+}
+
 .lecture-varil p {
   font-size: 35px;
 }
@@ -35,9 +40,15 @@
 .App-lecture {
   width: 350px;
   height: 200px;
-  background: #000000;
+  background: #ffffff;
   border-radius: 10px;
   margin: 30px 20px 0px 20px;
+}
+
+.App-lecture img {
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .lecture {

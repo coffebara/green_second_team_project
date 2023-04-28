@@ -11,7 +11,7 @@ function App() {
           <div className="lecture-front">
             <h1>Front End</h1>
           </div>
-          <div>
+          <div className="lte">
             <img src="https://ifh.cc/g/6AW38r.png" width="800px" />
           </div>
           <div className="lecture-mlyon">
@@ -30,14 +30,26 @@ function App() {
           </div>
           <div className="lecture-App-1">
             <div className="lecture">
-              <div className="App-lecture"></div>
-              <div className="App-lecture"></div>
-              <div className="App-lecture"></div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/13f2HM.png" alt="html/css" />
+              </div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/ssAmtL.png" alt="js 기초" />
+              </div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/Snlkd5.png" alt="js ES6" />
+              </div>
             </div>
             <div className="lecture">
-              <div className="App-lecture"></div>
-              <div className="App-lecture"></div>
-              <div className="App-lecture"></div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/MLthrr.png" alt="react" />
+              </div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/GzWvjM.png" alt="node.js" />
+              </div>
+              <div className="App-lecture">
+                <img src="https://ifh.cc/g/krLoqY.png" alt="next.js" />
+              </div>
             </div>
           </div>
         </div>
