@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Nav_Light from "./Nav_Light";
 
 function Copyright(props) {
   return (
@@ -41,9 +42,11 @@ export default function SignUp() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    
+    <ThemeProvider theme={theme}><Nav_Light/>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        
         <Box
           sx={{
             marginTop: 8,
