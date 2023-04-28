@@ -10,6 +10,7 @@ import Reference from './pages/reference.js'
 import Checkout from "./pages/checkout.js";
 import Sorry from './pages/Sorry';
 import Lecture from './pages/lecture.js'
+// import Login from './pages/Login.js';
 
 import { Routes, Route } from "react-router-dom";
 
@@ -23,7 +24,7 @@ function App() {
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />
                 <Route path='/reference/*' element={<Reference />} />
-                <Route path='/login' element={<></>} />
+                <Route path='/login' element={<div>로그인</div>} />
                 <Route path="/*" element={<div>잘못된 경로임</div>} />
                 <Route path="/sorry" element={<Sorry/>}/>
             </Routes>
