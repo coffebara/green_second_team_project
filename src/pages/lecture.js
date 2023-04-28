@@ -42,9 +42,9 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <Footer />
+        <div>
+          <Footer />
+        </div>
       </div>
     </div>
   );
