@@ -55,6 +55,8 @@ export default function LoginPage() {
           label="Remember me"
         />
         <Button
+          component={RouterLink}
+          to="/"
           type="submit"
           fullWidth
           variant="contained"

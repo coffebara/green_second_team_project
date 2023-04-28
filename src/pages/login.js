@@ -15,6 +15,7 @@ function Login() {
         <LoginPage />
         <Routes>
           <Route path="/register" element={<Register />} />
+
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </div>
