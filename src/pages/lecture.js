@@ -1,10 +1,10 @@
 import "../styles/lecture.css";
 import Nav from "../components/Nav_Light";
+import Footer from "../components/footer_Light";
 
 function App() {
   return (
     <div>
-      {" "}
       <Nav />
       <div className="lecture-App">
         <header className="lecture-App-header" />
@@ -13,7 +13,7 @@ function App() {
             <h1>Front End</h1>
           </div>
           <div>
-            <img src="https://ifh.cc/g/w1H4Fb.jpg" width="800px" />
+            <img src="https://ifh.cc/g/6AW38r.png" width="800px" />
           </div>
           <div className="lecture-mlyon">
             <div className="lecture-varil">
@@ -26,15 +26,6 @@ function App() {
                 품질 좋은 강의를 유지하기 위해 끊임 없이 노력하는
                 <br />
                 그야말로 it da의 최고의 콘텐츠 입니다.
-              </p>
-            </div>
-            <div className="lecture-varil2">
-              <p>
-                믿을 수 있는
-                <br />
-                강의
-                <br />
-                여기서 부터.
               </p>
             </div>
           </div>
@@ -51,6 +42,9 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
