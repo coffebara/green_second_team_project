@@ -12,6 +12,8 @@ import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./components/register";
+import BT from "./pages/Banner_test1"
+
 
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
@@ -31,6 +33,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
+        <Route path="/bt" element={<BT />} />
       </Routes>
     </div>
   );

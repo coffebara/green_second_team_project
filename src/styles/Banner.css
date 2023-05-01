@@ -18,18 +18,13 @@
     margin: 2em 0 4em;
 }
 
-
-
 #Banner_bg2 {
-    height: 530px;
-    background-color: darkgrey;
-}
-
-#Banner_bg2_text_setting{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 530px;
+    background-color: darkgrey;
 }
 
 #Banner_bg2_big_img_setting {
@@ -83,55 +78,7 @@
     line-height: 1.5;
 }
 
-
-.Banner_slideshow{
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.Banner_slide_container{
-    position: absolute;
-    width: 1200px;
-    transition: left 0.5s ease-out;
-}
-.Banner_slide{
-    position: absolute;
-    width: 100%;
-    padding: 0 10%;
-    box-sizing: border-box;
-    top: 50;
-    transform: translateY();
-    text-align: center;
-    overflow: hidden;
-}
-/* 
-.Banner_slide li:not(:last-child){
-    float: left;
-    margin-right: 100px;
-}
-
-.Banner_slide li {
-    float: left;
-}
-*/
-.controller span {
-    position: absolute;
-    background-color: transparent;
-    color: black;
-    text-align: center;
-    border-radius: 50%;
-    padding: 10px 20px;
-    top: 50%;
-    font-size: 1.3em;
+#cursor{
     cursor: pointer;
 }
 
-.prev {
-    left: -10px;
-}
-
-.next {
-    right: 10px;
-} 

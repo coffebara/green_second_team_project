@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom"
 export default function Banner_Center() {
     let navigate = useNavigate();
     return (
-            <div id="Banner_for_slide">
-                <div id="Banner_bg2_text_setting">
+            <div id="container">
+                <div id="Banner_bg2">
                     <div id="Banner_bg2_img" >
                         <img src={process.env.PUBLIC_URL + '/NEXTjs.png'} id="Banner_bg2_big_img_setting" width="360px" height="260px"
-                            onClick={() => { navigate('/sorry') }} />
+                            onClick={() => { navigate('/bt') }} />
                     </div>
                     <div id="Banner_bg2_setting">
                         <h4>NEXT.js로 웹서비스 만들기</h4>

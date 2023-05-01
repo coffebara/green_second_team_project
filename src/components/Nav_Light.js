@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
+import Cart_font from './Cart_font';
 export default function Nav_Light(){
     let navigate = useNavigate();
     return(
@@ -10,7 +11,7 @@ export default function Nav_Light(){
                         <Nav.Link onClick={() => { navigate('/class') }} id="NavSet_Light">강의</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/reference') }} id="NavSet_Light">레퍼런스</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/login') }} id="NavSet_Light">로그인</Nav.Link>
-                        <Nav.Link onClick={() => { navigate('/cart') }} id="NavSet_Light">🛒</Nav.Link>
+                        <Nav.Link onClick={() => { navigate('/cart') }} id="NavSet_Light"><Cart_font/></Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
