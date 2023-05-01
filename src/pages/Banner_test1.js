@@ -50,7 +50,6 @@ export default function Banner_test1() {
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </section>
         </div>
