@@ -1,4 +1,4 @@
-import { Button,Navbar, Container, Nav } from 'react-bootstrap'
+import {Navbar, Container, Nav,Badge } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
 export default function Nav_Dark(){
     let navigate = useNavigate();
@@ -10,6 +10,8 @@ export default function Nav_Dark(){
                         <Nav.Link onClick={() => { navigate('/class') }} id="NavSet_Dark">강의</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/reference') }} id="NavSet_Dark">레퍼런스</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/login') }} id="NavSet_Dark">로그인</Nav.Link>
+                        <Nav.Link onClick={() => { navigate('/cart') }} id="NavSet_Dark">
+                        장바구니<Badge className='ms-2' bg="secondary">0</Badge></Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

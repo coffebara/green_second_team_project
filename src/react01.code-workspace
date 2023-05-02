@@ -19,10 +19,6 @@
         {
             "name": "team",
             "path": ".."
-        },
-        {
-            "name": "Next",
-            "path": "../../Next"
         }
     ]
 }

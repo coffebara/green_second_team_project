@@ -24,7 +24,7 @@ export default function Banner_Center() {
                                 <li>⬝ 32개의 강의</li>
                             </ul>
                         </div>
-                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/bt') }} >바로가기 →</Button>
+                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/btt') }} >바로가기 →</Button>
                     </div>
                 </div>
             </div>

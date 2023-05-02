@@ -4,13 +4,14 @@ import Nav_Dark from "../components/Nav_Dark";
 import Banner_Center from "./Banner_Center";
 import Footer_Light from "../components/Footer_Light";
 import { useNavigate } from "react-router-dom"
+import Banner_test from "./Banner_Center";
 
 
 export default function Banner() {
     let navigate = useNavigate();
     return (
         <div>
-            <Nav_Dark />
+            <Nav_Light />
             <div id="Banner_bg1">
                 <h1 id="Banner_bg1_center1">Clone Startups<br />
                     Learn to code</h1>
@@ -19,7 +20,7 @@ export default function Banner() {
                 <Button id="Banner_bg1_button" variant="outline-dark" onClick={() => { navigate('/class') }} >시작하기 →</Button>
             </div>
 
-        <Banner_Center/>
+        <Banner_test/>
         
             <div id="Banner_bg3">
                 <div id="Banner_bg3_center1">
