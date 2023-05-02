@@ -11,13 +11,15 @@ import Js01 from '../components/Reperence/Js01';
 import Js02 from '../components/Reperence/Js02';
 import Js03 from '../components/Reperence/Js03';
 import Next01 from '../components/Reperence/Next01';
-import Bootstrap01 from '../components/Reperence/Bootstrap01';
+import Bootstrap01 from '../components/Reperence/Bootstrap01'; /* 추가부분 */
+
 
 function Reference() {
   return (
     <div>
       <Nav_Dark />
       <div className="Reference_main">
+      
         <ReferenceList />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,7 +29,7 @@ function Reference() {
           <Route path="/js02" element={<Js02 />} />
           <Route path="/js03" element={<Js03 />} />
           <Route path="/next01" element={<Next01 />} />
-          <Route path="/bootstrap01" element={<Bootstrap01 />} />
+          <Route path="/bootstrap01" element={<Bootstrap01 />} /> {/* 추가부분 */}
         </Routes>
       </div>
     </div>

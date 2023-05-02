@@ -13,7 +13,7 @@ import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./components/register";
 import BT from "./pages/Banner_test1"
-import BTT from "./pages/Banner_test3"
+import BTT from "./pages/Banner_test2"
 
 
 import { Routes, Route } from "react-router-dom";
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Banner />} />
-        <Route path="/class" element={<Lecture />}></Route>
+        <Route path="/class" element={<Lecture />}/>
         <Route path="detail" element={<>상세 페이지</>} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
