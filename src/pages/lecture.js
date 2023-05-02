@@ -3,7 +3,6 @@ import Nav from "../components/Nav_Light";
 import Nav_Dark from "../components/Nav_Dark";
 import Footer from "../components/Footer_Light";
 import { useState } from "react";
-import "./App.css";
 import data from "../assets/data.js";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
