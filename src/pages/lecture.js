@@ -2,18 +2,25 @@ import "../styles/lecture.css";
 import Nav from "../components/Nav_Light";
 import Nav_Dark from "../components/Nav_Dark";
 import Footer from "../components/Footer_Light";
+import { useState } from "react";
+import data from "../assets/data.js";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { Col } from "react-bootstrap";
 
-function App() {
+function Lecture() {
+  let [products] = useState(data);
+  let navigate = useNavigate();
   return (
-    <div>
-      <Nav_Dark />
+    <>
+      <Nav />
       <div className="lecture-App">
         <div className="lecture-App-main">
           <div className="lecture-front">
             <h1>Front End</h1>
           </div>
           <div className="lte">
-            <img src="https://ifh.cc/g/6AW38r.png" width="800px" />
+            <img src="https:ifh.cc/g/6AW38r.png" width="800px" />
           </div>
           <div className="lecture-mlyon">
             <div className="lecture-varil">
@@ -29,46 +36,62 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="lecture-App-1">
-            <div className="lecture">
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/13f2HM.png" alt="html/css" />
-                <p>
-                  HTML/CSS All-in-one : 기초부터 Bootstrap, SASS, 고급 animation
-                  까지
-                </p>
+          <div className="bg-opacity -25 pb-4">
+            <section className="container oberflow-hidden">
+              <div className="">
+                <div className="">
+                  <div
+                    className=""
+                    id="cursor"
+                    onClick={() => {
+                      navigate("/sorry");
+                    }}
+                  >
+                    <div className="App-lecture">
+                      <div className="lecture">
+                        <h2 className="card-title fs-5">
+                          <Card products={products[0]} i={1} />
+                        </h2>
+                        <h2 className="card-title fs-5">
+                          <Card products={products[1]} i={2} />
+                        </h2>
+                        <h2 className="card-title fs-5">
+                          <Card products={products[2]} i={3} />
+                        </h2>
+                      </div>
+                      <div className="lecture">
+                        <h2 className="card-title fs-5">
+                          <Card products={products[3]} i={4} />
+                        </h2>
+                        <h2 className="card-title fs-5">
+                          <Card products={products[4]} i={5} />
+                        </h2>
+                        <h2 className="card-title fs-5">
+                          <Card products={products[5]} i={6} />
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/ssAmtL.png" alt="js 기초" />
-                <p>JavaScript 입문과 웹 UI개발</p>
-              </div>
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/Snlkd5.png" alt="js ES6" />
-                <p>쉽게 이해하는 JavaScript 객체지향 & ES6 신문법</p>
-              </div>
-            </div>
-            <div className="lecture">
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/MLthrr.png" alt="react" />
-                <p>React 리액트 기초부터 쇼핑몰 프로젝트까지!</p>
-              </div>
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/GzWvjM.png" alt="node.js" />
-                <p>Node.js, MongoDB로 2시간 만에 빠르게 웹서비스 만들기</p>
-              </div>
-              <div className="App-lecture">
-                <img src="https://ifh.cc/g/krLoqY.png" alt="next.js" />
-                <p>Next.js로 웹서비스 만들기</p>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
-export default App;
+function Card(props) {
+  return (
+    <>
+      <Col>
+        <img src={props.products.image} />
+        <h2>{props.products.title}</h2>
+      </Col>
+    </>
+  );
+}
+
+export default Lecture;

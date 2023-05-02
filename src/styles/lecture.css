@@ -38,10 +38,21 @@
 }
 
 .App-lecture {
+  margin: 30px 20px 100px 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  margin: 50px 25px 50px 25px;
+}
+
+.App-lecture h2 {
+  font-size: 20px;
   width: 350px;
-  height: 300px;
-  background: #ffffff;
-  margin: 30px 20px 0px 20px;
+  height: 200px;
+  margin-top: 10px;
 }
 
 .App-lecture img {
@@ -56,7 +67,7 @@
 
 .lecture {
   display: flex;
-  /* margin-left: 20px; */
+  justify-content: space-evenly;
 }
 
 .lecture-App-1 {
