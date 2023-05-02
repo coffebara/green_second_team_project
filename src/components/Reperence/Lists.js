@@ -123,47 +123,12 @@ const ReferenceList = () => {
 
 export default ReferenceList;
 
-// import React from 'react';
-// const ReferenceList = () => {
-//   return (
-//     <div>
-//       <nav
-//         id="navbar-example3"
-//         className="navbar navbar-light bg-light flex-column align-items-stretch p-3"
-//       >
-//         <a className="navbar-brand" href="#" onClick={toggle}>
-//           Navbar
-//         </a>
-//         <nav className="nav nav-pills flex-column Reference_hidden">
-//           <a className="nav-link" href="#item-1">
-//             Item 1
-//           </a>
-//           <nav className="nav nav-pills flex-column">
-//             <a className="nav-link ms-3 my-1" href="#item-1-1">
-//               Item 1-1
-//             </a>
-//             <a className="nav-link ms-3 my-1" href="#item-1-2">
-//               Item 1-2
-//             </a>
-//           </nav>
-//           <a className="nav-link" href="#item-2">
-//             Item 2
-//           </a>
-//           <a className="nav-link" href="#item-3">
-//             Item 3
-//           </a>
-//           <nav className="nav nav-pills flex-column">
-//             <a className="nav-link ms-3 my-1" href="#item-3-1">
-//               Item 3-1
-//             </a>
-//             <a className="nav-link ms-3 my-1" href="#item-3-2">
-//               Item 3-2
-//             </a>
-//           </nav>
-//         </nav>
-//       </nav>
-//     </div>
-//   );
-// };
 
-// export default ReferenceList;
+// 레퍼런스 글 쓰는법
+// 1. 페이지를 먼저 만든다 (React01, React02처럼 만들어서 component/Reperence 폴더에 넣기)
+// 2. List.js 파일에서 추가할 내용
+//  ㄱ. 소분류 오브젝트 작성 (react01, js01, Next01과 같은 Array)
+//  ㄴ. 소분류 map으로 뿌려주기 (underlist01~)
+//  ㄷ. div 대분류 태그 만들기 (list1~)
+//  ㄹ. return에 만든 태그 붙이기 ({list1}~)
+// 3. pages/reperence.js 파일에서 페이지 라우팅하기
