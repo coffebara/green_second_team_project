@@ -40,6 +40,7 @@ let data = [
     title: "Node.js, MongoDB로 2시간 만에 빠르게 웹서비스 만들기",
     content:
       "프로그래밍 세계 최고로 쉽게 설명해드리는 코딩애플과 함께라면 웹서비스 제작도 뚝딱입니다. 게시판 하나 만들며 배워보는 Node.js 강의가 신설되었습니다!",
+    price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/GzWvjM.png",
   },
@@ -48,6 +49,7 @@ let data = [
     title: "Next.js로 웹서비스 만들기",
     content:
       "Next.js는 프론트엔드부터 서버까지 만들 수 있는 React기반 프레임워크입니다. 이것만 사용해도 풀스택 웹개발이 가능합니다. ",
+    price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/krLoqY.png",
   },

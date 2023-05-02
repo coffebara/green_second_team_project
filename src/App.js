@@ -12,8 +12,8 @@ import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./components/register";
-import BT from "./pages/Banner_test1"
-
+import BT from "./pages/Banner_test1";
+import Lecture2 from "./pages/lecture2.js";
 
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Banner />} />
         <Route path="/class" element={<Lecture />}></Route>
-        <Route path="detail" element={<>상세 페이지</>} />
+        <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="/reference/*" element={<Reference />} />
