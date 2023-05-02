@@ -36,12 +36,12 @@ function Lecture() {
               </p>
             </div>
           </div>
-          <div className="bg-secondary bg-opacity -25 pb-4">
+          <div className="bg-opacity -25 pb-4">
             <section className="container oberflow-hidden">
-              <div className="row g-5 mt-4">
-                <div className="col-sm-6 col-lg-3">
+              <div className="">
+                <div className="">
                   <div
-                    className="card"
+                    className=""
                     id="cursor"
                     onClick={() => {
                       navigate("/sorry");
@@ -77,8 +77,8 @@ function Lecture() {
             </section>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
