@@ -10,6 +10,7 @@ import React02 from '../components/Reperence/React02';
 import Js01 from '../components/Reperence/Js01';
 import Js02 from '../components/Reperence/Js02';
 import Js03 from '../components/Reperence/Js03';
+import Next01 from '../components/Reperence/Next01';
 
 function Reference() {
   return (
@@ -24,6 +25,7 @@ function Reference() {
           <Route path="/js01" element={<Js01 />} />
           <Route path="/js02" element={<Js02 />} />
           <Route path="/js03" element={<Js03 />} />
+          <Route path="/next01" element={<Next01 />} />
         </Routes>
       </div>
     </div>

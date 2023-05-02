@@ -7,17 +7,21 @@ const ReferenceList = () => {
   let navigate = useNavigate();
   const [showNav, setShowNav] = useState(false);
   const [showNav2, setShowNav2] = useState(false);
+  const [showNav3, setShowNav3] = useState(false);
 
   const toggleReact01 = () => {
     setShowNav(!showNav);
-    // setShowNav2(false)
   };
   const toggleNav2 = () => {
     setShowNav2(!showNav2);
-    // setShowNav(false)
+  };
+
+  const toggleNav3 = () => {
+    setShowNav3(!showNav3);
   };
   let react01 = [{id:0, value:'리액트란?', url:'/reference/react01'}, {id:1, value:'리액트의 특징', url:'/reference/react02'}];
   let js01 = [{id:0, value:'JavaScript란?', url:'/reference/js01'}, {id:1, value:'JS변수', url:'/reference/js02'}, {id:2, value:'JS객체', url:'/reference/js03'}];
+  let next01 = [{id:0, value:'Next.js란?', url:'/reference/next01'}]
 
   let underlist01 = react01.map((list) => {
     return (
@@ -28,6 +32,14 @@ const ReferenceList = () => {
     );
   });
   let underlist02 = js01.map((list) => {
+    return (
+      <a className="nav-link Reference_navbar_list" key="id" onClick={
+        ()=>{navigate(list.url)}}>
+        {list.value}
+      </a>
+    );
+  });
+  let underlist03 = next01.map((list) => {
     return (
       <a className="nav-link Reference_navbar_list" key="id" onClick={
         ()=>{navigate(list.url)}}>
@@ -78,11 +90,33 @@ const ReferenceList = () => {
       </nav>
     </div>
   );
+  let list3 = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          href="#"
+          onClick={toggleNav3}
+        >
+          Next.js 이론
+        </a>
+        {showNav3 && (
+          <nav className="nav nav-pills flex-column">
+          {underlist03}
+        </nav>
+        )}
+      </nav>
+    </div>
+  );
 
   return (
     <div className="Reference_nav">
       {list}
       {list2}
+      {list3}
     </div>
   );
 };
