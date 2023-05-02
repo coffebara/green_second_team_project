@@ -8,6 +8,7 @@ const ReferenceList = () => {
   const [showNav, setShowNav] = useState(false);
   const [showNav2, setShowNav2] = useState(false);
   const [showNav3, setShowNav3] = useState(false);
+  const [showNav4, setShowNav4] = useState(false);
 
   const toggleReact01 = () => {
     setShowNav(!showNav);
@@ -19,9 +20,13 @@ const ReferenceList = () => {
   const toggleNav3 = () => {
     setShowNav3(!showNav3);
   };
+  const toggleNav4 = () => {
+    setShowNav4(!showNav4);
+  };
   let react01 = [{id:0, value:'리액트란?', url:'/reference/react01'}, {id:1, value:'리액트의 특징', url:'/reference/react02'}];
   let js01 = [{id:0, value:'JavaScript란?', url:'/reference/js01'}, {id:1, value:'JS변수', url:'/reference/js02'}, {id:2, value:'JS객체', url:'/reference/js03'}];
   let next01 = [{id:0, value:'Next.js란?', url:'/reference/next01'}]
+  let bootstrap01 = [{id:0, value:'Bootstrap이란?', url:'/reference/Bootstrap01'}]
 
   let underlist01 = react01.map((list) => {
     return (
@@ -40,6 +45,14 @@ const ReferenceList = () => {
     );
   });
   let underlist03 = next01.map((list) => {
+    return (
+      <a className="nav-link Reference_navbar_list" key="id" onClick={
+        ()=>{navigate(list.url)}}>
+        {list.value}
+      </a>
+    );
+  });
+  let underlist04 = bootstrap01.map((list) => {
     return (
       <a className="nav-link Reference_navbar_list" key="id" onClick={
         ()=>{navigate(list.url)}}>
@@ -110,6 +123,31 @@ const ReferenceList = () => {
         )}
       </nav>
     </div>
+    
+    
+  );
+  let list4 = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          href="#"
+          onClick={toggleNav4}
+        >
+          bootstrap 이론
+        </a>
+        {showNav4 && (
+          <nav className="nav nav-pills flex-column">
+          {underlist04}
+        </nav>
+        )}
+      </nav>
+    </div>
+    
+    
   );
 
   return (
@@ -117,6 +155,7 @@ const ReferenceList = () => {
       {list}
       {list2}
       {list3}
+      {list4}
     </div>
   );
 };
