@@ -1,4 +1,5 @@
 import React from 'react';
+import TextArea from './CodeTextarea';
 
 function Js03() {
   return (
@@ -60,6 +61,7 @@ function Js03() {
         가지고 새로운 객체를 만들어 줍니다. 따라서 이 메소드를 이용하면 사용자가
         프로토타입 객체를 직접 명시할 수 있으므로, 상당히 유용하게 사용됩니다.
       </p>
+      <TextArea value={"<html>\n<head>\n</head>\n<body>\nHello world!\n</body>\n</html>"} />
       <p>
         Object.create() 메소드의 첫 번째 인수로는 프로토타입으로 사용할 객체를
         전달합니다. 두 번째 인수로는 새로운 객체의 추가할 프로퍼티 정보를

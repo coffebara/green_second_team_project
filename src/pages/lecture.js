@@ -1,11 +1,12 @@
 import "../styles/lecture.css";
 import Nav from "../components/Nav_Light";
+import Nav_Dark from "../components/Nav_Dark";
 import Footer from "../components/Footer_Light";
 
 function App() {
   return (
     <div>
-      <Nav />
+      <Nav_Dark />
       <div className="lecture-App">
         <div className="lecture-App-main">
           <div className="lecture-front">
