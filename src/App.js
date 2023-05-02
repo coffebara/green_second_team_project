@@ -14,7 +14,7 @@ import Login from "./pages/login";
 import Register from "./components/register";
 import BT from "./pages/Banner_test1";
 import BTT from "./pages/Banner_test2";
-import Lecture2 from "./pages/lecture2.js";
+import Lecture2 from "./pages/lecture.js";
 
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
