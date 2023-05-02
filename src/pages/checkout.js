@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import "../styles/checkout.css";
 import data from "../assets/data.js";
-import Nav_Dark from "../components/Nav_Dark.js";
-import Nav_Light from "../components/Nav_Light.js";
-import Footer from "../components/Footer_Dark.js";
+import Nav from "../components/Nav_Light.js";
+import Footer from "../components/Footer_Light.js";
 
 function Checkout() {
     const [title, setTitle] = useState(data);
     console.log(title);
     return (
         <div>
-            <Nav_Dark />
+            <Nav />
             <section id="checkout_title">
                 <div className="checkout_container">
                     신청하기
