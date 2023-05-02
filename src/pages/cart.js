@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "../styles/cart.css";
 import data from "../assets/data.js";
-import Nav_Dark from "../components/Nav_Dark.js";
-import Nav_Light from "../components/Nav_Light.js";
-import Footer from "../components/Footer_Dark"
+import Nav from "../components/Nav_Light.js";
+import Footer from "../components/Footer_Light.js"
 
 // data.js에서 받은 값으로 장바구니 리스트 뿌리기
 const CartList = () => {
@@ -24,7 +23,7 @@ const CartList = () => {
             <tr key={item.id}>
                 <td><span className="cart_cancelBtn">X</span></td>
                 <td>{item.title}</td>
-                <td className="cart_price">{(item.price).toLocaleString()}₩</td>
+                <td className="cart_price">{(item.price)?.toLocaleString()}₩</td>
                 <td>
                     <input className="cart_input" type="number" id="a" onChange={(e)=>handleChange(idx, e.target.value)} value={item.quantity} />
                 </td>
@@ -38,7 +37,7 @@ function Cart() {
     let navigate = useNavigate();
     return (
         <div>
-            <Nav_Dark/>
+            <Nav/>
             <section id="cart_title">
                 <div className="cart_container">신청하기<br/>Step 1. 강의 선택</div>
             </section>
