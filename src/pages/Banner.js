@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import Nav_Light from "../components/Nav_Light";
+import Nav_Dark from "../components/Nav_Dark";
 import Banner_Center from "./Banner_Center";
 import Footer_Light from "../components/Footer_Light";
 import { useNavigate } from "react-router-dom"
@@ -9,7 +10,7 @@ export default function Banner() {
     let navigate = useNavigate();
     return (
         <div>
-            <Nav_Light />
+            <Nav_Dark />
             <div id="Banner_bg1">
                 <h1 id="Banner_bg1_center1">Clone Startups<br />
                     Learn to code</h1>
