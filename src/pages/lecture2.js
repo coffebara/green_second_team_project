@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import data from "./product/data.js";
-import "./App.css";
+import data from "../assets/data.js";
+import "../styles/lecture2.css";
 
 function Lecture2() {
   // 컴포넌트를 export합니다.
