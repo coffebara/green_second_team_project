@@ -12,12 +12,13 @@ import Js02 from '../components/Reperence/Js02';
 import Js03 from '../components/Reperence/Js03';
 import Next01 from '../components/Reperence/Next01';
 import Bootstrap01 from '../components/Reperence/Bootstrap01'; /* 추가부분 */
+import Nav from "../components/Nav_Light.js";
 
 
 function Reference() {
   return (
     <div>
-      <Nav_Dark />
+      <Nav />
       <div className="Reference_main">
       
         <ReferenceList />

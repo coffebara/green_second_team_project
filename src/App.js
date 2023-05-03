@@ -15,11 +15,16 @@ import Register from "./components/register";
 import BT from "./pages/Banner_test1";
 import BTT from "./pages/Banner_test2";
 import Lecture2 from "./pages/lecture2.js";
-
+import List from "./pages/List.js"  // 임시 리스트
+import Detail from "./pages/Detail.js"  // 임시 상세
+import data from "./assets/data.js"
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 
 function App() {
+  // 디테일 페이지 용
+  const items = data
+  
   return (
     <div className="App">
       <Routes>
@@ -36,6 +41,10 @@ function App() {
         <Route path="/sorry" element={<Sorry />} />
         <Route path="/bt" element={<BT />} />
         <Route path="/btt" element={<BTT />} />
+
+        {/* 임시 리스트 */}
+        <Route path="/list" element={<List />} />
+        <Route path="/detail/:id" element={<Detail items={items}/>} />
       </Routes>
     </div>
   );
