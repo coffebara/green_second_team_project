@@ -10,13 +10,18 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
-
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
 import Nav_Light from "./Nav_Light";
+import { auth, googleProvider } from "../config/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 
 function Copyright(props) {
   return (
@@ -47,6 +52,8 @@ export default function SignUp() {
     });
     setSuccess(true);
   };
+  // 비밀번호 정규식 추가
+  const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
   return (
     <ThemeProvider theme={theme}>
@@ -118,6 +125,39 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  // 비밀번호 정규식 적용
+                  inputProps={{
+                    pattern: passwordRegex,
+                    title:
+                      "비밀번호는 최소 8자 이상, 대문자, 소문자, 숫자가 포함되어야 합니다.",
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirmPassword"
+                  autoComplete="new-password"
+                  // 비밀번호 확인 필드도 정규식 적용
+                  inputProps={{
+                    pattern: passwordRegex,
+                    title:
+                      "비밀번호는 최소 8자 이상, 대문자, 소문자, 숫자가 포함되어야 합니다.",
+                  }}
+                  // onBlur 이벤트로 비밀번호 일치 여부 검사
+                  onBlur={(e) => {
+                    const confirmPasswordInput = e.target;
+                    const passwordInput = document.getElementById("password");
+                    const isMatched =
+                      confirmPasswordInput.value === passwordInput.value;
+                    confirmPasswordInput.setCustomValidity(
+                      isMatched ? "" : "비밀번호가 일치하지 않습니다."
+                    );
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
