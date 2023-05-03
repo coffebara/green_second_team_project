@@ -4,6 +4,7 @@ import Nav_Dark from "../components/Nav_Dark";
 import Banner_Center from "./Banner_Center";
 import Footer_Light from "../components/Footer_Light";
 import { useNavigate } from "react-router-dom"
+import Banner_test2 from './Banner_test2'
 
 
   
@@ -21,7 +22,7 @@ export default function Banner() {
             </div>
 
         <Banner_Center/>
-        
+        <Banner_test2/>
             <div id="Banner_bg3">
                 <div id="Banner_bg3_center1">
                     <img src={process.env.PUBLIC_URL + '/nugulman.png'} width="200px" />

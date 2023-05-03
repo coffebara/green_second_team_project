@@ -3,11 +3,12 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function UncontrolledExample() {
   return (
-    <Carousel>
+  <div > 
+    <Carousel className='container' variant='dark'>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={process.env.PUBLIC_URL + '/flutter.png'}
+          src={process.env.PUBLIC_URL + '/review1.png'}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -17,7 +18,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={process.env.PUBLIC_URL + '/db.png'}
+          src={process.env.PUBLIC_URL + '/review2.png'}
           alt="Second slide"
         />
 
@@ -28,7 +29,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={process.env.PUBLIC_URL + '/dl.png'}
+          src={process.env.PUBLIC_URL + '/review3.png'}
           alt="Third slide"
         />
 
@@ -37,6 +38,7 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 
