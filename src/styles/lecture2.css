@@ -1,0 +1,16 @@
+#lecture-container {
+  margin: 0;
+  padding: 0;
+  margin: 50px 100px 50px 100px;
+}
+
+#lecture-star {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#blackcow {
+  /* list-style: none; */
+  padding-left: 20px;
+}

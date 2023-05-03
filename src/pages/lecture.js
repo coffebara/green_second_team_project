@@ -44,7 +44,7 @@ function Lecture() {
                     className=""
                     id="cursor"
                     onClick={() => {
-                      navigate("/sorry");
+                      navigate("/lecture2");
                     }}
                   >
                     <div className="App-lecture">
