@@ -29,6 +29,7 @@ export default function Footer() {
                     <div id="Footer_ul_setting">
                         <ul id="Footer_list_style">
                             <li><span id="Footer_span">LEGAL</span></li>
+                            <li onClick={() => { navigate('/faq') }} id="Cursor">FAQ</li>
                             <li id="Cursor">이용약관</li>
                             <li id="Cursor">개인정보취급방침</li>
                             <li id="Cursor">취소 및 환불정책</li>

@@ -2,6 +2,12 @@
     background-color: rgb(226, 226, 226);
     
 }
+
+.Darkmode{
+    background-color: black;
+    color: white;
+}
+
 #Footer_setting {
     display: flex; 
     

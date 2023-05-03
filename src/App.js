@@ -20,6 +20,7 @@ import Detail from "./pages/Detail.js"  // 임시 상세
 import data from "./assets/data.js"
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
+import FAQ from "./pages/FAQ";
 
 function App() {
   // 디테일 페이지 용
@@ -41,6 +42,7 @@ function App() {
         <Route path="/sorry" element={<Sorry />} />
         <Route path="/bt" element={<BT />} />
         <Route path="/btt" element={<BTT />} />
+        <Route path="/faq" element={<FAQ />} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />

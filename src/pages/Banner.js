@@ -3,6 +3,7 @@ import Nav_Light from "../components/Nav_Light";
 import Nav_Dark from "../components/Nav_Dark";
 import Banner_Center from "./Banner_Center";
 import Footer_Light from "../components/Footer_Light";
+import Footer_Dark from "../components/Footer_Dark";
 import { useNavigate } from "react-router-dom"
 import Banner_test2 from './Banner_test2'
 
@@ -36,7 +37,7 @@ export default function Banner() {
                     저희의 서비스는 여러분들의 작업을 한 단계로 끌어올려줍니다.
                 </div>
             </div>
-            <Footer_Light />
+            <Footer_Dark />
         </div>
     )
 }
