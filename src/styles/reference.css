@@ -9,9 +9,10 @@
 }
 
 .Reference_nav {
-    min-width: 20%;
+    min-width: 18%;
     background-color: #212529;
     height: 100%;
+    text-align: left;
 }
 
 .Reference_section {
@@ -35,12 +36,21 @@
 }
 
 .Reference_navbar_title {
+    margin-left: 5%;
     font-size: calc(1.3vw);
 }
 
 .Reference_navbar_list {
+    width: 100%;
+    margin-left: 1%;
     font-size: calc(1.1vw);
     cursor: pointer;
+}
+#navbar-example3{
+    border-bottom: 1px solid gray;
+}
+#navbar-example3:first-child{
+    border-top: 1px solid gray;
 }
 .Reference_hidden{
     display: none;
