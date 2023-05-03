@@ -10,7 +10,55 @@
   margin-bottom: 20px;
 }
 
+#lecture-star li {
+  font-size: 14px;
+}
+
+#html-lecture {
+  font-style: normal;
+  font-size: 27px;
+}
+
 #blackcow {
   /* list-style: none; */
   padding-left: 20px;
+}
+#lecture-btn {
+  background: #ff5554;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 280px;
+  height: 77px;
+  font-size: 14px;
+  border: #ff5554;
+  display: block;
+  /* color: #ff0000; */
+  text-align: center;
+  font-weight: 600;
+}
+
+#lecture-btn:hover {
+  background-color: #ff4444;
+  color: white;
+  cursor: pointer;
+}
+
+.Card-lecture {
+  display: flex;
+}
+
+.Card-lecture-1 {
+  padding-right: 55px;
+}
+
+.Card-lecture img {
+  border-radius: 5px;
+}
+
+.lecture-btn-main {
+  padding-left: 55px;
+}
+
+.lture {
+  float: left;
 }
