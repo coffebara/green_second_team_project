@@ -7,7 +7,7 @@ function UncontrolledExample() {
     <Carousel className='container' variant='dark'>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-50"
           src={process.env.PUBLIC_URL + '/review1.png'}
           alt="First slide"
         />
@@ -17,7 +17,7 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-50"
           src={process.env.PUBLIC_URL + '/review2.png'}
           alt="Second slide"
         />
@@ -28,7 +28,7 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-50"
           src={process.env.PUBLIC_URL + '/review3.png'}
           alt="Third slide"
         />
