@@ -91,7 +91,6 @@ function App() {
           <Route path="/reference/*" element={<Reference />} />
           <Route path="/login/*" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/forget" element={<Forget />} /> */}
           <Route path="/*" element={<div>잘못된 경로임</div>} />
           <Route path="/sorry" element={<Sorry />} />
           <Route path="/bt" element={<BT />} />
