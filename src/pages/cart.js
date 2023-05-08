@@ -8,94 +8,114 @@ import Footer from "../components/Footer_Light.js";
 import { changeCount } from "../store";
 
 function Cart() {
-    let navigate = useNavigate();
-    let dispatch = useDispatch();
-    let state = useSelector((state) => state);
+  let navigate = useNavigate();
+  let dispatch = useDispatch();
+  let state = useSelector((state) => state);
 
-    return (
-        <div>
-            <Nav />
-            <section id="cart_title">
-                <div className="cart_container">
-                    신청하기
-                    <br />
-                    Step 1. 강의 선택
-                </div>
-            </section>
-            <section id="cart_content">
-                <div className="cart_container cart_gridContainer">
-                    <div className="cart_list">
-                        <form method="post">
-                            <table className="cart_table">
-                                <thead id="cart_thead">
-                                    <tr>
-                                        <th>&nbsp;</th>
-                                        <th>강좌</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {state.cart.map((a, i) => (
-                                        <tr key={state.cart[i].id}>
-                                            <td>
-                                                <span className="cart_cancelBtn">X</span>
-                                            </td>
-                                            <td>{state.cart[i].title}</td>
-                                            <td className="cart_price">{state.cart[i].price?.toLocaleString()}₩</td>
-                                            <td>
-                                                {/* <input className="cart_input" type="number" id="a" onChange={(e)=>(useDispatch(changeCount()))} value={state.cart[i].quantity} /> */}
-                                                <input className="cart_input" type="number" id="a" value={state.cart[i].quantity} />
-                                            </td>
-                                            <td className="cart_price">{(state.cart[i].price * state.cart[i].quantity).toLocaleString()}₩</td>
-                                        </tr>
-                                    ))}
-                                    <tr>
-                                        <td colSpan="5">
-                                            <div>
-                                                <input className="cart_coupon" type="text" placeholder="쿠폰 코드" />
-                                                <input id="cart_coupon_btn" type="submit" value="쿠폰 적용하기" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div>
-                    <div className="cart_total">
-                        <div>
-                            <h4>신청할 강좌 합계</h4>
-                        </div>
-                        <table className="cart_table total_table">
-                            <tbody>
-                                <tr>
-                                    <td>소계</td>
-                                    <td className="total_price">284,000₩</td>
-                                </tr>
-                                <tr>
-                                    <td>총계</td>
-                                    <td className="total_price">284,000₩</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div>
-                            {/* 결제페이지 이동 */}
-                            <input
-                                onClick={() => {
-                                    navigate("/checkout");
-                                }}
-                                id="cart_process_btn"
-                                type="button"
-                                value="결제 진행하기"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <Footer />
+  return (
+    <div>
+      <Nav />
+      <section id="cart_title">
+        <div className="cart_container">
+          신청하기
+          <br />
+          Step 1. 강의 선택
         </div>
-    );
+      </section>
+      <section id="cart_content">
+        <div className="cart_container cart_gridContainer">
+          <div className="cart_list">
+            <form method="post">
+              <table className="cart_table">
+                <thead id="cart_thead">
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>강좌</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {state.cart.map((a, i) => (
+                    <tr key={state.cart[i].id}>
+                      <td>
+                        <span className="cart_cancelBtn">X</span>
+                      </td>
+                      <td>{state.cart[i].title}</td>
+                      <td className="cart_price">
+                        {state.cart[i].price?.toLocaleString()}₩
+                      </td>
+                      <td>
+                        {/* <input className="cart_input" type="number" id="a" onChange={(e)=>(useDispatch(changeCount()))} value={state.cart[i].quantity} /> */}
+                        <input
+                          className="cart_input"
+                          type="number"
+                          id="a"
+                          value={state.cart[i].quantity}
+                        />
+                      </td>
+                      <td className="cart_price">
+                        {(
+                          state.cart[i].price * state.cart[i].quantity
+                        ).toLocaleString()}
+                        ₩
+                      </td>
+                    </tr>
+                  ))}
+                  <tr>
+                    <td colSpan="5">
+                      <div>
+                        <input
+                          className="cart_coupon"
+                          type="text"
+                          placeholder="쿠폰 코드"
+                        />
+                        <input
+                          id="cart_coupon_btn"
+                          type="submit"
+                          value="쿠폰 적용하기"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+          <div className="cart_total">
+            <div>
+              <h4>신청할 강좌 합계</h4>
+            </div>
+            <table className="cart_table total_table">
+              <tbody>
+                <tr>
+                  <td>소계</td>
+                  <td className="total_price">284,000₩</td>
+                </tr>
+                <tr>
+                  <td>총계</td>
+                  <td className="total_price">284,000₩</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              {/* 결제페이지 이동 */}
+              <input
+                onClick={() => {
+                  navigate("/checkout");
+                }}
+                id="cart_process_btn"
+                type="button"
+                value="결제 진행하기"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
 }
 
 export default Cart;
