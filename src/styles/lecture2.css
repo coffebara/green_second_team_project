@@ -60,5 +60,6 @@
 }
 
 .lture {
-  float: left;
+  /* float: left; */
+  text-align: left;
 }

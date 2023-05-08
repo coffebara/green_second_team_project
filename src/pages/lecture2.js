@@ -8,10 +8,10 @@ function Lecture2() {
   // 컴포넌트를 export합니다.
   let [products] = useState(data); // useState를 이용해서 상태를 초기화합니다.
   return (
-    <div class="container" id="lecture-container">
+    <div className="container" id="lecture-container">
       <div className="lture">
-        <div class="row">
-          <div class="col-sm-12">
+        <div className="row">
+          <div className="col-sm-12">
             <h1 id="html-lecture">
               HTML/CSS All-in-one : 기초부터 Bootstrap, SASS, 고급 animation
               까지
@@ -23,22 +23,22 @@ function Lecture2() {
           </div>
           <div className="Card-lecture">
             <div className="Card-lecture-1">
-              <div class="col-sm-12">
+              <div className="col-sm-12">
                 <Card products={products[0]} i={1} />
               </div>
             </div>
             <div className="lecture-btn-main">
-              <div class="col-sm-12">
+              <div className="col-sm-12">
                 <input type="button" id="lecture-btn" value={"장바구니"} />
                 <p>현장강의: 130,000</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12"></div>
-        <div class="col-sm-12"></div>
-        <div class="col-sm-12"></div>
-        <div class="col-sm-12"></div>
+        <div className="col-sm-12"></div>
+        <div className="col-sm-12"></div>
+        <div className="col-sm-12"></div>
+        <div className="col-sm-12"></div>
       </div>
     </div>
   );
