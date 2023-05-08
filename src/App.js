@@ -64,7 +64,7 @@ import Checkout from "./pages/checkout.js";
 import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
-import Register from "./components/register";
+// import Register from "./components/register";
 import Lecture2 from "./pages/lecture2.js";
 import List from "./pages/List.js"  // 임시 리스트
 import Detail from "./pages/Detail.js"  // 임시 상세
@@ -88,11 +88,11 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="/reference/*" element={<Reference />} />
         <Route path="/login/*" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
-        <Route path="/darkmode" element={<Test_Darkmode/>} />
+        {/* <Route path="/darkmode" element={<Test_Darkmode/>} /> */}
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />
