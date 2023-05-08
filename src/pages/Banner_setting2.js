@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"
 
 
-export default function Banner_Center() {
+export default function Banner_setting2() {
     let navigate = useNavigate();
     return (
             <div id="container">
@@ -24,7 +24,7 @@ export default function Banner_Center() {
                                 <li>⬝ 32개의 강의</li>
                             </ul>
                         </div>
-                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/btt') }} >바로가기 →</Button>
+                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/darkmode') }} >바로가기 →</Button>
                     </div>
                 </div>
             </div>
