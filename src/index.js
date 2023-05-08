@@ -22,6 +22,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { AuthContextProvider } from "./context/AuthContext";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -29,15 +30,13 @@ import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<BrowserRouter>
-  <React.StrictMode>
-    <AuthContextProvider>
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    </AuthContextProvider>
-  </React.StrictMode>
-  </BrowserRouter>
+    <React.StrictMode>
+        <AuthContextProvider>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </Provider>
+        </AuthContextProvider>
+    </React.StrictMode>
 );

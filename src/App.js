@@ -64,7 +64,7 @@ import Checkout from "./pages/checkout.js";
 import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
-// import Register from "./components/register";
+import Register from "./Login/register/Register"
 import Lecture2 from "./pages/lecture2.js";
 import List from "./pages/List.js"  // 임시 리스트
 import Detail from "./pages/Detail.js"  // 임시 상세
