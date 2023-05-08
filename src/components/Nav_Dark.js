@@ -1,7 +1,9 @@
 import {Navbar, Container, Nav, Badge, Button } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
+import { useSelector } from 'react-redux';
 export default function Nav_Dark(){
     let navigate = useNavigate();
+    let state = useSelector((state) => state);
     return(
         <Navbar id="Nav_bg_Dark">
                 <Container>
@@ -12,7 +14,9 @@ export default function Nav_Dark(){
                         <Nav.Link onClick={() => { navigate('/reference') }} id="NavSet_Dark">레퍼런스</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/login') }} id="NavSet_Dark">로그인</Nav.Link>
                         <Nav.Link onClick={() => { navigate('/cart') }} id="NavSet_Dark">
-                        장바구니<Badge className='ms-2' bg="secondary">0</Badge></Nav.Link>
+                        장바구니<Badge className='ms-2' bg="secondary">{state.cart.length}</Badge></Nav.Link>
+                        {/* 테스트용 */}
+                        <Nav.Link onClick={() => { navigate('/list') }} id="NavSet_Dark">리스트</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

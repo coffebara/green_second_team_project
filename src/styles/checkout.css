@@ -66,6 +66,9 @@ ul,li{
 .checkout_price{
     color:#d61b1b;
 }
+.checkout_total{
+    font-weight: 900;
+}
 .cart_cancelBtn{
     display: block;
     color: #ff0000;
@@ -98,11 +101,27 @@ ul,li{
 .payment_agreement input{
     margin-right: 10px;
 }
+/* 인풋 체크 */
+.payment_method_explain{
+    display: none;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 2px;
+    /* line-height: 1.5; */
+    background-color: rgba(0,0,0,.08);
+    font-weight: normal;
+}
+.show{
+    display: block;
+}
+
 #payment_mustCheck{
     font-weight: 600;
 }
 .payment_agreement_span{
     color: #105796;
+    cursor: pointer;
 }
 #payment_btn{
     border: 2px solid #FF4949;

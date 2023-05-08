@@ -59,6 +59,7 @@ import "./styles/Sorry.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from "./pages/Banner.js";
 import Cart from "./pages/cart.js";
+import PrivacyPolicy from './pages/PrivacyPolicy.js'
 import Reference from "./pages/reference.js";
 import Checkout from "./pages/checkout.js";
 import Sorry from "./pages/Sorry";
@@ -87,9 +88,10 @@ function App() {
         <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/reference/*" element={<Reference />} />
         <Route path="/login/*" element={<Login />} />
-        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/register" element={<Register />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
