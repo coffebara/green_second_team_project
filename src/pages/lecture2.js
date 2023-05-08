@@ -2,7 +2,7 @@ import "../styles/lecture2.css";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { addItem } from "../store";
+import { addCart } from "../store";
 import { useDispatch } from "react-redux";
 
 function Lecture2(props) {
@@ -47,7 +47,7 @@ function Lecture2(props) {
                   value={"장바구니"}
                   onClick={() => {
                     dispatch(
-                      addItem({
+                      addCart({
                         id: item.id,
                         title: item.title,
                         quantity: 1,
