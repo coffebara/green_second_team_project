@@ -55,7 +55,7 @@ const store = configureStore({
         items: itemReducer,
         cart: cart.reducer,
         checkout: checkout.reducer,
-        auth: login.reducer,
+        login: login.reducer,
     },
 });
 
