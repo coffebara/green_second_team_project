@@ -168,7 +168,7 @@ function Cart() {
                             {/* 결제페이지 이동 */}
                             <input
                                 onClick={() => {
-                                    navigate("/checkout");
+                                    navigate(`${state.auth.isLogin ? '/checkout':'/login'}`);
                                     getTotalPrice();
                                 }}
                                 id="cart_process_btn"

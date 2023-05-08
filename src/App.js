@@ -95,7 +95,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
-        {/* <Route path="/darkmode" element={<Test_Darkmode/>} /> */}
+        <Route path="/darkmode" element={<Test_Darkmode/>} />
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />
         <Route path="/detail/:id" element={<Detail items={items} />} />

@@ -1,15 +1,5 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice, current } from "@reduxjs/toolkit";
 import itemReducer from "./components/Slices/itemSlice";
-
-// 카트 페이지..
-// const updateValue = (newVQuantity) => ({
-//   type: 'UPDATE_VALUE',
-//   payload: newVQuantity,
-// });
-// export const changeQuantityAction = (newQuantity, i) => ({
-//     type: "cart/updateQuantity",
-//     payload: { newQuantity, i },
-// });
 
 let cart = createSlice({
     name: "cart",
@@ -49,15 +39,28 @@ let checkout = createSlice({
     },
 });
 
+let login = createSlice({
+    name: "login",
+    initialState: { isLogin: false },
+    reducers: {
+        loginToggle (state, action) {
+            state.isLogin = action.payload;
+            console.log("기본값: " + state.isLogin + "\ 변경 값: " + action.payload);
+        }
+    },
+});
+
 const store = configureStore({
     reducer: {
         items: itemReducer,
         cart: cart.reducer,
         checkout: checkout.reducer,
+        auth: login.reducer,
     },
 });
 
 export let { addCart, removeCart, updateQuantity } = cart.actions;
 export let { getDiscount, getTotalSum } = checkout.actions;
+export let { loginToggle } = login.actions;
 
 export default store;
