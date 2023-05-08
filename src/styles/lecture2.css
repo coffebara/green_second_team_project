@@ -1,7 +1,7 @@
 #lecture-container {
   margin: 0;
   padding: 0;
-  margin: 50px 100px 50px 100px;
+  padding: 50px 100px 50px 100px;
 }
 
 #lecture-star {
@@ -48,7 +48,7 @@
 }
 
 .Card-lecture-1 {
-  padding-right: 55px;
+  padding-right: 15px;
 }
 
 .Card-lecture img {
@@ -56,7 +56,7 @@
 }
 
 .lecture-btn-main {
-  padding-left: 55px;
+  padding-left: 15px;
 }
 
 .lture {

@@ -7,6 +7,7 @@ let data = [
     price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/13f2HM.png",
+    detailImage: "https://ifh.cc/g/8kfTW7.png",
   },
   {
     id: 1,
@@ -16,6 +17,7 @@ let data = [
     price: 78000,
     quantity: 1,
     image: "https://ifh.cc/g/ssAmtL.png",
+    detailImage: "https://ifh.cc/g/TFcT2y.png",
   },
   {
     id: 2,
@@ -43,6 +45,7 @@ let data = [
     price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/GzWvjM.png",
+    detailImage: "https://ifh.cc/g/VWQaw1.png",
   },
   {
     id: 5,
