@@ -1,37 +1,12 @@
-#NavSet_Light {
-    color: black;
-}
-
-#NavSet_Light:hover {
-    color: rgb(141, 138, 138);
-}
-
-
-
-
-
-#Nav_bg_Dark{
-    background-color:  rgb(48, 47, 47);;
-}
-#NavSet_brand_Dark{
-    color: white;
-}
-
-#NavSet_Dark{
-    color: white;
-}
-#NavSet_Dark:hover{
-    color: white;
-    text-decoration: underline;
-}
-
-
-
-
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
   
  
   
-.dark-mode {
+  .dark-mode {
     background-color: #1a1919;
     color: #999;
     height: 100%;
@@ -92,10 +67,14 @@
     background-color: #999;
   }
   
+  input:focus + .slider {
+    box-shadow: 0 0 1px #999;
+  }
+  
   input:checked + .slider:before {
-    -webkit-transform: translateX(-26px);
-    -ms-transform: translateX(-26px);
-    transform: translateX(-26px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
   }
   
   /* Rounded sliders */

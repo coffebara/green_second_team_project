@@ -12,15 +12,15 @@ import Sorry from "./pages/Sorry";
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./components/register";
-import BT from "./pages/Banner_test1";
-import BTT from "./pages/Banner_test2";
 import Lecture2 from "./pages/lecture2.js";
 import List from "./pages/List.js"  // 임시 리스트
 import Detail from "./pages/Detail.js"  // 임시 상세
 import data from "./assets/data.js"
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
-import FAQ from "./pages/FAQ";
+import  DarkMode  from "./components/Darkmode.js";
+import Test_Darkmode from "./test/Test_Darkmode.js"
+
 
 function App() {
   // 디테일 페이지 용
@@ -28,6 +28,7 @@ function App() {
   
   return (
     <div className="App">
+  
       <Routes>
         <Route path="/" element={<Banner />} />
         <Route path="/class" element={<Lecture />}></Route>
@@ -40,9 +41,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
-        <Route path="/bt" element={<BT />} />
-        <Route path="/btt" element={<BTT />} />
-        <Route path="/faq" element={<FAQ />} />
+        <Route path="/darkmode" element={<Test_Darkmode/>} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />

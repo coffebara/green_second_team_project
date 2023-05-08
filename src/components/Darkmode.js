@@ -1,23 +1,18 @@
-import { Button, Navbar, Container, Nav, Badge } from "react-bootstrap";
-import Nav_Light from "../components/Nav_Light";
-import Banner_setting1 from "./Banner_setting1";
-import Banner_setting2 from "./Banner_setting2";
-import Banner_setting3 from "./Banner_setting3";
+import { Navbar, Container, Nav, Badge} from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
 import React, { useState } from 'react';
-import Dark_Icon from '../components/Dark_Icon';
-import Light_Icon from '../components/Light_Icon';
+import Dark_Icon from './Dark_Icon';
+import Light_Icon from './Light_Icon';
 
 
 
-  
-export default function Banner() {
+export default function Nav_Light() {
     let navigate = useNavigate();
     const [darkMode, setDarkMode] = useState(false);
     return (
-        <div>
- {/* 헤더 */}
- <Navbar className={darkMode ? 'light-mode' : 'dark-mode'}>
+    <div>
+        {/* 헤더 */}
+        <Navbar className={darkMode ? 'light-mode' : 'dark-mode'}>
             <Container>
                 <Navbar.Brand href="/" style={{ color: darkMode ? 'black' : 'white' }}>npm</Navbar.Brand>
                 <Nav className='justify-content-center align-items-center ' >
@@ -40,13 +35,11 @@ export default function Banner() {
             </Container>
         </Navbar>
 
-            
-        <Banner_setting1/>
-        <Banner_setting2/>
-        <Banner_setting3/>
 
-         {/* 푸터 */}
-         <div className={darkMode ? 'light-mode' : 'dark-mode'}>
+
+
+        {/* 푸터 */}
+        <div className={darkMode ? 'light-mode' : 'dark-mode'}>
         <div className="container">
             <div style={{ color: darkMode ? 'black' : 'white' }}  id="Footer_setting">
                 <div id="Footer_ul_detail_setting">
@@ -85,7 +78,6 @@ export default function Banner() {
                 </div>
             </div>
         </div>
-    </div>
-        </div>
+    </div></div>
     )
-}
+}   
