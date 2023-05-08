@@ -49,9 +49,12 @@ function Card(props) {
     <>
       <Col>
         <img src={props.products.image} />
+        <img src={props.products.detailImage} />
       </Col>
     </>
   );
 }
 
 export default Lecture2;
+// hhsshh@naver.com
+//         Ddddddd@1
