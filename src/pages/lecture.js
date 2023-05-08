@@ -7,13 +7,15 @@ import data from "../assets/data.js";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import { Routes, Route } from "react-router-dom";
+import Detail from "./lecture2";
 
 function Lecture() {
   let [products] = useState(data);
-  let navigate = useNavigate();
+  const items = data;
+
   return (
-    <>
-      <Nav />
+    (
       <div className="lecture-App">
         <div className="lecture-App-main">
           <div className="lecture-front">
@@ -36,59 +38,41 @@ function Lecture() {
               </p>
             </div>
           </div>
-          <div className="bg-opacity -25 pb-4">
-            <section className="container oberflow-hidden">
-              <div className="">
-                <div className="">
-                  <div
-                    className=""
-                    id="cursor"
-                    onClick={() => {
-                      navigate("/lecture2");
-                    }}
-                  >
-                    <div className="App-lecture">
-                      <div className="lecture">
-                        <h2 className="card-title fs-5">
-                          <Card products={products[0]} i={1} />
-                        </h2>
-                        <h2 className="card-title fs-5">
-                          <Card products={products[1]} i={2} />
-                        </h2>
-                        <h2 className="card-title fs-5">
-                          <Card products={products[2]} i={3} />
-                        </h2>
-                      </div>
-                      <div className="lecture">
-                        <h2 className="card-title fs-5">
-                          <Card products={products[3]} i={4} />
-                        </h2>
-                        <h2 className="card-title fs-5">
-                          <Card products={products[4]} i={5} />
-                        </h2>
-                        <h2 className="card-title fs-5">
-                          <Card products={products[5]} i={6} />
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <div className="App-lecture">
+            <div className="lecture">
+              <Card products={products[0]} i={1} />
+              <Card products={products[1]} i={2} />
+              <Card products={products[2]} i={3} />
+            </div>
+            <div className="lecture">
+              <Card products={products[3]} i={4} />
+              <Card products={products[4]} i={5} />
+              <Card products={products[5]} i={6} />
+            </div>
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    ),
+    (
+      <Routes>
+        <Route path="/detail/:id" element={<Detail items={items} />} />
+      </Routes>
+    )
   );
 }
 
 function Card(props) {
+  let navigate = useNavigate();
   return (
     <>
       <Col>
-        <img src={props.products.image} />
-        <h2>{props.products.title}</h2>
+        <img
+          onClick={() => {
+            navigate(`/detail/${props.products.id}`);
+          }}
+          src={props.products.image}
+        />
+        {/* <p>{props.products.title}</p> */}
       </Col>
     </>
   );
