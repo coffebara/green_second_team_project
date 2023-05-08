@@ -1,0 +1,70 @@
+
+#light {
+  background-color: white;
+  color: black;
+}
+
+#dark {
+ 
+  background-color: black;
+  color: white;
+}
+ 
+  #light .Nav_Theme {
+    background-color: black;
+  }
+  
+  #dark .Nav_Theme {
+    background-color: white;
+  }
+
+
+  #light .Nav_Toggletheme {
+    color: white;
+  }
+  
+  #dark .Nav_Toggletheme {
+    color: black;
+  }
+    
+  #light .Nav_Switch {
+    color: white;
+  }
+  
+  #dark .Nav_Switch {
+    color: black;
+  }
+
+  #light .Button_Switch {
+    color: black;
+    border:1px solid black;
+  }
+  
+  #dark .Button_Switch {
+    color: white;
+    border:1px solid white;
+  }
+
+
+
+/* //////////////// */
+
+
+     
+  #light .main2 {
+    background-color: white;
+  }
+  
+  #dark .main2 {
+    background-color: black;
+  }
+
+
+  
+  #light .sign2 {
+    color: black;
+  }
+  
+  #dark .sign2 {
+    color: white;
+  }

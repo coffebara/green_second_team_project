@@ -73,6 +73,8 @@ import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import FAQ from "./pages/FAQ";
 import Test_Darkmode from "./test/Test_Darkmode";
+import Test2_Darkmode from "./test2/Test2_ThemeDark";
+
 
 function App() {
   // 디테일 페이지 용
@@ -93,7 +95,8 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
-        {/* <Route path="/darkmode" element={<Test_Darkmode/>} /> */}
+        <Route path="/darkmode" element={<Test_Darkmode/>} />
+        <Route path="/darkmode2" element={<Test2_Darkmode/>} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />

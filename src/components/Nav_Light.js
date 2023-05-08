@@ -4,6 +4,7 @@ import Darkmode from './Darkmode';
 import React, { useState } from 'react';
 import Dark_Icon from './Dark_Icon';
 import Light_Icon from './Light_Icon';
+import ReactSwitch from "react-switch";
 
 
 
@@ -14,6 +15,7 @@ export default function Nav_Light() {
         <Navbar className={darkMode ? 'light-mode' : 'dark-mode'}>
             <Container>
                 <Navbar.Brand href="/" style={{ color: darkMode ? 'black' : 'white' }}>npm</Navbar.Brand>
+                <ReactSwitch />
                 <Nav className='justify-content-center align-items-center ' >
                     <div className='Darkmode_container'>
                         <span className='mt-3' ><Light_Icon /></span>

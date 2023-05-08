@@ -9,7 +9,7 @@ export default function Banner_setting2() {
                 <div id="Banner_bg2">
                     <div id="Banner_bg2_img" >
                         <img src={process.env.PUBLIC_URL + '/NEXTjs.png'} id="Banner_bg2_big_img_setting" width="360px" height="260px"
-                            onClick={() => { navigate('/bt') }} />
+                            onClick={() => { navigate('/darkmode2') }} />
                     </div>
                     <div id="Banner_bg2_setting">
                         <h4>NEXT.js로 웹서비스 만들기</h4>
@@ -24,7 +24,7 @@ export default function Banner_setting2() {
                                 <li>⬝ 32개의 강의</li>
                             </ul>
                         </div>
-                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/darkmode') }} >바로가기 →</Button>
+                        <Button id="Banner_bg2_button" variant="outline-dark" onClick={() => { navigate('/darkmode') }} className="Button_Switch">바로가기 →</Button>
                     </div>
                 </div>
             </div>
