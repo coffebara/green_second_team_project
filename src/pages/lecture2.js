@@ -1,60 +1,74 @@
-import { useState } from "react";
-import { Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import data from "../assets/data.js";
 import "../styles/lecture2.css";
+import { useParams } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { addCart } from "../store";
+import { useDispatch } from "react-redux";
 
-function Lecture2() {
-  // 컴포넌트를 export합니다.
-  let [products] = useState(data); // useState를 이용해서 상태를 초기화합니다.
+function Lecture2(props) {
+  let { id } = useParams();
+
+  let item = props.items.find((x) => x.id == id);
+  console.log(item);
+  let dispatch = useDispatch();
+
   return (
-    <div className="container" id="lecture-container">
+    <div class="container" id="lecture-container">
       <div className="lture">
-        <div className="row">
-          <div className="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
             <h1 id="html-lecture">
-              HTML/CSS All-in-one : 기초부터 Bootstrap, SASS, 고급 animation
-              까지
+              {item.title}
+              {/* HTML/CSS All-in-one : 기초부터 Bootstrap, SASS, 고급 animation
+              까지 */}
             </h1>
             <div id="lecture-star">
-              <li> ⭐⭐⭐⭐⭐ ( 43 리뷰 ) </li>
+              <FaStar color="yellow" />
+              <FaStar color="yellow" />
+              <FaStar color="yellow" />
+              <FaStar color="yellow" />
+              <FaStar color="yellow" />
+              {/* 별이 다섯개 */}
               <li id="blackcow">🐃 5870 수강생</li>
             </div>
           </div>
           <div className="Card-lecture">
             <div className="Card-lecture-1">
-              <div className="col-sm-12">
-                <Card products={products[0]} i={1} />
+              <div class="col-sm-12">
+                {/* <Card products={products[0]} i={1} /> */}
+                <img src={item.image} />
               </div>
             </div>
             <div className="lecture-btn-main">
-              <div className="col-sm-12">
-                <input type="button" id="lecture-btn" value={"장바구니"} />
-                <p>현장강의: 130,000</p>
+              <div class="col-sm-12">
+                <input
+                  type="button"
+                  id="lecture-btn"
+                  value={"장바구니"}
+                  onClick={() => {
+                    dispatch(
+                      addCart({
+                        id: item.id,
+                        title: item.title,
+                        quantity: 1,
+                        price: item.price,
+                      })
+                    );
+                  }}
+                />
+                <p>{item.price}원</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-sm-12"></div>
-        <div className="col-sm-12"></div>
-        <div className="col-sm-12"></div>
-        <div className="col-sm-12"></div>
+        <div class="col-sm-12"></div>
+        <div class="col-sm-12"></div>
+        <div class="col-sm-12"></div>
+        <div class="col-sm-12"></div>
       </div>
     </div>
   );
 }
-
-function Card(props) {
-  return (
-    <>
-      <Col>
-        <img src={props.products.image} />
-        <img src={props.products.detailImage} />
-      </Col>
-    </>
-  );
-}
-
 export default Lecture2;
 // hhsshh@naver.com
 //         Ddddddd@1

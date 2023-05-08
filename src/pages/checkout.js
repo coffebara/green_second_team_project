@@ -1,12 +1,30 @@
-import React, { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../styles/checkout.css";
-import data from "../assets/data.js";
-import Nav from "../components/Nav_Light.js";
-import Footer from "../components/Footer_Light.js";
+import Nav from "../components/Nav_Dark.js";
+import Footer from "../components/Footer_Dark.js";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
-    const [title, setTitle] = useState(data);
-    console.log(title);
+    const state = useSelector((state) => state)
+    const navigate = useNavigate();
+    const [selectedOption, setSelectedOption] = useState("option1")
+    const handleOptionChange = (e) => {
+        setSelectedOption(e.target.value)
+    }
+    useEffect(()=> {
+        switch(selectedOption) {
+            case "option1" : 
+            break;
+            case "option2" : 
+            break;
+            case "option3" : 
+            break;
+            case "option4" : 
+            break;
+        }
+    },[selectedOption])
+    console.log(state.checkout.totalSum);
     return (
         <div>
             <Nav />
@@ -71,22 +89,16 @@ function Checkout() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        {state.cart.map((item, idx)=> (
+                                            <tr key={state.cart[idx].id}>
+                                                <td>{state.cart[idx].title} x {state.cart[idx].quantity}</td>
+                                                <td><span className="checkout_price">{(state.cart[idx].price*state.cart[idx].quantity).toLocaleString()}₩</span></td>
+                                            </tr>
+                                        ))}
+                                        {/* <tr>
                                             <td>HTML/CSS × 1</td>
                                             <td>
                                                 <span className="checkout_price">75,000₩</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>JavaScript 입문 × 1</td>
-                                            <td>
-                                                <span className="checkout_price">78,000₩</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>JavaScript ES6 × 1</td>
-                                            <td>
-                                                <span className="checkout_price">56,000₩</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -94,7 +106,7 @@ function Checkout() {
                                             <td>
                                                 <span className="checkout_price">75,000₩</span>
                                             </td>
-                                        </tr>
+                                        </tr> */}
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -102,15 +114,25 @@ function Checkout() {
                                                 <strong>소계</strong>
                                             </td>
                                             <td>
-                                                <span className="checkout_price">284,000₩</span>
+                                                <span className="checkout_price checkout_total">{state.checkout.subTotal.toLocaleString()}₩</span>
                                             </td>
                                         </tr>
+                                        {state.checkout.discount !== 1 ? (
+                                            <tr>
+                                                <td>
+                                                    <strong>할인</strong>
+                                                </td>
+                                                <td>
+                                                    <span className="checkout_price checkout_total">-{(state.checkout.subTotal*(1-state.checkout.discount)).toLocaleString()}₩</span>
+                                                </td>
+                                            </tr>
+                                        ):null}
                                         <tr>
                                             <td>
                                                 <strong>총계</strong>
                                             </td>
                                             <td>
-                                                <span className="checkout_price">284,000₩</span>
+                                                <span className="checkout_price checkout_total">{(state.checkout.subTotal*state.checkout.discount).toLocaleString()}₩</span>
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -119,25 +141,29 @@ function Checkout() {
                                     <div className="payment_method">
                                         <ul>
                                             <li>
-                                                <input type="radio" name="checkout_payment" id="checkout_atm" />
-                                                <label for="checkout_atm">무통장입금</label>
+                                                <input onChange={handleOptionChange}  checked={selectedOption === 'option1'} value="option1" type="radio" name="checkout_payment" id="checkout_atm" />
+                                                <label htmlFor="checkout_atm">무통장입금</label>
+                                                <div className={`payment_method_explain ${selectedOption === 'option1'? 'show':""}`}><p>상단에 입금하시는 분 성함을 입력해주세요! 입금확인까지 평일은 영업시간내 10분~20분 정도 소요됩니다.</p></div>
                                             </li>
                                             <li>
-                                                <input type="radio" name="checkout_payment" id="checkout_acountAtm" />
-                                                <label for="checkout_acountAtm">무통장입금 (가상계좌생성)</label>
+                                                <input onChange={handleOptionChange}  checked={selectedOption === 'option2'} value="option2" type="radio" name="checkout_payment" id="checkout_acountAtm" />
+                                                <label htmlFor="checkout_acountAtm">무통장입금 (가상계좌생성)</label>
+                                                <div className={`payment_method_explain ${selectedOption === 'option2'? 'show':"" }`}><p>가상계좌로 입금하실 수 있습니다. (10분 내 자동 입금확인)</p></div>
                                             </li>
                                             <li>
-                                                <input type="radio" name="checkout_payment" id="checkout_credit" />
-                                                <label for="checkout_credit">신용카드 결제</label>
+                                                <input onChange={handleOptionChange}  checked={selectedOption === 'option3'} value="option3" type="radio" name="checkout_payment" id="checkout_credit" />
+                                                <label htmlFor="checkout_credit">신용카드 결제</label>
+                                                <div className={`payment_method_explain ${selectedOption === 'option3'? 'show':"" }`}><p>신용/체크카드로 결제하실 수 있습니다.</p></div>
                                             </li>
                                             <li>
-                                                <input type="radio" name="checkout_payment" id="checkout_rtAcount" />
-                                                <label for="checkout_rtAcount">실시간계좌 이체</label>
+                                                <input onChange={handleOptionChange}  checked={selectedOption === 'option4'} value="option4" type="radio" name="checkout_payment" id="checkout_rtAcount" />
+                                                <label htmlFor="checkout_rtAcount">실시간계좌 이체</label>
+                                                <div className={`payment_method_explain ${selectedOption === 'option4'? 'show': ""}`}><p>실시간계좌이체로 결제하실 수 있습니다.</p></div>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="payment_agreement">
-                                        <div><p>입력하신 개인정보는 사이트내에서 이용할 예정이며 <span className="payment_agreement_span">개인정보 보호정책</span>을(를) 준수하고 있습니다.</p></div>
+                                        <div><p>입력하신 개인정보는 사이트내에서 이용할 예정이며 <span className="payment_agreement_span" onClick={()=> navigate('/privacy-policy')}>개인정보 보호정책</span>을(를) 준수하고 있습니다.</p></div>
                                         <p id="payment_mustCheck"><input type="checkbox" />
                                         본인은 웹사이트 <span className="payment_agreement_span">이용 약관</span>을(를) 읽었으며 이에 동의합니다. </p> 
                                     <input id="payment_btn" type="button" value="결제하기"/>

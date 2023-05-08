@@ -1,5 +1,6 @@
 import {Navbar, Container, Nav, Badge, Button } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
+import { useSelector } from 'react-redux';
 export default function Nav_Dark(){
     let navigate = useNavigate();
     return(<div className='main1'>

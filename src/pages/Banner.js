@@ -36,6 +36,8 @@ export default function Banner() {
                     <Nav.Link onClick={() => { navigate('/login') }} style={{ color: darkMode ? 'black' : 'white' }}>로그인</Nav.Link>
                     <Nav.Link onClick={() => { navigate('/cart') }} style={{ color: darkMode ? 'black' : 'white' }}>
                         장바구니<Badge className='ms-2' bg="secondary">0</Badge></Nav.Link>
+                        {/* 테스트용 */}
+                        <Nav.Link onClick={() => { navigate('/list') }} id="NavSet_Dark">리스트</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
