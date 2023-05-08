@@ -89,7 +89,7 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="/reference/*" element={<Reference />} />
         <Route path="/login/*" element={<Login />} />
-        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/register" element={<Register />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
