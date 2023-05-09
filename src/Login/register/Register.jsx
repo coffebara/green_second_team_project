@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import { AuthContext } from "../../context/AuthContext";
 import Nav_Light from "../../components/Nav_Light";
+import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 
 const Register = () => {
   const { dispatch } = useContext(AuthContext);
@@ -55,7 +56,7 @@ const Register = () => {
       name: "confirmPassword",
       type: "text",
       placeholder: "Confirm Password",
-      errorMessage: "Passwords don't match",
+      errorMessage: "입력하신 비밀번호와 같지 않습니다",
       pattern: inputValues.password,
       required: true,
     },
@@ -106,6 +107,7 @@ const Register = () => {
       <Nav_Light />
       <div className="register">
         <form>
+          <LockOutlinedIcon />
           <h2>Register</h2>
           {inputs.map((input) => (
             <FormInput

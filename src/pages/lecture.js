@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "../styles/lecture.css";
 import Nav_Dark from "../components/Nav_Dark";
 import Footer from "../components/Footer";

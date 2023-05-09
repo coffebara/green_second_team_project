@@ -9,6 +9,7 @@ import {
 import { auth, provider } from "../../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../../context/AuthContext";
+import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -66,6 +67,7 @@ const Login = () => {
   return (
     <div className="login">
       <form>
+        <LockOutlinedIcon />
         <h2>Login</h2>
         <div className="formInput">
           <input
@@ -103,8 +105,17 @@ const Login = () => {
           >
             {" "}
             SignUp
-          </Link>
+          </Link>{" "}
         </div>
+        <span>비밀번호 찾기 </span>
+        <Link
+          to="/forget"
+          className="formSignup"
+          style={{ textDecoration: "none" }}
+        >
+          {" "}
+          Search
+        </Link>
 
         <div className="line"></div>
         <div className="media-options">

@@ -5,11 +5,29 @@ import "../styles/cart.css";
 import Nav from "../components/Nav_Dark.js";
 import Footer from "../components/Footer.js";
 import { updateQuantity, removeCart, getDiscount, getTotalSum } from "../store";
+import {Button, Modal} from "react-bootstrap";
+
+function CartModal(props) {
+    let navigate = useNavigate();
+    return (
+        <Modal {...props} backdrop="static" size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
+            <Modal.Body>
+                <h4>로그인이 필요합니다.</h4>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button className="cart_redBtn" onClick={()=>navigate("/login",{ 
+                    state: {
+                        prevPage: "/checkout"}})}>로그인 하기</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+}
 
 function Cart() {
     let navigate = useNavigate();
     let dispatch = useDispatch();
     let state = useSelector((state) => state);
+    const [modalShow, setModalShow] = useState(false);
     const [totalSum, setTotalSum] = useState(0);
     const [couponCode, setCouponCode] = useState("");
     const [couponAlert, setCouponAlert] = useState(true);
@@ -69,8 +87,9 @@ function Cart() {
                 </div>
             </section>
 
+            <CartModal show={modalShow} />
             {/* 깜짝 쿠폰 */}
-            {couponAlert == true ? (
+            {couponAlert === true ? (
                 <div onClick={() => alert("쿠폰 코드: a")} className="alert alert-warning">
                     ※※ 깜짝 쿠폰 ※※
                     <br /> 2초 내 클릭 시 쿠폰 코드 지급
@@ -142,7 +161,7 @@ function Cart() {
                     </div>
                     <div className="cart_total">
                         <div>
-                            <h4>신청할 강좌 합계</h4>
+                            <h4 onClick={()=>setModalShow(true)}>신청할 강좌 합계</h4>
                         </div>
                         <table className="cart_table total_table">
                             <tbody>
@@ -168,7 +187,7 @@ function Cart() {
                             {/* 결제페이지 이동 */}
                             <input
                                 onClick={() => {
-                                    navigate(`${state.login.isLogin ? '/checkout':'/login'}`);
+                                    {state.login.isLogin? navigate('/checkout') : setModalShow(true)}
                                     getTotalPrice();
                                 }}
                                 id="cart_process_btn"

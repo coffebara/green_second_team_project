@@ -75,8 +75,7 @@ import SignUp from "./components/SignUp";
 
 
 import Test2_Darkmode from "./test2/Test2_ThemeDark";
-import Test2_Darkmode2 from "./test2/Test2_ThemeDark2";
-
+import Forget from "./components/forget";
 import Detail1 from "./pages/lecture2";
 
 function App() {
@@ -96,9 +95,10 @@ function App() {
         <Route path="/login/*" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-
-        <Route path="/darkmode" element={<Test2_Darkmode2/>} />
+        <Route path="/sorry" element={<Sorry />} />
+        <Route path="/darkmode" element={<Test_Darkmode/>} />
         <Route path="/darkmode2" element={<Test2_Darkmode/>} />
 
         {/* 임시 리스트 */}
