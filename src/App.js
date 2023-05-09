@@ -98,8 +98,6 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-        <Route path="/sorry" element={<Sorry />} />
-        <Route path="/darkmode" element={<Test_Darkmode/>} />
         <Route path="/darkmode2" element={<Test2_Darkmode/>} />
 
         {/* 임시 리스트 */}
