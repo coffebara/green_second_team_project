@@ -62,7 +62,7 @@ import Cart from "./pages/cart.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy.js";
 import Reference from "./pages/reference.js";
 import Checkout from "./pages/checkout.js";
-import Sorry from "./pages/Sorry";
+
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./Login/register/Register";
@@ -73,10 +73,10 @@ import Board from "./pages/Board"
 import data from "./assets/data.js";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
-import FAQ from "./pages/FAQ";
-import Test_Darkmode from "./test/Test_Darkmode";
-import Test2_Darkmode from "./test2/Test2_ThemeDark";
 
+
+import Test2_Darkmode from "./test2/Test2_ThemeDark";
+import Forget from "./components/forget";
 import Detail1 from "./pages/lecture2";
 
 function App() {
@@ -96,6 +96,7 @@ function App() {
         <Route path="/login/*" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/sorry" element={<Sorry />} />
         <Route path="/darkmode" element={<Test_Darkmode/>} />

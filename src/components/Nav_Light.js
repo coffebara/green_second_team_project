@@ -17,7 +17,7 @@ export default function Nav_Light() {
         <Navbar className={darkMode ? 'light-mode' : 'dark-mode'}>
             <Container>
                 <Navbar.Brand href="/" style={{ color: darkMode ? 'black' : 'white' }}>npm</Navbar.Brand>
-                <ReactSwitch />
+             
                 <Nav className='justify-content-center align-items-center ' >
                     <div className='Darkmode_container'>
                         <span className='mt-3' ><Light_Icon /></span>

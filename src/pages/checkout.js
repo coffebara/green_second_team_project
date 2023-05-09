@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "../styles/checkout.css";
 import Nav from "../components/Nav_Dark.js";
-import Footer from "../components/Footer_Dark.js";
+import Footer from "../components/Footer.js";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 

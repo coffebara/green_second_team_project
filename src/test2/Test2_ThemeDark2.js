@@ -16,8 +16,6 @@ import Test_Lecture from './Test_lecture';
 
 import Test_Reference from './Test_reference';
 import Test_Cart from './Test_cart';
-import Test_Login from './Test_Login';
-import Test_Register from './Test_Register';
 
 
 
@@ -27,7 +25,7 @@ import Test_Register from './Test_Register';
 
 export const ThemeContext = createContext(null);
 
-export default function Test_ThemeDark() {
+export default function Test_ThemeDark2() {
 
   let navigate = useNavigate();
 
@@ -63,7 +61,8 @@ export default function Test_ThemeDark() {
           </Navbar>
         </div>
 
-<Test_Lecture/>
+
+     <Test_Cart/>
 
         <Footer/>
         

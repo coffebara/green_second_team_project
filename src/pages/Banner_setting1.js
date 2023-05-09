@@ -13,7 +13,9 @@ export default function Banner_setting1() {
                 <div id="Banner_bg1_center2">코딩을 진짜로 만들어볼까요?<br />
                     실제 서비스를 따라 만들면서 코딩을 배우세요</div>
                 <Button id="Banner_bg1_button" variant="outline-secondary" onClick={() => { navigate('/class') }} className="Button_Switch">시작하기 →</Button>
+            
             </div>
+            
         </div>
     )
 }

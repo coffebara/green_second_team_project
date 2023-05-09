@@ -1,19 +1,15 @@
-/* eslint-disable */
-import "../styles/lecture.css";
-import Nav_Dark from "../components/Nav_Dark";
-import Footer from "../components/Footer";
+import "./Test_lecture.css";
 import { useState } from "react";
 import data from "../assets/data.js";
 import { useNavigate } from "react-router-dom";
 import { Col } from "react-bootstrap";
-import Nav from "../components/Nav_Light";
 
-function Lecture() {
+function Test_Lecture() {
   let [products] = useState(data);
 
   return (
     <>
-      <Nav />
+   
       <div className="lecture-App">
         <div className="lecture-App-main">
           <div className="lecture-front">
@@ -50,7 +46,7 @@ function Lecture() {
           </div>
         </div>
       </div>
-      <Footer />
+
     </>
   );
 }
@@ -72,4 +68,4 @@ function Card(props) {
   );
 }
 
-export default Lecture;
+export default Test_Lecture;

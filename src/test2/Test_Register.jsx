@@ -1,19 +1,18 @@
 import React, { useContext, useState } from "react";
-import FormInput from "../../components/formInput/FormInput";
+import FormInput from "../components/formInput/FormInput";
 import { Link, useNavigate } from "react-router-dom";
-import "./register.scss";
+import "./Test_register.scss";
 import { FacebookRounded } from "@mui/icons-material";
-import { auth, provider } from "../../firebase";
+import { auth, provider } from "../firebase";
 import {
   updateProfile,
   createUserWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import { AuthContext } from "../../context/AuthContext";
-import Nav_Light from "../../components/Nav_Light";
-import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
+import { AuthContext } from "../context/AuthContext";
 
-const Register = () => {
+
+export default function Test_Register (){
   const { dispatch } = useContext(AuthContext);
   const [inputValues, setInputValues] = useState({
     username: "",
@@ -56,7 +55,7 @@ const Register = () => {
       name: "confirmPassword",
       type: "text",
       placeholder: "Confirm Password",
-      errorMessage: "입력하신 비밀번호와 같지 않습니다",
+      errorMessage: "Passwords don't match",
       pattern: inputValues.password,
       required: true,
     },
@@ -104,20 +103,19 @@ const Register = () => {
 
   return (
     <div>
-      <Nav_Light />
+     
       <div className="register">
-        <form>
-          <LockOutlinedIcon />
-          <h2>Register</h2>
+        <form className="Register_form">
+          <h2 className="Register_text">Register</h2>
           {inputs.map((input) => (
-            <FormInput
+            <FormInput className="Register_input"
               key={input.id}
               {...input}
               value={inputValues[input.name]}
               onChange={handleChange}
             />
           ))}
-          <button type="submit" onClick={handleRegister}>
+          <button className="Register_button" type="submit" onClick={handleRegister}>
             Register
           </button>
 
@@ -161,4 +159,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+
