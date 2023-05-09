@@ -11,6 +11,7 @@ let login = createSlice({
     logoutToggle(state) {
       state.isLogin = false;
       console.log("로그아웃됨");
+      console.log("기본값: " + state.isLogin);
     },
   },
 });
