@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import "../styles/cart.css";
+import "./Test_cart.css";
 import Nav from "../components/Nav_Dark.js";
 import Footer from "../components/Footer.js";
 import { updateQuantity, removeCart, getDiscount, getTotalSum } from "../store";
 
-function Cart() {
+export default function Test_Cart() {
     let navigate = useNavigate();
     let dispatch = useDispatch();
     let state = useSelector((state) => state);
@@ -60,7 +60,7 @@ function Cart() {
 
     return (
         <div>
-            <Nav />
+       
             <section id="cart_title">
                 <div className="cart_container">
                     신청하기
@@ -146,19 +146,19 @@ function Cart() {
                         </div>
                         <table className="cart_table total_table">
                             <tbody>
-                                <tr>
+                                <tr className="Cart_table_form">
                                     <td>소계</td>
                                     <td style={state.checkout.discount !== 1 ? { textDecoration: "line-through" } : null} className="total_price">
                                         {totalSum.toLocaleString()}₩
                                     </td>
                                 </tr>
                                 {state.checkout.discount !== 1 ? (
-                                    <tr>
+                                    <tr className="Cart_table_form">
                                         <td>쿠폰 할인 (20%)</td>
                                         <td className="coupon_discount">-{(totalSum * (1 - state.checkout.discount)).toLocaleString()}₩</td>
                                     </tr>
                                 ) : null}
-                                <tr>
+                                <tr className="Cart_table_form">
                                     <td>총계</td>
                                     <td className="total_price">{(totalSum * state.checkout.discount).toLocaleString()}₩</td>
                                 </tr>
@@ -179,12 +179,12 @@ function Cart() {
                     </div>
                 </div>
             </section>
-            <Footer />
+         
         </div>
     );
 }
 
-export default Cart;
+
 
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom"

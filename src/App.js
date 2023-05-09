@@ -62,7 +62,7 @@ import Cart from "./pages/cart.js";
 import PrivacyPolicy from "./pages/PrivacyPolicy.js";
 import Reference from "./pages/reference.js";
 import Checkout from "./pages/checkout.js";
-import Sorry from "./pages/Sorry";
+
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
 import Register from "./Login/register/Register";
@@ -72,9 +72,10 @@ import Detail from "./pages/Detail.js"; // 임시 상세
 import data from "./assets/data.js";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
-import FAQ from "./pages/FAQ";
-import Test_Darkmode from "./test/Test_Darkmode";
+
+
 import Test2_Darkmode from "./test2/Test2_ThemeDark";
+import Test2_Darkmode2 from "./test2/Test2_ThemeDark2";
 
 import Detail1 from "./pages/lecture2";
 
@@ -96,8 +97,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-        <Route path="/sorry" element={<Sorry />} />
-        <Route path="/darkmode" element={<Test_Darkmode/>} />
+
+        <Route path="/darkmode" element={<Test2_Darkmode2/>} />
         <Route path="/darkmode2" element={<Test2_Darkmode/>} />
 
         {/* 임시 리스트 */}

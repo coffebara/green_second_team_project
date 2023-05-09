@@ -5,26 +5,28 @@
 }
 
 #dark {
- 
+
   background-color: black;
   color: white;
 }
  
   #light .Nav_Theme {
-    background-color: black;
+    background-color: white;
+    border-top: 1px solid rgb(223, 221, 221);
+    border-bottom: 1px solid rgb(223, 221, 221)
   }
   
   #dark .Nav_Theme {
-    background-color: white;
+    background-color: rgb(51, 50, 50);
   }
 
 
   #light .Nav_Toggletheme {
-    color: white;
+    color: black;
   }
   
   #dark .Nav_Toggletheme {
-    color: black;
+    color: white;
   }
     
   #light .Nav_Switch {
@@ -46,25 +48,32 @@
   }
 
 
+/* 아래것 복붙하면 됨 */
 
-/* //////////////// */
 
-
-     
-  #light .main2 {
+  #light .Text_Theme {
     background-color: white;
   }
   
-  #dark .main2 {
+  #dark .Text_Theme {
     background-color: black;
   }
 
 
-  
-  #light .sign2 {
+  #light .Text_Toggletheme {
     color: black;
   }
   
-  #dark .sign2 {
+  #dark .Text_Toggletheme {
     color: white;
+  }
+
+  
+  #light .Border_Toggletheme {
+    border: 1px solid rgb(216, 213, 213);
+  }
+  
+  #dark .Border_Toggletheme {
+
+    border: 1px solid rgb(49, 48, 48);
   }

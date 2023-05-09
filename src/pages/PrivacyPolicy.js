@@ -1,4 +1,4 @@
-import Footer from "../components/Footer_Dark";
+import Footer from "../components/Footer";
 import Nav from "../components/Nav_Dark";
 import "../styles/privacyPolicy.css";
 
