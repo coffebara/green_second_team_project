@@ -5,9 +5,12 @@ let data = [
     content:
       "표준 HTML부터 flex/grid 모던 레이아웃, Bootstrap, Sass, CSS 애니메이션 등 웹페이지 디자인과 퍼블리싱에 필요한 모든 내용을 배우실 수 있습니다. 최근 스타트업, 대기업 등에서 적극…",
     price: 75000,
+    price1: 130000,
     quantity: 1,
     image: "https://ifh.cc/g/13f2HM.png",
     detailImage: "https://ifh.cc/g/8kfTW7.png",
+    pztext: "없음",
+    image1: "https://ifh.cc/g/ssAmtL.png",
   },
   {
     id: 1,
@@ -18,6 +21,8 @@ let data = [
     quantity: 1,
     image: "https://ifh.cc/g/ssAmtL.png",
     detailImage: "https://ifh.cc/g/TFcT2y.png",
+    pztext: "- HTML/CSS 기초 지식이 필요합니다.",
+    image1: "https://ifh.cc/g/Snlkd5.png",
   },
   {
     id: 2,
@@ -27,6 +32,10 @@ let data = [
     price: 56000,
     quantity: 1,
     image: "https://ifh.cc/g/Snlkd5.png",
+    detailImage: "https://ifh.cc/g/vHhFSQ.jpg",
+    pztext:
+      "- HTML/CSS 기초 JavaScript 기초 (var, function, if, for 반복문, Array와 Object에 자료 저장하고 수정하는 법, forEach 함수)",
+    image1: "https://ifh.cc/g/MLthrr.png",
   },
   {
     id: 3,
@@ -36,6 +45,10 @@ let data = [
     price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/MLthrr.png",
+    detailImage: "https://ifh.cc/g/yjytct.jpg",
+    pztext:
+      "- HTML/CSS 기초 JavaScript 기초 (var let const, function, if else, for, [], {} 자료 다루기)",
+    image1: "https://ifh.cc/g/GzWvjM.png",
   },
   {
     id: 4,
@@ -46,6 +59,9 @@ let data = [
     quantity: 1,
     image: "https://ifh.cc/g/GzWvjM.png",
     detailImage: "https://ifh.cc/g/VWQaw1.png",
+    pztext:
+      "- HTML/CSS 기초 JavaScript 또는 다른 프로그래밍 언어 기초 (var let const, function, if else, for, Array와 Object 자료형, class는 몰라도 됩니다)",
+    image1: "https://ifh.cc/g/krLoqY.png",
   },
   {
     id: 5,
@@ -55,6 +71,10 @@ let data = [
     price: 75000,
     quantity: 1,
     image: "https://ifh.cc/g/krLoqY.png",
+    detailImage: "https://ifh.cc/g/YqrSTT.png",
+    pztext:
+      "- HTML/CSS 기초 자바스크립트 기초 (var, if, function, for, array, object)",
+    image1: "https://ifh.cc/g/13f2HM.png",
   },
 ];
 export default data;
