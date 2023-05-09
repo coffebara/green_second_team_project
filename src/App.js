@@ -69,6 +69,7 @@ import Register from "./Login/register/Register";
 import Lecture2 from "./pages/lecture2.js";
 import List from "./pages/List.js"; // 임시 리스트
 import Detail from "./pages/Detail.js"; // 임시 상세
+import Board from "./pages/Board"
 import data from "./assets/data.js";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
@@ -104,6 +105,7 @@ function App() {
         <Route path="/list" element={<List />} />
         <Route path="/detail/:id" element={<Detail items={items} />} />
         <Route path="/lecture2/:id" element={<Detail1 items={items} />} />
+        <Route path="/board/" element={<Board />} />
       </Routes>
     </div>
   );
