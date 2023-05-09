@@ -16,11 +16,11 @@ function Lecture() {
       <Nav />
       <div className="lecture-App">
         <div className="lecture-App-main">
-          <div className="lte">
-            <img src="https:ifh.cc/g/6AW38r.png" width="800px" />
-          </div>
           <div className="lecture-front">
             <h1>Front End</h1>
+          </div>
+          <div className="lte">
+            <img src="https:ifh.cc/g/6AW38r.png" width="800px" />
           </div>
           <div className="lecture-mlyon">
             <div className="lecture-varil">

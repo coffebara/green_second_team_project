@@ -1,6 +1,6 @@
 /* eslint-disable */
 import "../styles/lecture2.css";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { addCart } from "../store";
@@ -14,6 +14,12 @@ function Lecture2(props) {
   let item = props.items.find((x) => x.id == id);
   console.log(item);
   let dispatch = useDispatch();
+
+  const [count, setCount] = useState(1);
+
+  function incrementCount() {
+    setCount(count + 1);
+  }
 
   return (
     <>
@@ -77,7 +83,9 @@ function Lecture2(props) {
                   </div>
                   <div className="doyou-lect">
                     <h3>이런 강의는 어떠세요 ?</h3>
-                    <img src={item.image1} />
+                    <Link to={`/lecture2/${count}`}>
+                      <img src={item.image1} onClick={incrementCount} />
+                    </Link>
                   </div>
                 </div>
               </div>
