@@ -5,8 +5,6 @@ import Banner_setting2 from "./Banner_setting2";
 import Banner_setting3 from "./Banner_setting3";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import Dark_Icon from "../components/Dark_Icon";
-import Light_Icon from "../components/Light_Icon";
 // import { useDispatch } from "react-redux";
 // import { loginToggle, logoutToggle } from "../components/Slices/loginSlice";
 
@@ -28,7 +26,6 @@ export default function Banner() {
           <Nav className="justify-content-center align-items-center ">
             <div className="Darkmode_container">
               <span className="mt-3">
-                <Light_Icon />
               </span>
               <div className="switch-checkbox">
                 <label className="switch mt-1">
@@ -41,7 +38,6 @@ export default function Banner() {
                 </label>
               </div>
               <span className="mt-3">
-                <Dark_Icon />
               </span>
             </div>
             <Nav.Link

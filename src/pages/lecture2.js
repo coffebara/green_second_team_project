@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import { addCart } from "../store";
 import { useDispatch } from "react-redux";
 import Nav from "../components/Nav_Light";
-import Footer from "../components/Footer_Light";
 import { FaSignal } from "react-icons/fa";
 
 function Lecture2(props) {

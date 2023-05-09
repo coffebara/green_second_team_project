@@ -1,9 +1,6 @@
 import { Navbar, Container, Nav, Badge, Button } from 'react-bootstrap'
 import { useNavigate } from "react-router-dom"
-import Darkmode from './Darkmode';
 import React, { useState } from 'react';
-import Dark_Icon from './Dark_Icon';
-import Light_Icon from './Light_Icon';
 import ReactSwitch from "react-switch";
 import { useSelector } from 'react-redux';
 
@@ -19,16 +16,7 @@ export default function Nav_Light() {
                 <Navbar.Brand href="/" style={{ color: darkMode ? 'black' : 'white' }}>npm</Navbar.Brand>
              
                 <Nav className='justify-content-center align-items-center ' >
-                    <div className='Darkmode_container'>
-                        <span className='mt-3' ><Light_Icon /></span>
-                        <div className='switch-checkbox'>
-                            <label className='switch mt-1'>
-                                <input type='checkbox' checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
-                                <span className='slider round'></span>
-                            </label>
-                        </div>
-                        <span className='mt-3'  ><Dark_Icon /></span>
-                    </div>
+                    
                     <Nav.Link onClick={() => { navigate('/class') }} style={{ color: darkMode ? 'black' : 'white' }}>강의</Nav.Link>
                     <Nav.Link onClick={() => { navigate('/reference') }} style={{ color: darkMode ? 'black' : 'white' }}>레퍼런스</Nav.Link>
                     <Nav.Link onClick={() => { navigate('/login') }} style={{ color: darkMode ? 'black' : 'white' }}>로그인</Nav.Link>
