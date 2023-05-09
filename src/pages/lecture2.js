@@ -18,7 +18,8 @@ function Lecture2(props) {
   const [count, setCount] = useState(1);
 
   function incrementCount() {
-    setCount(count + 1);
+    const newCount = count >= 5 ? 0 : count + 1;
+    setCount(newCount);
   }
 
   return (
