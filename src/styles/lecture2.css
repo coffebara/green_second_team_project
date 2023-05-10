@@ -70,10 +70,21 @@
   height: 639.67px;
 }
 
-.lecture-btn-main {
+#light .lecture-btn-main {
   padding: 20px 20px 0px 20px;
   border: solid 1px #d2d2d7;
   background-color: #fafafa;
+  height: 250px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+#dark .lecture-btn-main {
+  padding: 20px 20px 0px 20px;
+  border: solid 1px #d2d2d7;
+  background-color: #1d1d1fe6;
+  border-radius: 8px;
   height: 250px;
   font-size: 14px;
   font-weight: bold;
@@ -103,9 +114,19 @@
   margin-left: 215px;
 }
 
-.home-lecture {
+#light .home-lecture {
   border: solid 1px #d2d2d7;
   background-color: #fafafa;
+  border-radius: 5px;
+  margin: 10px 0px 10px 0px;
+  height: 70px;
+  width: 1030px;
+  text-align: left;
+}
+
+#dark .home-lecture {
+  border: solid 1px #d2d2d7;
+  background-color: #1d1d1fe6;
   border-radius: 5px;
   margin: 10px 0px 10px 0px;
   height: 70px;
