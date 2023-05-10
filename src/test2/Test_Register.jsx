@@ -10,9 +10,9 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { AuthContext } from "../context/AuthContext";
+import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 
-
-export default function Test_Register (){
+export default function Test_Register() {
   const { dispatch } = useContext(AuthContext);
   const [inputValues, setInputValues] = useState({
     username: "",
@@ -55,7 +55,7 @@ export default function Test_Register (){
       name: "confirmPassword",
       type: "text",
       placeholder: "Confirm Password",
-      errorMessage: "Passwords don't match",
+      errorMessage: "입력하신 비밀번호와 같지 않습니다",
       pattern: inputValues.password,
       required: true,
     },
@@ -103,19 +103,24 @@ export default function Test_Register (){
 
   return (
     <div>
-     
       <div className="register">
         <form className="Register_form">
+          <LockOutlinedIcon />
           <h2 className="Register_text">Register</h2>
           {inputs.map((input) => (
-            <FormInput className="Register_input"
+            <FormInput
+              className="Register_input"
               key={input.id}
               {...input}
               value={inputValues[input.name]}
               onChange={handleChange}
             />
           ))}
-          <button className="Register_button" type="submit" onClick={handleRegister}>
+          <button
+            className="Register_button"
+            type="submit"
+            onClick={handleRegister}
+          >
             Register
           </button>
 
@@ -157,6 +162,4 @@ export default function Test_Register (){
       </div>
     </div>
   );
-};
-
-
+}
