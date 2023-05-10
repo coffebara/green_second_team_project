@@ -61,7 +61,7 @@ import Banner from "./pages/Banner.js";
 import CartPage from "./pages/CartPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy.js";
 import Reference from "./pages/reference.js";
-import Checkout from "./pages/checkout.js";
+import CheckoutPage from "./pages/CheckoutPage.js";
 
 import Lecture from "./pages/lecture.js";
 import Login from "./pages/login";
@@ -90,7 +90,7 @@ function App() {
         <Route path="/class" element={<Lecture />}></Route>
         <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<CartPage />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="checkout" element={<CheckoutPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/reference/*" element={<Reference />} />
         <Route path="/login/*" element={<Login />} />

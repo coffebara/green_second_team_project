@@ -119,7 +119,7 @@ function Cart() {
                                         className="cart_redBtn"
                                         type="button"
                                         onClick={() => {
-                                            navigate("/list");
+                                            navigate("/class");
                                         }}
                                         value="상점으로 돌아가기"
                                     />
@@ -176,7 +176,7 @@ function Cart() {
                             <table className="cart_table total_table">
                                 <tbody>
                                     <tr className="Cart_table_form">
-                                        <td>소계</td>
+                                        <td >소계</td>
                                         <td style={state.checkout.discount !== 1 ? { textDecoration: "line-through" } : null} className="total_price">
                                             {totalSum.toLocaleString()}₩
                                         </td>
@@ -187,7 +187,7 @@ function Cart() {
                                             <td className="coupon_discount">-{(totalSum * (1 - state.checkout.discount)).toLocaleString()}₩</td>
                                         </tr>
                                     ) : null}
-                                    <tr className="Cart_table_form">
+                                    <tr className="Cart_table_form cart_total_price_border">
                                         <td>총계</td>
                                         <td className="total_price">{(totalSum * state.checkout.discount).toLocaleString()}₩</td>
                                     </tr>

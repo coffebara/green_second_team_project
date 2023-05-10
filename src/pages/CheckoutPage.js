@@ -5,8 +5,8 @@ import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Cart from "../components/Cart";
 import Footer from "../components/Footer";
+import Checkout from '../components/Checkout';
 
 export const ThemeContext = createContext(null);
 
@@ -70,7 +70,7 @@ export default function CartPage() {
                     </Navbar>
                 </div>
 
-                <Cart />
+                <Checkout />
 
                 <Footer />
             </div>

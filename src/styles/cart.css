@@ -100,7 +100,7 @@ body {
     cursor: pointer;
 }
 /* 왼쪽 리스트 테이블 */
-.cart_table {
+.cart_table{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -141,7 +141,7 @@ body {
     padding: 5px;
     margin-right: 10px;
 }
-#cart_coupon_btn {
+#light #cart_coupon_btn {
     border: 1px solid #ff4949;
     background-color: white;
     color: #ff4949;
@@ -154,52 +154,81 @@ body {
     cursor: pointer;
     transition: 0.1s;
 }
-#cart_coupon_btn:hover {
+#dark #cart_coupon_btn {
+    border: 1px solid white;
+    background-color: #ff4949;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px;
+    width: 120px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#light #cart_coupon_btn:hover {
     background-color: #ff4949;
     color: white;
 }
+#dark #cart_coupon_btn:hover {
+    background-color: white;
+    color: #ff4949;
+}
 
-.cart_table td {
+#light .cart_table td {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+}
+#dark .cart_table td {
+    border-top: 1px solid white;
     padding: 15px 0;
 }
 #cart_btn {
     border-bottom: 0;
 }
 /* 오른쪽 토탈 */
-.cart_total {
+#light .cart_total {
     grid-area: right;
     border: 1px solid rgba(0, 0, 0, 0.08);
     margin-top: 10px;
     padding: 30px 30px;
     min-height: 280px;
-    /* transition: height 0.2s ease-in-out */
+}
+#dark .cart_total {
+    grid-area: right;
+    border: 1px solid white;
+    margin-top: 10px;
+    padding: 30px 30px;
+    min-height: 280px;
 }
 .cart_total h4 {
     text-align-last: left;
     /* margin-top: 20px; */
 }
-#dark .Cart_table_form td{
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    
-    }
+.cart_total_price_border td{
+    border-top: 1px solid #000;
+}
 
 .total_price {
     text-align: right;
     color: #d61b1b;
 }
+
+.total_table{
+    border: 0;
+}
+
+
+
 /* 할인가격 */
 .coupon_discount{
     grid-area: right;
-    border-top: 1px solid #ffffff;
     margin-top: 10px;
     padding: 30px 30px;
     text-align: right;
     /* font-weight: 900; */
     color: #d61b1b;
-    transition: 0.2s ease-in-out ;
-    /* height: 280px; */
 }
 #light #cart_process_btn {
     border: 1px solid #ff4949;
