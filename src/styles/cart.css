@@ -8,7 +8,17 @@ body {
     margin-left: auto;
 }
 /* 타이틀 */
-#cart_title {
+
+#light #cart_title {
+    display: flex;
+    height: 150px;
+    background-color: rgb(213, 215, 218);
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    align-items: center;
+}
+#dark #cart_title {
     display: flex;
     height: 150px;
     background-color: rgb(27, 31, 35);
@@ -48,7 +58,7 @@ body {
 .no_contents p {
     margin-top: 20px;
 }
-.cart_redBtn {
+#light .cart_redBtn {
     border: 1px solid #ff4949;
     background-color: white;
     color: #ff4949;
@@ -61,9 +71,29 @@ body {
     cursor: pointer;
     transition: 0.1s;
 }
-.cart_redBtn:hover {
+
+#dark .cart_redBtn {
+    border: 1px solid white;
     background-color: #ff4949;
     color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px;
+    width: 160px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#light .cart_redBtn:hover {
+    background-color: #ff4949;
+    color: white;
+}
+
+#dark .cart_redBtn:hover {
+    background-color: white;
+    color: #ff4949;
 }
 /* 깜짝 쿠폰 */
 .alert:hover{
@@ -149,6 +179,12 @@ body {
     text-align-last: left;
     /* margin-top: 20px; */
 }
+#dark .Cart_table_form td{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    
+    }
+
 .total_price {
     text-align: right;
     color: #d61b1b;
@@ -165,7 +201,7 @@ body {
     transition: 0.2s ease-in-out ;
     /* height: 280px; */
 }
-#cart_process_btn {
+#light #cart_process_btn {
     border: 1px solid #ff4949;
     background-color: white;
     color: #ff4949;
@@ -178,10 +214,31 @@ body {
     cursor: pointer;
     transition: 0.1s;
 }
-#cart_process_btn:hover {
+
+#dark #cart_process_btn {
+    border: 1px solid white;
+    background-color: #ff4949;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#light #cart_process_btn:hover {
     background-color: #ff4949;
     color: white;
 }
+
+
+#dark #cart_process_btn:hover {
+    background-color: white;
+    color:  #ff4949;
+}
+
 
 /* grid-template-areas 사용법 .container {
     display: grid;
