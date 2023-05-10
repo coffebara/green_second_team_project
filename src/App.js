@@ -75,9 +75,10 @@ import { Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 
 
-import Test2_Darkmode from "./test2/Test2_ThemeDark";
+
 import Forget from "./components/forget";
 import Detail1 from "./pages/lecture2";
+import Advertise from "./components/Advertise";
 
 function App() {
   // 디테일 페이지 용
@@ -86,8 +87,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Banner />} />
-        <Route path="/class" element={<Lecture />}></Route>
+        <Route path="/" element={<Advertise />} />
+        <Route path="/home" element={<Banner />} />
+        <Route path="/class" element={<Lecture />}/>
         <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<CartPage />} />
         <Route path="checkout" element={<Checkout />} />
@@ -98,7 +100,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-        <Route path="/darkmode2" element={<Test2_Darkmode/>} />
+        <Route path="/Lecture2" element={<Lecture2/>} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />

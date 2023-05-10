@@ -27,7 +27,7 @@ function Lecture() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
+              <Navbar.Brand href="/home" className="Nav_Toggletheme">
                 npm
               </Navbar.Brand>
               <Nav>
