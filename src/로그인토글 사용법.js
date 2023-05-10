@@ -7,6 +7,9 @@
 
 // function 예시 () {
 //     let state = useSelector(state => state.login);
+//     const onClickHandler = () => {
+//         state.loginToggle
+//     }
 
 //     return (
 //         <>
