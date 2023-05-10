@@ -9,7 +9,7 @@ export default function Banner_setting2() {
             <section className="container oberflow-hidden">
                 <div className="row g-5 mt-4" >
                     <div className="col-sm-6 col-lg-3 ">
-                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/class') }}>
+                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/sorry') }}>
                             <img src={process.env.PUBLIC_URL + '/NEXTjs.png'} className="card-img-top" alt="" />
                             <div className="card-body Text_Theme ">
                                 <h2 className="card-title fs-5 fw-bold ">Next.js로 웹서비스 만들기</h2>
@@ -20,7 +20,7 @@ export default function Banner_setting2() {
                         </div>
                     </div>
                     <div className="col-sm-6 col-lg-3">
-                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/class') }}>
+                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/sorry') }}>
                             <img src={process.env.PUBLIC_URL + '/db.png'} className="card-img-top" alt="" />
                             <div className="card-body Text_Theme">
                                 <h2 className="card-title fs-5 fw-bold ">한 번에 끝내는 SQL & Database</h2>
@@ -30,7 +30,7 @@ export default function Banner_setting2() {
                         </div>
                     </div>
                     <div className="col-sm-6 col-lg-3">
-                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/class') }}>
+                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/sorry') }}>
                             <img src={process.env.PUBLIC_URL + '/flutter.png'} className="card-img-top" alt="" />
                             <div className="card-body Text_Theme">
                                 <h2 className="card-title fs-5 fw-bold">Flutter로 만드는 iOS, Android 앱</h2>
@@ -40,7 +40,7 @@ export default function Banner_setting2() {
                         </div>
                     </div>
                     <div className="col-sm-6 col-lg-3">
-                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/class') }}>
+                        <div className="card Border_Toggletheme" id="cursor" onClick={() => { navigate('/sorry') }}>
                             <img src={process.env.PUBLIC_URL + '/dl.png'} className="card-img-top" alt="" />
                             <div className="card-body Text_Theme">
                                 <h2 className="card-title fs-5 fw-bold">Tensorflow 딥러닝 AI 기초부터 실무까지</h2>

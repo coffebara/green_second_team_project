@@ -52,6 +52,7 @@
 // }
 // export default App;
 import "./App.css";
+
 import "./styles/Nav.css";
 import "./styles/Banner.css";
 import "./styles/Footer.css";
@@ -77,7 +78,7 @@ import SignUp from './components/SignUp';
 
 import Forget from "./components/forget";
 import Detail1 from "./pages/lecture2";
-import Advertise from "./components/Advertise";
+
 
 function App() {
   // 디테일 페이지 용
