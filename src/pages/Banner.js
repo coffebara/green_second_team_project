@@ -33,7 +33,7 @@ export default function Banner() {
         <div className='Nav_Theme'>
           <Navbar >
             <Container>
-              <Navbar.Brand href="/" className='Nav_Toggletheme'>npm</Navbar.Brand>
+            <Nav.Link onClick={() => { navigate('/') }} className='Nav_Toggletheme'>npm</Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   
