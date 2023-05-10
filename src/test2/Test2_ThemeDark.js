@@ -15,7 +15,7 @@ import Footer from '../components/Footer'
 import Test_Lecture from './Test_lecture';
 
 import Test_Reference from './Test_reference';
-import Test_Cart from './Test_cart.jscs';
+import Test_Cart from './Test_cart.js';
 import Test_Login from './Test_Login';
 import Test_Register from './Test_Register';
 
