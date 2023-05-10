@@ -87,8 +87,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Advertise />} />
-        <Route path="/home" element={<Banner />} />
+        <Route path="/" element={<Banner />} />
         <Route path="/class" element={<Lecture />}/>
         <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<CartPage />} />
