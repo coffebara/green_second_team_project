@@ -60,7 +60,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from "./pages/Banner.js";
 import CartPage from "./pages/CartPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy.js";
-import Reference from "./pages/reference.js";
+import Referencepage from "./pages/Referencepage";
 import CheckoutPage from "./pages/CheckoutPage.js";
 
 import Lecture from './pages/lecture.js';
