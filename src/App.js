@@ -55,7 +55,6 @@ import "./App.css";
 import "./styles/Nav.css";
 import "./styles/Banner.css";
 import "./styles/Footer.css";
-import "./styles/Sorry.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from "./pages/Banner.js";
 import CartPage from "./pages/CartPage";
@@ -101,7 +100,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-        <Route path="/darkmode2" element={<Test2_Darkmode/>} />
+        <Route path="/Lecture2" element={<Lecture2/>} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />

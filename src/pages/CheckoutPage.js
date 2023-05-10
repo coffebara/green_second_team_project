@@ -1,4 +1,4 @@
-import "../test2/Test2.css";
+
 
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
