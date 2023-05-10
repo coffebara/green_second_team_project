@@ -8,11 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 import Banner_setting1 from "../pages/Banner_setting1";
 import Banner_setting3 from "../pages/Banner_setting3";
-<<<<<<< HEAD
-import For_others1 from "../pages/For_others1.js";
-import Footer from "../components/Footer";
-import Test_Lecture from "./Test_lecture";
-=======
 import For_others1 from '../pages/For_others1.js'
 import Footer from '../components/Footer'
 import Test_Lecture from './Test_lecture';
@@ -26,12 +21,9 @@ import Test_Register from './Test_Register';
 
 
 
->>>>>>> d7508403101966e6458dfe491f9f948aedad1f20
 
 import Test_Reference from "./Test_reference";
-import Test_Cart from "./Test_cart";
-import Test_Login from "./Test_Login";
-import Test_Register from "./Test_Register";
+
 
 export const ThemeContext = createContext(null);
 
@@ -101,11 +93,7 @@ export default function Test_ThemeDark() {
           </Navbar>
         </div>
 
-<<<<<<< HEAD
-        <Test_Lecture />
-=======
 {/* <Test_Reference/> */}
->>>>>>> d7508403101966e6458dfe491f9f948aedad1f20
 
         <Footer />
       </div>
