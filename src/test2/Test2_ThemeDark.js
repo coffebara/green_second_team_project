@@ -63,7 +63,7 @@ export default function Test_ThemeDark() {
           </Navbar>
         </div>
 
-<Test_Lecture/>
+<Test_Reference/>
 
         <Footer/>
         
