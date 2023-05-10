@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "../styles/cart.css";
-import Nav from "../components/Nav_Dark.js";
-import Footer from "../components/Footer.js";
+// import Nav from "../components/Nav_Dark.js";
+// import Footer from "../components/Footer_Dark.js";
 import { updateQuantity, removeCart, getDiscount, getTotalSum } from "../store";
-import {Button, Modal} from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 
 function CartModal(props) {
     let navigate = useNavigate();
@@ -15,9 +15,18 @@ function CartModal(props) {
                 <h4>로그인이 필요합니다.</h4>
             </Modal.Body>
             <Modal.Footer>
-                <Button className="cart_redBtn" onClick={()=>navigate("/login",{ 
-                    state: {
-                        prevPage: "/checkout"}})}>로그인 하기</Button>
+                <Button
+                    className="cart_redBtn"
+                    onClick={() =>
+                        navigate("/login", {
+                            state: {
+                                prevPage: "/checkout",
+                            },
+                        })
+                    }
+                >
+                    로그인 하기
+                </Button>
             </Modal.Footer>
         </Modal>
     );
@@ -78,7 +87,7 @@ function Cart() {
 
     return (
         <div>
-            <Nav />
+            {/* <Nav /> */}
             <section id="cart_title">
                 <div className="cart_container">
                     신청하기
@@ -89,9 +98,9 @@ function Cart() {
 
             <CartModal show={modalShow} />
             {/* 깜짝 쿠폰 */}
-            {couponAlert === true ? (
+            {couponAlert === true && state.cart.length  ?  (
                 <div onClick={() => alert("쿠폰 코드: a")} className="alert alert-warning">
-                    ※※ 깜짝 쿠폰 ※※
+                    🎊🎊 깜짝 쿠폰 🎊🎊
                     <br /> 2초 내 클릭 시 쿠폰 코드 지급
                 </div>
             ) : null}
@@ -103,7 +112,7 @@ function Cart() {
                         {!state.cart.length ? (
                             <div className="no_contents">
                                 <div>
-                                    <p>! 고객님의 장바구니가 현재 비어있습니다.</p>
+                                    <p>❗ 고객님의 장바구니가 현재 비어있습니다.</p>
                                 </div>
                                 <p>
                                     <input
@@ -159,46 +168,49 @@ function Cart() {
                             </form>
                         )}
                     </div>
-                    <div className="cart_total">
-                        <div>
-                            <h4 onClick={()=>setModalShow(true)}>신청할 강좌 합계</h4>
-                        </div>
-                        <table className="cart_table total_table">
-                            <tbody>
-                                <tr>
-                                    <td>소계</td>
-                                    <td style={state.checkout.discount !== 1 ? { textDecoration: "line-through" } : null} className="total_price">
-                                        {totalSum.toLocaleString()}₩
-                                    </td>
-                                </tr>
-                                {state.checkout.discount !== 1 ? (
-                                    <tr>
-                                        <td>쿠폰 할인 (20%)</td>
-                                        <td className="coupon_discount">-{(totalSum * (1 - state.checkout.discount)).toLocaleString()}₩</td>
+                    {state.cart.length ? (
+                        <div className="cart_total">
+                            <div>
+                                <h4 onClick={() => setModalShow(true)}>신청할 강좌 합계</h4>
+                            </div>
+                            <table className="cart_table total_table">
+                                <tbody>
+                                    <tr className="Cart_table_form">
+                                        <td>소계</td>
+                                        <td style={state.checkout.discount !== 1 ? { textDecoration: "line-through" } : null} className="total_price">
+                                            {totalSum.toLocaleString()}₩
+                                        </td>
                                     </tr>
-                                ) : null}
-                                <tr>
-                                    <td>총계</td>
-                                    <td className="total_price">{(totalSum * state.checkout.discount).toLocaleString()}₩</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div>
-                            {/* 결제페이지 이동 */}
-                            <input
-                                onClick={() => {
-                                    {state.login.isLogin? navigate('/checkout') : setModalShow(true)}
-                                    getTotalPrice();
-                                }}
-                                id="cart_process_btn"
-                                type="button"
-                                value="결제 진행하기"
-                            />
+                                    {state.checkout.discount !== 1 ? (
+                                        <tr className="Cart_table_form">
+                                            <td>쿠폰 할인 (20%)</td>
+                                            <td className="coupon_discount">-{(totalSum * (1 - state.checkout.discount)).toLocaleString()}₩</td>
+                                        </tr>
+                                    ) : null}
+                                    <tr className="Cart_table_form">
+                                        <td>총계</td>
+                                        <td className="total_price">{(totalSum * state.checkout.discount).toLocaleString()}₩</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                {/* 결제페이지 이동 */}
+                                <input
+                                    onClick={() => {
+                                        {
+                                            state.login.isLogin ? navigate("/checkout") : setModalShow(true);
+                                        }
+                                        getTotalPrice();
+                                    }}
+                                    id="cart_process_btn"
+                                    type="button"
+                                    value="결제 진행하기"
+                                />
+                            </div>
                         </div>
-                    </div>
+                    ) : null}
                 </div>
             </section>
-            <Footer />
         </div>
     );
 }
