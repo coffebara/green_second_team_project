@@ -1,12 +1,10 @@
-// import './Test2.css'
-import '../styles/Test_reference.css'
+import '../styles/reference.css'
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from 'react-bootstrap'
 import { createContext, useState } from 'react';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
 import Footer from '../components/Footer'
-// import Test_Reference from './Test_reference';
 import Reference from './reference';
 
 

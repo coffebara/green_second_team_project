@@ -66,7 +66,7 @@ const ReferenceList = () => {
     <div>
       <nav
         id="navbar-example3"
-        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+        className="navbar flex-column align-items-stretch"
       >
         <a
           className="navbar-brand Reference_navbar_title"
@@ -87,7 +87,7 @@ const ReferenceList = () => {
     <div>
       <nav
         id="navbar-example3"
-        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+        className="navbar flex-column align-items-stretch"
       >
         <a
           className="navbar-brand Reference_navbar_title"
@@ -108,7 +108,7 @@ const ReferenceList = () => {
     <div>
       <nav
         id="navbar-example3"
-        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+        className="navbar flex-column align-items-stretch"
       >
         <a
           className="navbar-brand Reference_navbar_title"
@@ -131,7 +131,7 @@ const ReferenceList = () => {
     <div>
       <nav
         id="navbar-example3"
-        className="navbar navbar-dark bg-dark flex-column align-items-stretch"
+        className="navbar flex-column align-items-stretch"
       >
         <a
           className="navbar-brand Reference_navbar_title"

@@ -14,7 +14,7 @@ import For_others1 from '../pages/For_others1.js'
 import Footer from '../components/Footer'
 import Test_Lecture from './Test_lecture';
 
-import Test_Reference from './Test_reference';
+// import Test_Reference from './Test_reference';
 import Test_Cart from './Test_cart.js';
 import Test_Login from './Test_Login';
 import Test_Register from './Test_Register';
@@ -63,7 +63,7 @@ export default function Test_ThemeDark() {
           </Navbar>
         </div>
 
-<Test_Reference/>
+{/* <Test_Reference/> */}
 
         <Footer/>
         
