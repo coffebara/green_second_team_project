@@ -1,6 +1,6 @@
 #Banner_bg1 {
     height: auto;
-    border-top: 1px solid rgb(221, 218, 218);
+ 
 }
 
 #Banner_bg1_center1 {
@@ -18,48 +18,12 @@
     margin: 2em 0 4em;
 }
 
-#Banner_bg2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 530px;
-    background-color: darkgrey;
-}
-
-#Banner_bg2_big_img_setting {
-    border-radius: 5%;
-    cursor: pointer;
-}
-
-#Banner_bg2_small_img_setting {
-    background-color: white;
-    border-radius: 35%;
-}
-
-#Banner_bg2_setting {
-    margin: 0em 2em -1.5em;
-}
-
-#Banner_bg2_center1 {
-    text-align: justify;
-}
-
-#Banner_bg2_list>li {
-    padding: 0.3em 0em;
-    list-style-type: none;
-}
-
-#Banner_bg2_button {
-    margin: 1em 0 3em;
-
-}
 
 
 
 #Banner_bg3 {
     height: auto;
-    border-bottom: 1px solid rgb(221, 218, 218);
+
 }
 
 #Banner_bg3_center1 {

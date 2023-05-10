@@ -7,8 +7,9 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import Banner_setting1 from "../pages/Banner_setting1";
+import Banner_setting2 from '../pages/Banner_setting2.js'
 import Banner_setting3 from "../pages/Banner_setting3";
-import For_others1 from '../pages/For_others1.js'
+
 import Footer from '../components/Footer'
 import Test_Lecture from './Test_lecture';
 
@@ -42,9 +43,14 @@ export default function Test_ThemeDark() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
-                npm
-              </Navbar.Brand>
+            <Nav.Link
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  npm
+                </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -93,7 +99,14 @@ export default function Test_ThemeDark() {
           </Navbar>
         </div>
 
-{/* <Test_Reference/> */}
+
+        <Banner_setting1 />
+      <Banner_setting2 />
+      <Banner_setting3 />
+
+
+
+
 
         <Footer />
       </div>
