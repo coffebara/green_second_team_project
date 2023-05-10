@@ -55,20 +55,20 @@ export const AuthContextProvider = ({ children }) => {
   const dispatchStore = useDispatch();
   const [state, dispatch] = useReducer(AuthReducers, INITIAL_STATE);
 
-  useEffect(() => {
-    // Firebase 인증 구독을 추가하여 사용자 정보가 변경될 때마다 상태를 업데이트합니다.
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        dispatch({ type: "LOGIN_SUCCESS", payload: user });
-      } else {
-        dispatch({ type: "LOGOUT" });
-      }
-    });
+  // useEffect(() => {
+  //   // Firebase 인증 구독을 추가하여 사용자 정보가 변경될 때마다 상태를 업데이트합니다.
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     if (user) {
+  //       dispatch({ type: "LOGIN_SUCCESS", payload: user });
+  //     } else {
+  //       dispatch({ type: "LOGOUT" });
+  //     }
+  //   });
 
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
 
   useEffect(() => {
     let newLoginToggle = state.isLogin;
