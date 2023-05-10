@@ -51,17 +51,17 @@
 //   );
 // }
 // export default App;
-import './App.css';
-import './styles/Nav.css';
-import './styles/Banner.css';
-import './styles/Footer.css';
-import './styles/Sorry.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Banner from './pages/Banner.js';
-import CartPage from './pages/CartPage';
-import PrivacyPolicy from './pages/PrivacyPolicy.js';
-import Referencepage from './pages/Referencepage'
-import Checkout from './pages/checkout.js';
+import "./App.css";
+import "./styles/Nav.css";
+import "./styles/Banner.css";
+import "./styles/Footer.css";
+import "./styles/Sorry.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Banner from "./pages/Banner.js";
+import CartPage from "./pages/CartPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy.js";
+import Reference from "./pages/reference.js";
+import CheckoutPage from "./pages/CheckoutPage.js";
 
 import Lecture from './pages/lecture.js';
 import Login from './pages/login';
@@ -90,7 +90,7 @@ function App() {
         <Route path="/class" element={<Lecture />}></Route>
         <Route path="/lecture2" element={<Lecture2 />} />
         <Route path="cart" element={<CartPage />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="checkout" element={<CheckoutPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/reference/*" element={<Referencepage />} />
         <Route path="/login/*" element={<Login />} />
