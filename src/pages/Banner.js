@@ -1,4 +1,4 @@
-import '../styles/DarkMode.css'
+import '../styles/Darkmode.css'
 
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from 'react-bootstrap'
