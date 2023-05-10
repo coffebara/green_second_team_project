@@ -27,7 +27,7 @@ function Lecture() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-            <Nav.Link onClick={() => { navigate('/home') }}  className='Nav_Toggletheme'>npm</Nav.Link>
+            <Nav.Link onClick={() => { navigate('/') }}  className='Nav_Toggletheme'>npm</Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
