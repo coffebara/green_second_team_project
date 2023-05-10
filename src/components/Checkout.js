@@ -1,33 +1,28 @@
 import { useEffect, useState, useRef } from "react";
 import "../styles/checkout.css";
-import Nav from "../components/Nav_Dark.js";
-import Footer from "../components/Footer.js";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 function Checkout() {
+    const user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
     const state = useSelector((state) => state)
     const navigate = useNavigate();
     const [selectedOption, setSelectedOption] = useState("option1")
+    const [ name, setName ] = useState("");
+    const [ email, setEmail ] = useState("");
     const handleOptionChange = (e) => {
         setSelectedOption(e.target.value)
     }
-    useEffect(()=> {
-        switch(selectedOption) {
-            case "option1" : 
-            break;
-            case "option2" : 
-            break;
-            case "option3" : 
-            break;
-            case "option4" : 
-            break;
-        }
-    },[selectedOption])
-    console.log(state.checkout.totalSum);
+    // console.log(user);
+
+    const changeName = (e) => {
+        setName(e.target.value);
+    }
+    const changeEmail = (e) => {
+        setEmail(e.target.value);
+    }
     return (
         <div>
-            <Nav />
             <section id="checkout_title">
                 <div className="checkout_container">
                     신청하기
@@ -50,13 +45,13 @@ function Checkout() {
                                 <ul>
                                     <li>이름</li>
                                     <li>
-                                        <input className="checkout_input" type="text" placeholder="김상준" />
+                                        <input onChange={changeName} className="checkout_input" type="text" placeholder="김상준" value={name}/>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>이메일</li>
                                     <li>
-                                        <input className="checkout_input" type="email" placeholder="rlatkdwns@naver.com" />
+                                        <input onChange={changeEmail} className="checkout_input" type="email" placeholder="rlatkdwns@naver.com" value={email} />
                                     </li>
                                 </ul>
                             </div>
@@ -166,7 +161,7 @@ function Checkout() {
                                         <div><p>입력하신 개인정보는 사이트내에서 이용할 예정이며 <span className="payment_agreement_span" onClick={()=> navigate('/privacy-policy')}>개인정보 보호정책</span>을(를) 준수하고 있습니다.</p></div>
                                         <p id="payment_mustCheck"><input type="checkbox" />
                                         본인은 웹사이트 <span className="payment_agreement_span">이용 약관</span>을(를) 읽었으며 이에 동의합니다. </p> 
-                                    <input id="payment_btn" type="button" value="결제하기"/>
+                                    <input className="cart_redBtn" type="button" value="결제하기"/>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +169,6 @@ function Checkout() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     );
 }

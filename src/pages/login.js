@@ -36,7 +36,6 @@ function Login() {
   ]);
   return (
     <div>
-      <Nav_Dark />
       <div className="Login_main">
         <LoginPage />
         <Routes>

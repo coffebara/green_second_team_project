@@ -1,7 +1,7 @@
-import '../styles/reference.css';
 import '../styles/Nav.css'
+import '../styles/reference.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from "../components/Nav_Light";
+import Nav_Dark from "../components/Nav_Dark.js";
 import ReferenceList from '../components/Reperence/Lists';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../components/Reperence/Home';
@@ -17,7 +17,7 @@ import Bootstrap01 from '../components/Reperence/Bootstrap01'; /* 추가부분 *
 function Reference() {
   return (
     <div>
-      <Nav />
+   
       <div className="Reference_main">
       
         <ReferenceList />

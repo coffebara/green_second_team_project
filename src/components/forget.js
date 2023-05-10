@@ -16,6 +16,7 @@ import {
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import { Link as RouterLink } from "react-router-dom";
 import Nav_Light from "./Nav_Light";
+import Footer from "./Footer";
 
 export default function Register() {
   const [email, setEmail] = useState("");

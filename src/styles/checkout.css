@@ -7,7 +7,16 @@ ul,li{
     list-style-type: none
 }
 /* 타이틀 */
-#checkout_title {
+#light #checkout_title {
+    display: flex;
+    height: 150px;
+    background-color: rgb(213, 215, 218);
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    align-items: center;
+}
+#dark #checkout_title {
     display: flex;
     height: 150px;
     background-color: rgb(27, 31, 35);
@@ -33,7 +42,7 @@ ul,li{
     margin-bottom: 20px;
 }
 /* input  */
-.checkout_input{
+#light .checkout_input{
     width: 100%;
     height: 40px;
     border: 1px solid #c5c5c5;
@@ -41,21 +50,45 @@ ul,li{
     padding: 10px;
     margin: 10px 0;
 }
-.checkout_area{
+#light .checkout_area{
     width: 100%;
     border: 1px solid #c5c5c5;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
 }
+#dark .checkout_input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #c5c5c5;
+    background-color: white;
+}
+#dark .checkout_area{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #c5c5c5;
+    background-color: white;
+}
 /* 신청한 강좌 목록 */
 .checkout_table{
     width: 100%;
     margin-bottom: 20px;
 }
-.checkout_table th, td{
+#light .checkout_table th, #light .checkout_table td{
     padding: 15px 0;
+    /* border-bottom: 1px solid tomato; */
     border-bottom: 1px solid rgba(0,0,0,.08);
+}
+#dark .checkout_table th, #dark .checkout_table td{
+    padding: 15px 0;
+    border-bottom: 1px solid white;
 }
 .checkout_table td:first-child {
     width: 80%;
@@ -91,6 +124,10 @@ ul,li{
     border: 1px solid rgba(0,0,0,.08);
     padding: 15px 15px;
 }
+#dark .payment_method,#dark .payment_agreement{
+    border: 1px solid white;
+    padding: 15px 15px;
+}
 .payment_method li{
     margin: 20px 0;
     font-weight: 600;
@@ -112,6 +149,10 @@ ul,li{
     background-color: rgba(0,0,0,.08);
     font-weight: normal;
 }
+#dark .payment_method_explain{
+    background-color: white;
+    color: #c5c5c5;
+}
 .show{
     display: block;
 }
@@ -123,7 +164,7 @@ ul,li{
     color: #105796;
     cursor: pointer;
 }
-#payment_btn{
+#light .payment_btn{
     border: 2px solid #FF4949;
     background-color: white;
     color: #FF4949;
@@ -136,7 +177,24 @@ ul,li{
     cursor: pointer;
     transition: 0.1s;
 }
-#payment_btn:hover{
+#dark .payment_btn{
+    border: 2px solid white;
+    background-color: #ff4949;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#light .payment_btn:hover{
+    background-color: #FF4949;
+    color: white;
+}
+#dark .payment_btn:hover{
     background-color: #FF4949;
     color: white;
 }
