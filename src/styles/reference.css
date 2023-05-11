@@ -5,28 +5,23 @@
 
 .Reference_main {
     display: flex;
-    height: 100vh;
 }
 
 .Reference_nav {
     min-width: 18%;
     background-color: white;
-    height: 100%;
     text-align: left;
     border-right: 1px solid lightgray;
 }
 
 #dark .Reference_nav {
-    min-width: 18%;
     background-color: black;
     color: white;
-    height: 100%;
-    text-align: left;
     border-right: 1px solid gray;
 }
 
 .Reference_section {
-    width: auto;
+    width: 100%;
     padding: 3%;
     text-align: left;
 }
@@ -51,8 +46,6 @@
 }
 
 #dark .Reference_navbar_title {
-    margin-left: 5%;
-    font-size: calc(1.3vw);
     color: white;
 }
 
@@ -104,6 +97,11 @@ h3, h4 {
     flex-direction: column;
     justify-content: space-between;
 }
+.Reference_rightside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .reference_comment{
     text-align: left;
     margin: 5%;
@@ -123,8 +121,6 @@ h3, h4 {
 
 
 #dark .reference_comment_textbox{
-    width: 75%; height: 60px;
-    padding-left: 1%;
     background-color: black;
     color: white;
     border: 1px solid white;
@@ -156,3 +152,10 @@ h3, h4 {
     padding-left: 2.5%;
     min-width: calc(18%);
 }
+.comment_content{
+    min-width: calc(70%);
+}
+
+/* .comment_date{
+    font-size: smaller;
+} */

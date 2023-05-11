@@ -3,7 +3,6 @@ import Comment from './Comment';
 
 function Next01() {
   return (
-    <div className='reference_main'>
       <div
         data-bs-spy="scroll"
         data-bs-target="#navbar-example3"
@@ -44,8 +43,6 @@ function Next01() {
           또한 meta 태그를 자유롭게 추가함으로 seo를 용이하게 할수 있습니다.
         </p>
       </div>
-      <Comment />
-    </div>
   );
 }
 

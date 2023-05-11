@@ -85,23 +85,6 @@ function App() {
   // 디테일 페이지 용
   const items = data;
 
-  // 서버용
-  const [server1, setServer1] = useState([]);
-  const [comment, setComment] = useState([]);
-
-  const handleClick = () => {
-    axios
-      .get('http://localhost:5000/data')
-      .then((res) => setServer1(res.data))
-      .catch((err) => console.log(err))
-  };
-
-  const commentClick = () => {
-    axios
-      .get('http://localhost:5000/comment')
-      .then((res) => setServer1(res.data))
-      .catch((err) => console.log(err))
-  };
 
   return (
     <div className="App">
@@ -126,14 +109,6 @@ function App() {
         <Route path="/lecture2/:id" element={<Detail1 items={items} />} />
         <Route path="/board/" element={<Board />} />
       </Routes>
-      <div>
-        <button onClick={commentClick}>Get Data</button>
-        <ul>
-        {server1.map(item => (
-          <li key={item._id}>작성자 : {item.author} <br /> 댓글 내용 : {item.content}</li>
-        ))}
-      </ul>
-      </div>
     </div>
   );
 }
