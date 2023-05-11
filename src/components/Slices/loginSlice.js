@@ -39,6 +39,7 @@ export const logout = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       await auth.signOut();
+      console.log("로그아웃됨");
       return true;
     } catch (error) {
       return rejectWithValue(error.message);
