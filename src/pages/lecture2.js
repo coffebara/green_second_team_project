@@ -40,9 +40,14 @@ function Lecture2(props) {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
                 npm
-              </Navbar.Brand>
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -82,14 +87,17 @@ function Lecture2(props) {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
                 </Nav.Link>
               </Nav>
             </Container>
           </Navbar>
         </div>
+
         <div class="container" id="lecture-container">
           <div className="lture">
             <div class="row">
