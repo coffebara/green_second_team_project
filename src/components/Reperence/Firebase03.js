@@ -1,6 +1,8 @@
 import React from "react";
 
 function Firebase03() {
+  const codeBlock= 
+
   return (
     <div
       data-bs-spy="scroll"
@@ -8,7 +10,7 @@ function Firebase03() {
       data-bs-offset="0"
       tabIndex="0"
       className="Reference_section"
-    >
+    > <pre>
       <h3 id="item-2" className="contents_title">
         JavaScript 프로젝트에 Firebase 추가
       </h3>
@@ -94,7 +96,7 @@ function Firebase03() {
           </li>
         </li>
       </p>
-    
+  </pre>  
     </div>
   );
 }
