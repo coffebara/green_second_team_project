@@ -4,8 +4,8 @@ import itemReducer from "./components/Slices/itemSlice";
 let cart = createSlice({
   name: "cart",
   initialState: [
-    // { id: 50, title: "아 제발", quantity: 1, price: 100 },
-    // { id: 11, title: "좀 나와라", quantity: 1, price: 200 },
+    { id: 50, title: "하이", quantity: 1, price: 100 },
+    { id: 11, title: "바이", quantity: 1, price: 200 },
   ],
   reducers: {
     addCart(state, action) {
@@ -44,8 +44,9 @@ let login = createSlice({
   initialState: { isLogin: false },
   reducers: {
     loginToggle(state, action) {
+      console.log("기본값: " + state.isLogin)
       state.isLogin = action.payload;
-      console.log("기본값: " + state.isLogin + " 변경 값: " + action.payload);
+      console.log(" 변경 값: " + action.payload);
     },
     logout(state) {
       state.isLoggedIn = false;
