@@ -44,6 +44,11 @@ const ReferenceList = () => {
   ];
   let Firebase01 = [
     { id: 0, value: "Firebase 란?", url: "/reference/Firebase01" },
+    {
+      id: 1,
+      value: "Firebase 실시간 데이터베이스 이해",
+      url: "/reference/Firebase02",
+    },
   ];
 
   let underlist01 /* 수정부분 */ = react01 /* 수정부분 */

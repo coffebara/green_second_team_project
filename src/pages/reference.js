@@ -13,6 +13,7 @@ import Js03 from "../components/Reperence/Js03";
 import Next01 from "../components/Reperence/Next01";
 import Bootstrap01 from "../components/Reperence/Bootstrap01"; /* 추가부분 */
 import Firebase01 from "../components/Reperence/Firebase01";
+import Firebase02 from "../components/Reperence/Firebase02";
 
 function Reference() {
   return (
@@ -28,6 +29,7 @@ function Reference() {
           <Route path="/js03" element={<Js03 />} />
           <Route path="/next01" element={<Next01 />} />
           <Route path="/Firebase01" element={<Firebase01 />} />
+          <Route path="/Firebase02" element={<Firebase02 />} />
           <Route path="/bootstrap01" element={<Bootstrap01 />} />{" "}
           {/* 추가부분 */}
         </Routes>
