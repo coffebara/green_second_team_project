@@ -7,32 +7,50 @@ import "../styles/cart.css";
 import { updateQuantity, removeCart, getDiscount, getTotalSum } from "../store";
 import { Button, Modal } from "react-bootstrap";
 
-function CartModal(props) {
-    let navigate = useNavigate();
-    return (
-        <Modal {...props} backdrop="static" size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
-            <Modal.Body>
-                <h4>로그인이 필요합니다.</h4>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button
-                    className="cart_redBtn"
-                    onClick={() =>
-                        navigate("/login", {
-                            state: {
-                                prevPage: "/checkout",
-                            },
-                        })
-                    }
-                >
-                    로그인 하기
-                </Button>
-            </Modal.Footer>
-        </Modal>
-    );
-}
+// function CartModal(props) {
+//     const [show, setShow] = useState(false);
+//     setShow(props.show? props.show : false)
+//     let navigate = useNavigate();
+//     return (
+//         <Modal show={show} backdrop="static" size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
+//             <div>
+//             <Modal.Body>
+//                 <h4>로그인이 필요합니다.</h4>
+//             </Modal.Body>
+//             <Modal.Footer>
+//                 <Button
+//                     className="cart_redBtn" variant={props.theme === "light" ? "secondary" : "outline-secondary"}
+//                     onClick={() =>
+//                         navigate("/login", {
+//                             state: {
+//                                 prevPage: "/checkout",
+//                             },
+//                         })
+//                     }
+//                 >
+                    
+//                     나가기
+//                 </Button>
+//                 <Button
+//                     className="cart_redBtn" variant={props.theme === "light" ? "danger" : "outline-danger"}
+//                     onClick={() =>
+//                         navigate("/login", {
+//                             state: {
+//                                 prevPage: "/checkout",
+//                             },
+//                         })
+//                     }
+//                 >
+                    
+//                     로그인 하기
+//                 </Button>
+//             </Modal.Footer>
+//             </div>
+//         </Modal>
+//     );
+// }
 
-function Cart() {
+function Cart({theme}) {
     let navigate = useNavigate();
     let dispatch = useDispatch();
     let state = useSelector((state) => state);
@@ -95,8 +113,34 @@ function Cart() {
                     Step 1. 강의 선택
                 </div>
             </section>
-
-            <CartModal show={modalShow} />
+            {/* 모달 시작 */}
+            <Modal show={modalShow} backdrop="static" size="sm" aria-labelledby="contained-modal-title-vcenter" centered>
+            <div>
+            <Modal.Body>
+                <h4>로그인이 필요합니다.</h4>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button
+                    className="cart_redBtn" variant={theme === "light" ? "outline-secondary" : "secondary"}
+                    onClick={() => setModalShow(false)}>
+                    나가기
+                </Button>
+                <Button
+                    className="cart_redBtn" variant={theme === "light" ? "outline-danger" : "danger"}
+                    onClick={() =>
+                        navigate("/login", {
+                            state: {
+                                prevPage: "/checkout",
+                            },
+                        })
+                    }
+                >
+                    
+                    로그인 하기
+                </Button>
+            </Modal.Footer>
+            </div>
+        </Modal>
             {/* 깜짝 쿠폰 */}
             {couponAlert === true && state.cart.length  ?  (
                 <div onClick={() => alert("쿠폰 코드: a")} className="alert alert-warning">
@@ -171,7 +215,7 @@ function Cart() {
                     {state.cart.length ? (
                         <div className="cart_total">
                             <div>
-                                <h4 onClick={() => setModalShow(true)}>신청할 강좌 합계</h4>
+                                <h4>신청할 강좌 합계</h4>
                             </div>
                             <table className="cart_table total_table">
                                 <tbody>
