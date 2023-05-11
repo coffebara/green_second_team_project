@@ -126,7 +126,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleReact01} /* 수정부분 */
         >
           React 이론
@@ -147,7 +146,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav2}
         >
           JavaScript 이론
@@ -166,7 +164,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav3}
         >
           Next.js 이론
@@ -185,7 +182,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav4}
         >
           Bootstrap 이론
@@ -204,7 +200,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav5}
         >
           Firebase 이론

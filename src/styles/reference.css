@@ -41,6 +41,7 @@
 }
 
 .Reference_navbar_title {
+    cursor: pointer;
     margin-left: 5%;
     font-size: calc(1.3vw);
 }
