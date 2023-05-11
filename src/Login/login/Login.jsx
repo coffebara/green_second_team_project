@@ -190,7 +190,7 @@ export default function Test_Login() {
           // Signed in
           const user = userCredential.user;
           dispatch({ type: "LOGIN_SUCCESS", payload: user });
-          // console.log(user);
+          console.log(user);
           navigate("/");
         }
       );
