@@ -30,7 +30,11 @@
 }
 
 
-#Footer_img {
+#Footer_img1 {
+    width: 13vh;
+    height: 8vh;
+}
+#Footer_img2 {
     width: 8vh;
     height: 8vh;
 }

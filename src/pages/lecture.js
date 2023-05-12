@@ -41,6 +41,7 @@ export const ThemeContext = createContext(null);
   const dispatch = useDispatch();
     function handleLogout() {
         dispatch(logout());
+        navigate('/')
     }
 
 
@@ -56,7 +57,7 @@ export const ThemeContext = createContext(null);
                   }}
                   className="Nav_Toggletheme"
                 >
-                  npm
+                 <img src="" alt="이미지"/>
                 </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
@@ -82,15 +83,9 @@ export const ThemeContext = createContext(null);
                 >
                   레퍼런스
                 </Nav.Link>
-                <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
-                <Button onClick={handleLogout}> {state.login.isLogin ? "로그아웃" : "로그인"}</Button>
+               
+                {!state.login.isLogin? <Nav.Link onClick={()=> navigate('/login')}  className="Nav_Toggletheme">로그인</Nav.Link> :
+                 <Nav.Link onClick={()=>  handleLogout()}  className="Nav_Toggletheme">로그아웃</Nav.Link>}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");

@@ -41,7 +41,7 @@ export default function Test_ThemeDark() {
 
 
   const dispatch = useDispatch();
-  
+
     function handleLogout() {
         dispatch(logout());
     }
@@ -61,7 +61,7 @@ export default function Test_ThemeDark() {
                 }}
                 className="Nav_Toggletheme"
               >
-                npm
+               <img src="" alt="이미지"/>
               </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
@@ -87,8 +87,8 @@ export default function Test_ThemeDark() {
                 >
                   레퍼런스
                 </Nav.Link>
-                {!state.login.isLogin? <Nav.Link onClick={()=> navigate('/login')}>로그인</Nav.Link> :
-                 <Nav.Link onClick={()=> dispatch(logout())}>로그아웃</Nav.Link>}
+                {!state.login.isLogin? <Nav.Link onClick={()=> navigate('/login')}  className="Nav_Toggletheme">로그인</Nav.Link> :
+                 <Nav.Link onClick={()=>  handleLogout()}  className="Nav_Toggletheme">로그아웃</Nav.Link>}
 
                 {/* <Nav.Link
                   onClick={() => {
