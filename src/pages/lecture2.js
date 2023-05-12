@@ -37,12 +37,17 @@ function Lecture2(props) {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
-        <div className="Nav_Theme">
+      <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
-                npm
-              </Navbar.Brand>
+            <Nav.Link
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  npm
+                </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -90,6 +95,8 @@ function Lecture2(props) {
             </Container>
           </Navbar>
         </div>
+
+        
         <div class="container" id="lecture-container">
           <div className="lture">
             <div class="row">

@@ -2,9 +2,10 @@
 
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 
 import Banner_setting1 from "../pages/Banner_setting1";
 import Banner_setting3 from "../pages/Banner_setting3";
@@ -15,14 +16,30 @@ import Footer from '../components/Footer'
 
 export const ThemeContext = createContext(null);
 
-export default function Test_ThemeDark() {
-  let navigate = useNavigate();
 
+export default function Test_ThemeDark() {
+  
+//여기서부터 
   let state = useSelector((state) => state);
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  const [theme, setTheme] = useState("dark");
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
   };
+  const toggleTheme = () => {
+    setTheme((themeMode) => {
+      const newTheme = themeMode === "dark" ? "light" : "dark";
+      setMode(newTheme);
+      return newTheme;
+    });
+  };
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    localTheme ? setTheme(localTheme) : setTheme("light");
+  }, []);
+
+  let navigate = useNavigate();
+  //여기까지
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -30,14 +47,14 @@ export default function Test_ThemeDark() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-            <Nav.Link
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  npm
-                </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                npm
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -64,7 +81,7 @@ export default function Test_ThemeDark() {
                 </Nav.Link>
                 <Nav.Link
                   onClick={() => {
-                    navigate(`${state.login.isLogin ? "/checkout" : "/login"}`);
+                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
                   }}
                   className="Nav_Toggletheme"
                 >
@@ -74,6 +91,7 @@ export default function Test_ThemeDark() {
                   onClick={() => {
                     navigate("/cart");
                   }}
+                 
                   className="Nav_Toggletheme"
                 >
                   장바구니
@@ -88,12 +106,8 @@ export default function Test_ThemeDark() {
 
 
         <Banner_setting1 />
-      <Banner_setting2 />
-      <Banner_setting3 />
-
-
-
-
+        <Banner_setting2 />
+        <Banner_setting3 />
 
         <Footer />
       </div>

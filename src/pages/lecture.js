@@ -6,30 +6,51 @@ import { useNavigate } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect  } from "react";
 import { useSelector } from "react-redux";
 
 export const ThemeContext = createContext(null);
 
-function Lecture() {
-  let [products] = useState(data);
-  let navigate = useNavigate();
+ function Lecture() {
+
 
   let state = useSelector((state) => state);
+
   const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
   };
+  
+  const toggleTheme = () => {
+    setTheme((themeMode) => {
+      const newTheme = themeMode === "light" ? "dark" : "light";
+      setMode(newTheme);
+      return newTheme;
+    });
+  };
+  
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    localTheme ? setTheme(localTheme) : setTheme("dark");
+  }, []);
+  let [products] = useState(data);
+  let navigate = useNavigate();
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
-        <div className="Nav_Theme">
+      <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
-                npm
-              </Navbar.Brand>
+            <Nav.Link
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  npm
+                </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -56,7 +77,7 @@ function Lecture() {
                 </Nav.Link>
                 <Nav.Link
                   onClick={() => {
-                    navigate(`${state.login.isLogin ? "/checkout" : "/login"}`);
+                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
                   }}
                   className="Nav_Toggletheme"
                 >
