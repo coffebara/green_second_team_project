@@ -7,20 +7,21 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Cart from "../components/Cart";
 import Footer from "../components/Footer";
+import CartRefresh from "../components/CartRefresh";
+
 
 export const ThemeContext = createContext(null);
 
 export default function CartPage() {
-
-
+    
     let state = useSelector((state) => state);
-
+    
     const [theme, setTheme] = useState("light");
     const setMode = (mode) => {
         window.localStorage.setItem("theme", mode);
         setTheme(mode);
     };
-
+    
     const toggleTheme = () => {
         setTheme((themeMode) => {
             const newTheme = themeMode === "light" ? "dark" : "light";
@@ -34,6 +35,7 @@ export default function CartPage() {
         localTheme ? setTheme(localTheme) : setTheme("dark");
     }, []);
 
+    CartRefresh()
     let navigate = useNavigate();
 
     return (
@@ -96,7 +98,7 @@ export default function CartPage() {
                     </Navbar>
                 </div>
 
-                <Cart />
+                <Cart theme={theme} />
 
                 <Footer />
             </div>
