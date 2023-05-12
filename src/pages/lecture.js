@@ -5,9 +5,10 @@ import data from "../assets/data.js";
 import { useNavigate } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import ReactSwitch from "react-switch";
-import { Navbar, Container, Nav, Badge } from "react-bootstrap";
+import { Navbar, Container, Nav, Badge,Button } from "react-bootstrap";
 import { createContext, useState,useEffect  } from "react";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { logout } from "../store";
 
 export const ThemeContext = createContext(null);
 
@@ -36,6 +37,12 @@ export const ThemeContext = createContext(null);
   }, []);
   let [products] = useState(data);
   let navigate = useNavigate();
+
+  const dispatch = useDispatch();
+    function handleLogout() {
+        dispatch(logout());
+    }
+
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -83,6 +90,7 @@ export const ThemeContext = createContext(null);
                 >
                   {state.login.isLogin ? "로그아웃" : "로그인"}
                 </Nav.Link>
+                <Button onClick={handleLogout}> {state.login.isLogin ? "로그아웃" : "로그인"}</Button>
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -90,9 +98,11 @@ export const ThemeContext = createContext(null);
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
                 </Nav.Link>
               </Nav>
             </Container>

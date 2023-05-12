@@ -159,9 +159,10 @@ import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext } from "react";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom"; // 네이게이션 경로확인을 위한 import
 
 export const ThemeContext = createContext(null);
-
+//class
 export default function Test_Login() {
   const [inputs, setInputs] = useState({
     email: "",
@@ -170,6 +171,9 @@ export default function Test_Login() {
   const [toggleEye, setToggleEye] = useState(false);
   const [inputType, setInputType] = useState("password");
   const navigate = useNavigate();
+
+  const location = useLocation(); // 네이게이션 경로 확인
+  const prevPage = location.state ? location.state.prevPage : null; // 경로 입력
 
   const { dispatch } = useContext(AuthContext);
 
@@ -190,8 +194,9 @@ export default function Test_Login() {
           // Signed in
           const user = userCredential.user;
           dispatch({ type: "LOGIN_SUCCESS", payload: user });
-          // console.log(user);
-          navigate("/");
+          console.log(user);
+          // 로그인 성공 후 지정한 결로가  있으면 해당 경로/ 없으면 직전 페이지로
+          navigate(prevPage ? prevPage : -1);
         }
       );
     } catch (error) {
@@ -228,7 +233,7 @@ export default function Test_Login() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/home" className="Nav_Toggletheme">
+              <Navbar.Brand href="/" className="Nav_Toggletheme">
                 npm
               </Navbar.Brand>
               <Nav>

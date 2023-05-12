@@ -10,7 +10,7 @@ function Home() {
       className="Reference_section"
     >
       <h3 id="item-1" className="contents_title">
-        IT-da의 페이지에 오신 것을 환영합니다.
+      IT-da의 페이지에 오신 것을 환영합니다.
       </h3>
       <p>
         이 곳에서 프로그래밍 지식을 여러분께 공유하려 합니다.

@@ -71,8 +71,12 @@
   margin: 25px;
 }
 
-.App-lecture p:hover {
+#light .App-lecture p:hover {
   color: #ff0000;
+}
+
+#dark .App-lecture p:hover {
+  color: #0071e3;
 }
 
 .lecture {

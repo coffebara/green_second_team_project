@@ -1,8 +1,8 @@
 /* eslint-disable*/
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../../styles/reference.css';
-import Search_setting from '../Search_setting'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../../styles/reference.css";
+import Search_setting from "../Search_setting";
 
 const ReferenceList = () => {
   let navigate = useNavigate();
@@ -10,8 +10,10 @@ const ReferenceList = () => {
   const [showNav2, setShowNav2] = useState(false);
   const [showNav3, setShowNav3] = useState(false);
   const [showNav4, setShowNav4] = useState(false);
+  const [showNav5, setShowNav5] = useState(false);
 
-  const toggleReact01 = () => { /* 추가부분 */
+  const toggleReact01 = () => {
+    /* 추가부분 */
     setShowNav(!showNav);
   };
   const toggleNav2 = () => {
@@ -24,45 +26,99 @@ const ReferenceList = () => {
   const toggleNav4 = () => {
     setShowNav4(!showNav4);
   };
-  let react01 /* 추가부분 */ = [{id:0, value:'리액트 란?', url:'/reference/react01'}, {id:1, value:'리액트의 특징', url:'/reference/react02'}];
-  let js01 = [{id:0, value:'JavaScript 란?', url:'/reference/js01'}, {id:1, value:'JS 변수', url:'/reference/js02'}, {id:2, value:'JS 객체', url:'/reference/js03'}];
-  let next01 = [{id:0, value:'Next.js 란?', url:'/reference/next01'}]
-  let bootstrap01 = [{id:0, value:'Bootstrap 이란?', url:'/reference/Bootstrap01'}]
+  const toggleNav5 = () => {
+    setShowNav5(!showNav5);
+  };
+  let react01 /* 추가부분 */ = [
+    { id: 0, value: "리액트 란?", url: "/reference/react01" },
+    { id: 1, value: "리액트의 특징", url: "/reference/react02" },
+  ];
+  let js01 = [
+    { id: 0, value: "JavaScript 란?", url: "/reference/js01" },
+    { id: 1, value: "JS 변수", url: "/reference/js02" },
+    { id: 2, value: "JS 객체", url: "/reference/js03" },
+  ];
+  let next01 = [{ id: 0, value: "Next.js 란?", url: "/reference/next01" }];
+  let bootstrap01 = [
+    { id: 0, value: "Bootstrap 이란?", url: "/reference/Bootstrap01" },
+  ];
+  let Firebase01 = [
+    { id: 0, value: "Firebase 란?", url: "/reference/Firebase01" },
+    {
+      id: 1,
+      value: "Firebase 실시간 데이터베이스 이해",
+      url: "/reference/Firebase02",
+    },
+  ];
 
-  let underlist01 /* 수정부분 */ = react01/* 수정부분 */.map((list) => {
-    return (
-      <a className="nav-link Reference_navbar_list" key="id" onClick={
-        ()=>{navigate(list.url)}}>
-        {list.value}
-      </a>
-    );
-  });
+  let underlist01 /* 수정부분 */ = react01 /* 수정부분 */
+    .map((list) => {
+      return (
+        <a
+          className="nav-link Reference_navbar_list"
+          key="id"
+          onClick={() => {
+            navigate(list.url);
+          }}
+        >
+          {list.value}
+        </a>
+      );
+    });
   let underlist02 = js01.map((list) => {
     return (
-      <a className="nav-link Reference_navbar_list" key="id" onClick={
-        ()=>{navigate(list.url)}}>
+      <a
+        className="nav-link Reference_navbar_list"
+        key="id"
+        onClick={() => {
+          navigate(list.url);
+        }}
+      >
         {list.value}
       </a>
     );
   });
   let underlist03 = next01.map((list) => {
     return (
-      <a className="nav-link Reference_navbar_list" key="id" onClick={
-        ()=>{navigate(list.url)}}>
+      <a
+        className="nav-link Reference_navbar_list"
+        key="id"
+        onClick={() => {
+          navigate(list.url);
+        }}
+      >
         {list.value}
       </a>
     );
   });
   let underlist04 = bootstrap01.map((list) => {
     return (
-      <a className="nav-link Reference_navbar_list" key="id" onClick={
-        ()=>{navigate(list.url)}}>
+      <a
+        className="nav-link Reference_navbar_list"
+        key="id"
+        onClick={() => {
+          navigate(list.url);
+        }}
+      >
         {list.value}
       </a>
     );
   });
-
-  let list = (  /* 수정부분 */
+  let underlist05 = Firebase01.map((list) => {
+    return (
+      <a
+        className="nav-link Reference_navbar_list"
+        key="id"
+        onClick={() => {
+          navigate(list.url);
+        }}
+      >
+        {list.value}
+      </a>
+    );
+  });
+  let list = (
+    /* 수정부분 */
     <div>
       <nav
         id="navbar-example3"
@@ -70,7 +126,6 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleReact01} /* 수정부분 */
         >
           React 이론
@@ -91,15 +146,12 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav2}
         >
           JavaScript 이론
         </a>
         {showNav2 && (
-          <nav className="nav nav-pills flex-column">
-          {underlist02}
-        </nav>
+          <nav className="nav nav-pills flex-column">{underlist02}</nav>
         )}
       </nav>
     </div>
@@ -112,20 +164,15 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav3}
         >
           Next.js 이론
         </a>
         {showNav3 && (
-          <nav className="nav nav-pills flex-column">
-          {underlist03}
-        </nav>
+          <nav className="nav nav-pills flex-column">{underlist03}</nav>
         )}
       </nav>
     </div>
-    
-    
   );
   let list4 = (
     <div>
@@ -135,35 +182,48 @@ const ReferenceList = () => {
       >
         <a
           className="navbar-brand Reference_navbar_title"
-          href="#"
           onClick={toggleNav4}
         >
           Bootstrap 이론
         </a>
-        {showNav4  && (
-          <nav className="nav nav-pills flex-column">
-          {underlist04} 
-        </nav>
+        {showNav4 && (
+          <nav className="nav nav-pills flex-column">{underlist04}</nav>
         )}
       </nav>
     </div>
-    
-    
   );
-
+  let list5 = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          onClick={toggleNav5}
+        >
+          Firebase 이론
+        </a>
+        {showNav5 && (
+          <nav className="nav nav-pills flex-column">{underlist05}</nav>
+        )}
+      </nav>
+    </div>
+  );
   return (
     <div className="Reference_nav">
-      <Search_setting/>
+      <Search_setting />
       {list}
       {list2}
       {list3}
-      {list4} {/* 추가부분 */}
+      {list4}
+      {list5}
+      {/* 추가부분 */}
     </div>
   );
 };
 
 export default ReferenceList;
-
 
 // 레퍼런스 글 쓰는법
 // 1. 페이지를 먼저 만든다 (React01, React02처럼 만들어서 component/Reperence 폴더에 넣기)
