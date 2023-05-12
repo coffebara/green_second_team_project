@@ -28,7 +28,7 @@ export default function Comment() {
 
   useEffect(() => {
     axios
-    .get('http://localhost:5000/comment?url='+window.location.href)
+    .get('http://localhost:5001/comment?url='+window.location.href)
     .then((res) => setComment(res.data))
     .catch((err) => console.log(err));
   });
@@ -38,7 +38,7 @@ export default function Comment() {
       console.log(window.location.href);
     } else {
       axios
-        .post('http://localhost:5000/commentwriting', {
+        .post('http://localhost:5001/commentwriting', {
           name: name,
           parents: window.location.href,
           date: koreaTime,
@@ -82,7 +82,7 @@ export default function Comment() {
           <hr />
           <div className="reference_comment_list">
             <div className="comment_writer">{item.name}</div>
-            <div className="comment_content">{item.content}</div>
+            <div className="comment_content">{item.content} <span className='smaller_text'>삭제</span> </div>
             <div className="comment_date">{item.date}</div>
           </div>
         </div>

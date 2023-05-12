@@ -157,6 +157,9 @@ h3, h4 {
     min-width: calc(70%);
 }
 
-/* .comment_date{
+.smaller_text{
+    cursor: pointer;
+    color: red;
+    margin-left: 1%;
     font-size: smaller;
-} */
+}
