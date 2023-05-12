@@ -2,7 +2,7 @@ import React from "react";
 
 function Firebase03() {
   const codeBlock= 
-
+why
   return (
     <div
       data-bs-spy="scroll"
