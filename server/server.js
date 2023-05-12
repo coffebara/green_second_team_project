@@ -4,7 +4,7 @@ const test = require('.//Router/test');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 app.use(express.json());
-var cors = require('cors')
+var cors = require('cors');
 app.use(cors());
 
 const uri =
@@ -17,7 +17,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
-
 
 async function run() {
   try {
@@ -40,15 +39,19 @@ run().catch(console.dir);
 
 app.use('/', test);
 
-app.get('/comment', async(req,res)=>{
+app.get('/comment', async (req, res) => {
   await client.connect();
-  const db = client.db('forum');
-  let comment = await db.collection('comment').find().toArray();
+  const db = client.db('Team1');
+  let comment = await db
+    .collection('comment')
+    .find({ parents: req.query.url })
+    .toArray();
+    console.log(req.query.url)
   res.json(comment);
 });
 
-app.post('/commentwriting', async(req,res)=>{
-  if(req.content == ""){
+app.post('/commentwriting', async (req, res) => {
+  if (req.content == '') {
     return res.status(500).json('빈 댓글은 작성이 불가합니다.');
   } else {
     await client.connect();

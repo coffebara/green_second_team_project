@@ -3,18 +3,35 @@ import '../../styles/reference.css';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
+// firebase
+// import { AuthContext } from "../context/AuthContext";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
 export default function Comment() {
-  let state = useSelector((state) => state);
+  // 댓글 텍스트용
+  const [text, setText] = useState('');
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
+
+  // 현재 날짜 생성
+  let nowDate = new Date();
+  let koreaTime = new Date(
+    nowDate.toLocaleString('en-US', { timeZone: 'Asia/Seoul' })
+  );
 
   // 서버용
+  let state = useSelector((state) => state);
   const [comment, setComment] = useState([]);
+  const [data, setData] = useState([]);
+  
 
-  const commentClick = () => {
+  useEffect(() => {
     axios
-      .get('http://localhost:5000/comment')
-      .then((res) => setComment(res.data))
-      .catch((err) => console.log(err));
-  };
+    .get('http://localhost:5000/comment?url='+window.location.href)
+    .then((res) => setComment(res.data))
+    .catch((err) => console.log(err));
+  });
 
   const comment_btn = () => {
     if (state.login.isLogin === false) {
@@ -22,11 +39,11 @@ export default function Comment() {
     } else {
       axios
         .post('http://localhost:5000/commentwriting', {
-          name: 'name',
+          name: name,
           parents: window.location.href,
-          date: 'date',
+          date: koreaTime,
           good: 'good',
-          content: '안녕하세요',
+          content: text,
         })
         .then((response) => {
           console.log(response);
@@ -34,38 +51,52 @@ export default function Comment() {
         .catch((error) => {
           console.log(error);
         });
+      setText('');
     }
   };
+  //플레이스홀더
+  const placeholderText = state.login.isLogin ? '' : '로그인 후 이용해주세요.';
+
+  // 파이어베이스에서 로그인한 계정의 이름을 가져옴
+  const [name, setName] = useState('');
+  const auth = getAuth();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setName(user.displayName);
+        placeholderText = '';
+      }
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, [auth]);
 
   return (
     <div className="reference_comment">
       <div>
-        <button onClick={commentClick}>Get Data</button>
-        <ul>
-          {comment.map((item) => (
-            <li key={item._id}>
-              작성자 : {item.author} <br /> 댓글 내용 : {item.content}
-            </li>
-          ))}
-        </ul>
+        <ul></ul>
       </div>
-
-      <hr />
-      <div className="reference_comment_list">
-        <div className="comment_writer">박철준</div>
-        <div className="comment_content">
-          이게 뭔 소리죠? 잘 이해가 안가는군요.
+      {comment.map((item) => (
+        <div>
+          <hr />
+          <div className="reference_comment_list">
+            <div className="comment_writer">{item.name}</div>
+            <div className="comment_content">{item.content}</div>
+            <div className="comment_date">{item.date}</div>
+          </div>
         </div>
-        <div className="comment_date">2013.05.11 14:35</div>
-      </div>
+      ))}
       <form>
         <hr />
         <div className="reference_comment_writing">
           <input
             className="reference_comment_textbox"
             type="text"
-            placeholder="로그인 후 이용해주세요."
+            placeholder={placeholderText}
             name="content"
+            value={text}
+            onChange={handleChange}
           />
           <button
             className="reference_comment_btn"
@@ -77,6 +108,7 @@ export default function Comment() {
             댓글 작성
           </button>
         </div>
+
         <hr />
       </form>
     </div>
