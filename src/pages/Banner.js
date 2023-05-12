@@ -61,7 +61,7 @@ export default function Test_ThemeDark() {
                 }}
                 className="Nav_Toggletheme"
               >
-               <img src="" alt="이미지"/>
+               <img src={process.env.PUBLIC_URL + "/favicon.ico"}/>
               </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">

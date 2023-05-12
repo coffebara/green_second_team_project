@@ -41,8 +41,8 @@ export default function Footer() {
         </div>
         <div id="Footer_ul_setting">
           <ul id="Footer_list_style">
-            <li><a href="https://www.npmjs.com/" ><img src={process.env.PUBLIC_URL + 'npm.png'} id="Footer_img1"></img></a></li>
-            <li><a href="https://github.com/" ><img src={process.env.PUBLIC_URL + 'github.png'} id="Footer_img2"></img></a></li>
+            <li><a href="https://www.npmjs.com/" target="_blank"><img src={process.env.PUBLIC_URL + 'npm.png'} id="Footer_img1" ></img></a></li>
+            <li><a href="https://github.com/" target="_blank"><img src={process.env.PUBLIC_URL + 'github.png'} id="Footer_img2" ></img></a></li>
             
           </ul>
         </div>
