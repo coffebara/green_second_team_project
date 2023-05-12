@@ -8,6 +8,7 @@ import { updateQuantity, removeCart, getDiscount, getTotalSum } from "../store";
 import { Button, Modal } from "react-bootstrap";
 
 function Cart({theme}) {
+    
     let navigate = useNavigate();
     let dispatch = useDispatch();
     let state = useSelector((state) => state);
