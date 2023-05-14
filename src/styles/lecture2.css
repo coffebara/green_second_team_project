@@ -168,6 +168,12 @@
   overflow: hidden;
 }
 
+.doyou-lect p {
+  text-align: center;
+  color: #000000;
+  margin-top: 10px;
+}
+
 .doyou-lect h3 {
   font-size: 16px;
 }
@@ -176,4 +182,12 @@
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+#cart-lecture {
+  height: 40px;
+}
+
+#cart-lecture2 {
+  height: 40px;
 }

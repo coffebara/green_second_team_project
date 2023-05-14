@@ -71,12 +71,8 @@
   margin: 25px;
 }
 
-#light .App-lecture p:hover {
+.App-lecture p:hover {
   color: #ff0000;
-}
-
-#dark .App-lecture p:hover {
-  color: #0071e3;
 }
 
 .lecture {
@@ -100,4 +96,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#filter-le {
+  background-color: #d2d2d7;
+  color: #000000;
+  border: #d2d2d7;
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 10px;
 }

@@ -2,63 +2,59 @@
 import "../styles/lecture.css";
 import Footer from "../components/Footer";
 import data from "../assets/data.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import ReactSwitch from "react-switch";
-import { Navbar, Container, Nav, Badge,Button } from "react-bootstrap";
-import { createContext, useState,useEffect  } from "react";
-import { useSelector,useDispatch } from "react-redux";
-import { logout } from "../store";
+import { Navbar, Container, Nav, Badge } from "react-bootstrap";
+import { createContext, useState } from "react";
+import { useSelector } from "react-redux";
+import { Button } from "@mui/material";
 
 export const ThemeContext = createContext(null);
 
- function Lecture() {
+function findObjectsBykey(objArray, key, value) {
+  return objArray.filter((obj) => obj[key] === value);
+}
 
+const aliceObjects = findObjectsBykey(data, "category", "초급");
+console.log(aliceObjects);
 
-  let state = useSelector((state) => state);
-
-  const [theme, setTheme] = useState("light");
-  const setMode = (mode) => {
-    window.localStorage.setItem("theme", mode);
-    setTheme(mode);
-  };
-  
-  const toggleTheme = () => {
-    setTheme((themeMode) => {
-      const newTheme = themeMode === "light" ? "dark" : "light";
-      setMode(newTheme);
-      return newTheme;
-    });
-  };
-  
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
-    localTheme ? setTheme(localTheme) : setTheme("dark");
-  }, []);
+function Lecture() {
+  let { id } = useParams();
   let [products] = useState(data);
   let navigate = useNavigate();
 
-  const dispatch = useDispatch();
-    function handleLogout() {
-        dispatch(logout());
-        navigate('/')
-    }
+  let state = useSelector((state) => state);
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 
+  const [handButtonClick, sethandButtonClick] = useState(aliceObjects);
+
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
-      <div className="Nav_Theme">
+        <div className="Nav_Theme">
           <Navbar>
             <Container>
-            <Nav.Link
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                 <img src="" alt="이미지"/>
-                </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -83,9 +79,32 @@ export const ThemeContext = createContext(null);
                 >
                   레퍼런스
                 </Nav.Link>
-               
-                {!state.login.isLogin? <Nav.Link onClick={()=> navigate('/login')}  className="Nav_Toggletheme">로그인</Nav.Link> :
-                 <Nav.Link onClick={()=>  handleLogout()}  className="Nav_Toggletheme">로그아웃</Nav.Link>}
+                {!state.login.isLogin ? (
+                  <Nav.Link
+                    onClick={() => navigate("/login")}
+                    className="Nav_Toggletheme"
+                  >
+                    로그인
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link
+                    onClick={() => handleLogout()}
+                    className="Nav_Toggletheme"
+                  >
+                    로그아웃
+                  </Nav.Link>
+                )}
+
+                {/* <Nav.Link
+                  onClick={() => {
+                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  {state.login.isLogin ? "로그아웃" : "로그인"}
+                </Nav.Link>
+
+                <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -93,11 +112,9 @@ export const ThemeContext = createContext(null);
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  {state.cart.length ? (
-                    <Badge className="ms-2" bg="secondary">
-                      {state.cart.length}
-                    </Badge>
-                  ) : null}
+                  <Badge className="ms-2" bg="secondary">
+                    0
+                  </Badge>
                 </Nav.Link>
               </Nav>
             </Container>
@@ -126,16 +143,51 @@ export const ThemeContext = createContext(null);
                 </p>
               </div>
             </div>
+            <div>
+              <Button
+                variant="text"
+                onClick={() => {
+                  sethandButtonClick(findObjectsBykey(data, "all"));
+                }}
+              >
+                전체
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => {
+                  sethandButtonClick(
+                    findObjectsBykey(data, "category", "초급")
+                  );
+                }}
+              >
+                초급
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => {
+                  sethandButtonClick(
+                    findObjectsBykey(data, "category", "중급")
+                  );
+                }}
+              >
+                중급
+              </Button>
+              <Button
+                variant="text"
+                onClick={() => {
+                  sethandButtonClick(
+                    findObjectsBykey(data, "category", "고급")
+                  );
+                }}
+              >
+                고급
+              </Button>
+            </div>
             <div className="App-lecture">
               <div className="lecture">
-                <Card products={products[0]} i={1} />
-                <Card products={products[1]} i={2} />
-                <Card products={products[2]} i={3} />
-              </div>
-              <div className="lecture">
-                <Card products={products[3]} i={4} />
-                <Card products={products[4]} i={5} />
-                <Card products={products[5]} i={6} />
+                {handButtonClick.map((product, index) => (
+                  <Hhs key={index} products={product} i={index + 1} />
+                ))}
               </div>
             </div>
           </div>
@@ -146,7 +198,7 @@ export const ThemeContext = createContext(null);
   );
 }
 
-function Card(props) {
+function Hhs(props) {
   let navigate = useNavigate();
   return (
     <>
