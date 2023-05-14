@@ -8,7 +8,7 @@ var cors = require("cors");
 app.use(cors());
 
 // const uri ="mongodb+srv://admin:1q2w3e4r@joon.seyvdep.mongodb.net/?retryWrites=true&w=majority";
-const uri ="mongodb+srv://admin:wm0r7Yef0s4CsnMm@joon.seyvdep.mongodb.net/?retryWrites=true&w=majority";
+const uri ="mongodb+srv://admin:1q2w3e4r@joon.zmizrin.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   serverApi: {
