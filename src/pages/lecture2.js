@@ -54,6 +54,14 @@ function Lecture2(props) {
     filter: theme === "dark" ? "invert(100%)" : "none",
   };
 
+  const formattedPrice = item.price
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규표현식 사용
+
+  const formattedPrice1 = item.price1
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
@@ -191,9 +199,9 @@ function Lecture2(props) {
 
                     <div>
                       <li className="price1-lecture">
-                        현장강의:{item.price1}₩
+                        현장 강의 : ₩{formattedPrice1}
                       </li>
-                      <li className="pr-le">{item.price}₩</li>
+                      <li className="pr-le">₩{formattedPrice}</li>
                       <hr />
                       <div className="pr1-lect">
                         <div>
