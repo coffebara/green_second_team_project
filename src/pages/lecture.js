@@ -16,7 +16,7 @@ function findObjectsBykey(objArray, key, value) {
   return objArray.filter((obj) => obj[key] === value);
 }
 
-const aliceObjects = findObjectsBykey(data, "category", "초급");
+const aliceObjects = findObjectsBykey(data, "all"); // 초기 값
 console.log(aliceObjects);
 
 function Lecture() {
@@ -94,17 +94,6 @@ function Lecture() {
                     로그아웃
                   </Nav.Link>
                 )}
-
-                {/* <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
-
-                <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -112,9 +101,11 @@ function Lecture() {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
                 </Nav.Link>
               </Nav>
             </Container>
@@ -200,6 +191,7 @@ function Lecture() {
 
 function Hhs(props) {
   let navigate = useNavigate();
+
   return (
     <>
       <Col>

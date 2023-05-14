@@ -118,17 +118,6 @@ function Lecture2(props) {
                     로그아웃
                   </Nav.Link>
                 )}
-
-                {/* <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
-
-                <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -136,14 +125,17 @@ function Lecture2(props) {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
                 </Nav.Link>
               </Nav>
             </Container>
           </Navbar>
         </div>
+
         {modal === true ? (
           <CartModal modal={modal} setModal={setModal} />
         ) : null}
