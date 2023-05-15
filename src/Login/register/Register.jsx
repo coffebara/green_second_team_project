@@ -276,7 +276,11 @@ export default function Register() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
-
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
@@ -284,7 +288,10 @@ export default function Register() {
           <Navbar>
             <Container>
               <Navbar.Brand href="/home" className="Nav_Toggletheme">
-                npm
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
               </Navbar.Brand>
               <Nav>
                 <div className="Nav_Switch">

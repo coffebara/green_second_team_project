@@ -1,10 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "../../../front"
-		},
-		{
-			"path": "../.."
-		}
-	]
+  "folders": [
+	{
+		"path": "../../../front"
+	},
+	{
+		"path": "../.."
+	}
+],
+  "settings": {}
 }
