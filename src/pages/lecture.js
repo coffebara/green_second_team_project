@@ -1,14 +1,20 @@
 /* eslint-disable */
-import "../styles/lecture.css";
-import Footer from "../components/Footer";
-import data from "../assets/data.js";
-import { useNavigate, useParams } from "react-router-dom";
-import { Col } from "react-bootstrap";
-import ReactSwitch from "react-switch";
-import { Navbar, Container, Nav, Badge } from "react-bootstrap";
-import { createContext, useState } from "react";
-import { useSelector } from "react-redux";
-import { Button } from "@mui/material";
+import "../styles/lecture.css"; // css 불러오기
+import Footer from "../components/Footer"; // Footer 불러오기
+import data from "../assets/data.js"; // data 불러오기
+import { useNavigate, useParams } from "react-router-dom"; // router-dom에서 useNavigate, useParams 가져오기
+// useNavigate: 페이지 전환, URL 변경, 뒤로가기/앞으로가기 등을 처리
+// useParams: 동적 경로 매개변수를 가져와서 컴포넌트에서 사용
+import { Col } from "react-bootstrap"; // 부트스트랩에서 Col 컴포넌트 가져오기
+// Col: 그리드 시스템에서 컬럼(테이블의 열)의 역할을 하는 컴포넌트
+import ReactSwitch from "react-switch"; // 스위치 토글을 구현하기 위한 도구
+import { Navbar, Container, Nav, Badge } from "react-bootstrap"; // 부트스트랩의 네비게이션 바와 관련된 요소를 구성하는 데 사용
+import { createContext, useState } from "react"; // react에서 createContext와 useState를 가져옵니다
+// createContext: React 컨텍스트를 생성하는 데 사용
+// useState: 상태를 관리하기 위한 Hook
+import { useSelector } from "react-redux"; // react-redux에서 useSelector을 가져옵니다
+//  useSelector: Redux 상태(store)에서 원하는 데이터를 선택하기 위해 사용되는 Hook
+import { Button } from "@mui/material"; // mui 패키지에서 Button을 가져옵니다 (라이브러리)
 
 export const ThemeContext = createContext(null);
 
@@ -16,7 +22,7 @@ function findObjectsBykey(objArray, key, value) {
   return objArray.filter((obj) => obj[key] === value);
 }
 
-const aliceObjects = findObjectsBykey(data, "all"); // 초기 값
+const aliceObjects = findObjectsBykey(data, "all"); // 카테고리 초기 값
 console.log(aliceObjects);
 
 function Lecture() {
@@ -55,6 +61,7 @@ function Lecture() {
                   style={imageStyle}
                 />
               </Nav.Link>
+
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -71,6 +78,7 @@ function Lecture() {
                 >
                   강의
                 </Nav.Link>
+
                 <Nav.Link
                   onClick={() => {
                     navigate("/reference");
@@ -94,6 +102,7 @@ function Lecture() {
                     로그아웃
                   </Nav.Link>
                 )}
+
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -101,11 +110,9 @@ function Lecture() {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  {state.cart.length ? (
-                    <Badge className="ms-2" bg="secondary">
-                      {state.cart.length}
-                    </Badge>
-                  ) : null}
+                  <Badge className="ms-2" bg="secondary">
+                    0
+                  </Badge>
                 </Nav.Link>
               </Nav>
             </Container>

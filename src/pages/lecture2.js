@@ -79,6 +79,7 @@ function Lecture2(props) {
                   style={imageStyle}
                 />
               </Nav.Link>
+
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -95,6 +96,7 @@ function Lecture2(props) {
                 >
                   강의
                 </Nav.Link>
+
                 <Nav.Link
                   onClick={() => {
                     navigate("/reference");
@@ -118,6 +120,7 @@ function Lecture2(props) {
                     로그아웃
                   </Nav.Link>
                 )}
+
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -125,11 +128,9 @@ function Lecture2(props) {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  {state.cart.length ? (
-                    <Badge className="ms-2" bg="secondary">
-                      {state.cart.length}
-                    </Badge>
-                  ) : null}
+                  <Badge className="ms-2" bg="secondary">
+                    0
+                  </Badge>
                 </Nav.Link>
               </Nav>
             </Container>
