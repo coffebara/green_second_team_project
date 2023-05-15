@@ -57,11 +57,14 @@
 }
 
 .App-lecture {
-  margin: 80px 20px 400px 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  margin: 80px 20px 1000px 20px;
   cursor: pointer;
+}
+
+.lecture-container {
+  float: left;
+  width: 30%;
+  margin-left: 50px;
 }
 
 .App-lecture img {
@@ -71,18 +74,12 @@
   margin: 25px;
 }
 
-.App-lecture p:hover {
+#light .App-lecture p:hover {
   color: #ff0000;
 }
 
-.lecture {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0px 20px 0px;
-}
-
-.lecture-App-1 {
-  margin: 50px 0px 100px 0px;
+#dark .App-lecture p:hover {
+  color: #0071e3;
 }
 
 .App-link {
