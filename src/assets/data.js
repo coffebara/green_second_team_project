@@ -71,7 +71,7 @@ let data = [
   },
   {
     id: 4,
-    title: "Node.js, MongoDB로 2시간 만에 빠르게 웹서비스 만들기",
+    title: "Node.js, MongoDB로 빠르게 웹서비스 만들기",
     nextTitle: "Next.js로 웹서비스 만들기",
     content:
       "프로그래밍 세계 최고로 쉽게 설명해드리는 코딩애플과 함께라면 웹서비스 제작도 뚝딱입니다. 게시판 하나 만들며 배워보는 Node.js 강의가 신설되었습니다!",

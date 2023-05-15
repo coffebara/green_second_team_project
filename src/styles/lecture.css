@@ -39,39 +39,32 @@
 .lecture-front h1 {
   font-size: 80px;
   padding-top: 100px;
-  /* color: #f5f5f7; */
 }
 
 .lecture-varil {
   margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+#lt-btn {
+  margin: 10px;
 }
 
 .lecture-varil h2 {
   font-size: 60px;
-  /* color: #d2d2d7; */
 }
 
 .lecture-varil p {
   font-size: 35px;
-  margin: 100px 0px 20px 0px;
 }
 
 .App-lecture {
-  margin: 80px 20px 1000px 20px;
+  padding: 0px 330px 800px 300px;
   cursor: pointer;
 }
 
 .lecture-container {
-  float: left;
-  width: 30%;
-  margin-left: 50px;
-}
-
-.App-lecture img {
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin: 25px;
+  float: right;
 }
 
 #light .App-lecture p:hover {
