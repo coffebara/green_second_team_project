@@ -133,9 +133,11 @@ function Lecture() {
                   className="Nav_Toggletheme"
                 >
                   장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
                 </Nav.Link>
               </Nav>
             </Container>
