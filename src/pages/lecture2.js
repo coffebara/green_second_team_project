@@ -11,6 +11,7 @@ import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext, useState } from "react";
 import { useSelector } from "react-redux";
 import { Button } from "react-bootstrap";
+import { useEffect } from "react";
 import {
   TextField,
   Grid,
@@ -30,16 +31,8 @@ function Lecture2(props) {
   let { id } = useParams();
   let item = props.items.find((x) => x.id == id);
   console.log(item);
-  let dispatch = useDispatch();
-  let navigate = useNavigate();
 
   const [modal, setModal] = useState(false);
-
-  let state = useSelector((state) => state);
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
 
   const [count, setCount] = useState(1);
 
@@ -47,13 +40,38 @@ function Lecture2(props) {
     const newCount = count >= 5 ? 0 : count + 1;
     setCount(newCount);
   }
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
+  let state = useSelector((state) => state);
 
+  const [theme, setTheme] = useState("dark");
+
+  function handleLogout() {
+    dispatch(logout());
+  }
+
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
+  };
+
+  const toggleTheme = () => {
+    setTheme((themeMode) => {
+      const newTheme = themeMode === "dark" ? "light" : "dark";
+      setMode(newTheme);
+      return newTheme;
+    });
+  };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    localTheme ? setTheme(localTheme) : setTheme("light");
+  }, []);
   const imageStyle = {
     width: 100,
     height: 25,
     filter: theme === "dark" ? "invert(100%)" : "none",
   };
-
   const formattedPrice = item.price
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규표현식 사용

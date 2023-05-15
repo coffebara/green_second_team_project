@@ -15,6 +15,9 @@ import { createContext, useState } from "react"; // react에서 createContext와
 import { useSelector } from "react-redux"; // react-redux에서 useSelector을 가져옵니다
 //  useSelector: Redux 상태(store)에서 원하는 데이터를 선택하기 위해 사용되는 Hook
 import { Button } from "@mui/material"; // mui 패키지에서 Button을 가져옵니다 (라이브러리)
+import { logout } from "../store";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 export const ThemeContext = createContext(null);
 
@@ -28,16 +31,36 @@ console.log(aliceObjects);
 function Lecture() {
   let { id } = useParams();
   let [products] = useState(data);
-  let navigate = useNavigate();
-
-  let state = useSelector((state) => state);
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
 
   const [handButtonClick, sethandButtonClick] = useState(aliceObjects);
 
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
+  let state = useSelector((state) => state);
+
+  const [theme, setTheme] = useState("dark");
+
+  function handleLogout() {
+    dispatch(logout());
+  }
+
+  const setMode = (mode) => {
+    window.localStorage.setItem("theme", mode);
+    setTheme(mode);
+  };
+
+  const toggleTheme = () => {
+    setTheme((themeMode) => {
+      const newTheme = themeMode === "dark" ? "light" : "dark";
+      setMode(newTheme);
+      return newTheme;
+    });
+  };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    localTheme ? setTheme(localTheme) : setTheme("light");
+  }, []);
   const imageStyle = {
     width: 100,
     height: 25,
