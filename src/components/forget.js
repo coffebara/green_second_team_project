@@ -5,7 +5,6 @@ import {
   Grid,
   Box,
   Typography,
-  Container,
   Avatar,
   Dialog,
   DialogTitle,
@@ -16,7 +15,7 @@ import {
 import LockOutlinedIcon from "@mui/icons-material/LockClockOutlined";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import ReactSwitch from "react-switch";
-import { Navbar, Nav, Badge } from "react-bootstrap";
+import { Navbar, Nav, Badge, Container } from "react-bootstrap";
 import { createContext } from "react";
 import { useSelector } from "react-redux";
 
