@@ -57,11 +57,14 @@
 }
 
 .App-lecture {
-  margin: 80px 20px 400px 20px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  margin: 80px 20px 1000px 20px;
   cursor: pointer;
+}
+
+.lecture-container {
+  float: left;
+  width: 30%;
+  margin-left: 50px;
 }
 
 .App-lecture img {
@@ -79,16 +82,6 @@
   color: #0071e3;
 }
 
-.lecture {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0px 20px 0px;
-}
-
-.lecture-App-1 {
-  margin: 50px 0px 100px 0px;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -100,4 +93,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#filter-le {
+  background-color: #d2d2d7;
+  color: #000000;
+  border: #d2d2d7;
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 10px;
 }

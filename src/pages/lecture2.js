@@ -2,7 +2,6 @@
 import "../styles/lecture2.css";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import { useEffect } from "react";
 import { addCart } from "../store";
 import { useDispatch } from "react-redux";
 import { FaSignal } from "react-icons/fa";
@@ -11,6 +10,19 @@ import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext, useState } from "react";
 import { useSelector } from "react-redux";
+import { Button } from "react-bootstrap";
+import {
+  TextField,
+  Grid,
+  Box,
+  Typography,
+  Avatar,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from "@mui/material";
 
 export const ThemeContext = createContext(null);
 
@@ -20,6 +32,8 @@ function Lecture2(props) {
   console.log(item);
   let dispatch = useDispatch();
   let navigate = useNavigate();
+
+  const [modal, setModal] = useState(false);
 
   let state = useSelector((state) => state);
   const [theme, setTheme] = useState("light");
@@ -34,20 +48,37 @@ function Lecture2(props) {
     setCount(newCount);
   }
 
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
+
+  const formattedPrice = item.price
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규표현식 사용
+
+  const formattedPrice1 = item.price1
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
-      <div className="Nav_Theme">
+        <div className="Nav_Theme">
           <Navbar>
             <Container>
-            <Nav.Link
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  npm
-                </Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -72,14 +103,21 @@ function Lecture2(props) {
                 >
                   레퍼런스
                 </Nav.Link>
-                <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/checkout" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
+                {!state.login.isLogin ? (
+                  <Nav.Link
+                    onClick={() => navigate("/login")}
+                    className="Nav_Toggletheme"
+                  >
+                    로그인
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link
+                    onClick={() => handleLogout()}
+                    className="Nav_Toggletheme"
+                  >
+                    로그아웃
+                  </Nav.Link>
+                )}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -98,7 +136,9 @@ function Lecture2(props) {
           </Navbar>
         </div>
 
-        
+        {modal === true ? (
+          <CartModal modal={modal} setModal={setModal} />
+        ) : null}
         <div class="container" id="lecture-container">
           <div className="lture">
             <div class="row">
@@ -111,11 +151,11 @@ function Lecture2(props) {
                     <FaStar color="#FFCB10" />
                     <FaStar color="#FFCB10" />
                     <FaStar color="#FFCB10" />
-                    <re>( 43 리뷰 )</re>
+                    <re>( {item.rvrv} 리뷰 )</re>
                   </p>
                   {/* 별이 다섯개 */}
                   <li id="blackcow">
-                    <aw>🐶</aw> 5870 수강생
+                    <aw>🐶</aw> {item.sugang} 수강생
                   </li>
                 </div>
               </div>
@@ -132,6 +172,12 @@ function Lecture2(props) {
                       id="lecture-btn"
                       value={"장바구니"}
                       onClick={() => {
+                        const result = confirm(
+                          "장바구니에 상품을 담았습니다. \n장바구니로 이동하겠습니까?"
+                        );
+                        if (result) {
+                          navigate("/cart");
+                        }
                         dispatch(
                           addCart({
                             id: item.id,
@@ -142,11 +188,12 @@ function Lecture2(props) {
                         );
                       }}
                     />
+
                     <div>
                       <li className="price1-lecture">
-                        현장강의:{item.price1}₩
+                        현장 강의 : ₩{formattedPrice1}
                       </li>
-                      <li className="pr-le">{item.price}₩</li>
+                      <li className="pr-le">₩{formattedPrice}</li>
                       <hr />
                       <div className="pr1-lect">
                         <div>
@@ -163,6 +210,7 @@ function Lecture2(props) {
                       <Link to={`/lecture2/${count}`}>
                         <img src={item.image1} onClick={incrementCount} />
                       </Link>
+                      <p>{item.nextTitle}</p>
                     </div>
                   </div>
                 </div>
@@ -264,3 +312,23 @@ function Lecture2(props) {
   );
 }
 export default Lecture2;
+
+function CartModal({ modal, setModal }) {
+  return (
+    <div>
+      <h3>장바구니에 추가되었습니다 .</h3>
+      <div>
+        <Button
+          id="cart-lecture"
+          onClick={() => setModal(!modal)}
+          isPurple={true}
+        >
+          쇼핑 계속하기
+        </Button>
+        <Link to="/cart">
+          <Button id="cart-lecture2">장바구니 보기</Button>
+        </Link>
+      </div>
+    </div>
+  );
+}
