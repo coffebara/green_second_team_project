@@ -157,6 +157,18 @@ h3, h4 {
     min-width: calc(70%);
 }
 
-/* .comment_date{
-    font-size: smaller;
-} */
+.comment_cancelBtn {
+    display: block;
+    color: #ff0000;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.comment_cancelBtn:hover {
+    background-color: #ff0000;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+}

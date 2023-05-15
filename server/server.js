@@ -1,14 +1,16 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const test = require(".//Router/test");
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const test = require('.//Router/test');
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 app.use(express.json());
-var cors = require("cors");
+var cors = require('cors');
 app.use(cors());
 
 // const uri ="mongodb+srv://admin:1q2w3e4r@joon.seyvdep.mongodb.net/?retryWrites=true&w=majority";
-const uri ="mongodb+srv://admin:1q2w3e4r@joon.zmizrin.mongodb.net/?retryWrites=true&w=majority";
+const uri =
+  'mongodb+srv://admin:1q2w3e4r@joon.zmizrin.mongodb.net/?retryWrites=true&w=majority';
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -23,9 +25,9 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    await client.db('admin').command({ ping: 1 });
     console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
+      'Pinged your deployment. You successfully connected to MongoDB!'
     );
     // const db = client.db('forum');
     // let result = await db.collection('comment').find().toArray();
@@ -37,27 +39,51 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.use("/", test);
+app.use('/', test);
 
-app.get("/comment", async (req, res) => {
+app.get('/comment', async (req, res) => {
   await client.connect();
-  const db = client.db("Team1");
+  const db = client.db('Team1');
   let comment = await db
-    .collection("comment")
+    .collection('comment')
     .find({ parents: req.query.url })
     .toArray();
   console.log(req.query.url);
   res.json(comment);
 });
 
-app.post("/commentwriting", async (req, res) => {
-  if (req.content == "") {
-    return res.status(500).json("빈 댓글은 작성이 불가합니다.");
+app.post('/commentwriting', async (req, res) => {
+  if (req.content == '') {
+    return res.status(500).json('빈 댓글은 작성이 불가합니다.');
   } else {
     await client.connect();
-    const db = client.db("Team1");
-    let comment = await db.collection("comment").insertOne(req.body);
+    const db = client.db('Team1');
+    let comment = await db.collection('comment').insertOne(req.body);
     res.json(comment);
+  }
+});
+
+app.post('/deletecomment', async (req, res) => {
+  console.log(req.body);
+  
+  try {
+    const id = req.body._id;
+    if (!ObjectId.isValid(id)) {
+      return res.status(400).json('잘못된 ID 형식');
+    }
+
+    await client.connect();
+    let db = client.db('Team1');
+    let result = await db
+      .collection('comment')
+      .deleteOne({ _id: new ObjectId(id) });
+    console.log(result);
+    res.status(200).json('삭제완료');
+  } catch (error) {
+    console.error(error);
+    res.status(500).json('오류 발생');
+  } finally {
+    await client.close();
   }
 });
 
