@@ -136,7 +136,8 @@ function Lecture() {
             </div>
             <div>
               <Button
-                variant="text"
+                id="lt-btn"
+                variant="outlined"
                 onClick={() => {
                   sethandButtonClick(findObjectsBykey(data, "all"));
                 }}
@@ -144,7 +145,8 @@ function Lecture() {
                 전체
               </Button>
               <Button
-                variant="text"
+                id="lt-btn"
+                variant="outlined"
                 onClick={() => {
                   sethandButtonClick(
                     findObjectsBykey(data, "category", "초급")
@@ -154,7 +156,8 @@ function Lecture() {
                 초급
               </Button>
               <Button
-                variant="text"
+                id="lt-btn"
+                variant="outlined"
                 onClick={() => {
                   sethandButtonClick(
                     findObjectsBykey(data, "category", "중급")
@@ -164,7 +167,8 @@ function Lecture() {
                 중급
               </Button>
               <Button
-                variant="text"
+                id="lt-btn"
+                variant="outlined"
                 onClick={() => {
                   sethandButtonClick(
                     findObjectsBykey(data, "category", "고급")
@@ -191,7 +195,6 @@ function Lecture() {
 
 function Hhs(props) {
   let navigate = useNavigate();
-
   return (
     <>
       <Col>

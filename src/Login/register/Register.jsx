@@ -276,16 +276,28 @@ export default function Register() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
-
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/home" className="Nav_Toggletheme">
-                npm
-              </Navbar.Brand>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch

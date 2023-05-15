@@ -225,7 +225,11 @@ export default function Test_Login() {
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
-
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
   // console.log(inputs);
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -233,9 +237,17 @@ export default function Test_Login() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
-                npm
-              </Navbar.Brand>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
