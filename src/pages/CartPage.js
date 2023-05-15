@@ -3,25 +3,24 @@ import "../test2/Test2.css";
 import ReactSwitch from "react-switch";
 import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext, useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Cart from "../components/Cart";
 import Footer from "../components/Footer";
 import CartRefresh from "../components/CartRefresh";
-
+import { logout } from "../store";
 
 export const ThemeContext = createContext(null);
 
 export default function CartPage() {
-    
     let state = useSelector((state) => state);
-    
+
     const [theme, setTheme] = useState("light");
     const setMode = (mode) => {
         window.localStorage.setItem("theme", mode);
         setTheme(mode);
     };
-    
+
     const toggleTheme = () => {
         setTheme((themeMode) => {
             const newTheme = themeMode === "light" ? "dark" : "light";
@@ -35,9 +34,18 @@ export default function CartPage() {
         localTheme ? setTheme(localTheme) : setTheme("dark");
     }, []);
 
-    CartRefresh()
+    CartRefresh();
     let navigate = useNavigate();
 
+    const dispatch = useDispatch();
+    const imageStyle = {
+        width: 100,
+        height: 25,
+        filter: theme === "dark" ? "invert(100%)" : "none",
+    };
+    function handleLogout() {
+        dispatch(logout());
+    }
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <div id={theme}>
@@ -50,11 +58,18 @@ export default function CartPage() {
                                 }}
                                 className="Nav_Toggletheme"
                             >
-                                npm
+                                <img
+                                    src={process.env.PUBLIC_URL + "/favicon.ico"}
+                                    style={imageStyle}
+                                />
                             </Nav.Link>
                             <Nav>
                                 <div className="Nav_Switch">
-                                    <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} className="mt-2" />
+                                    <ReactSwitch
+                                        onChange={toggleTheme}
+                                        checked={theme === "dark"}
+                                        className="mt-2"
+                                    />
                                 </div>
                                 <Nav.Link
                                     onClick={() => {
@@ -72,14 +87,32 @@ export default function CartPage() {
                                 >
                                     레퍼런스
                                 </Nav.Link>
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate(`${state.login.isLogin ? "/checkout" : "/login"}`);
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    {state.login.isLogin ? "로그아웃" : "로그인"}
-                                </Nav.Link>
+                                {!state.login.isLogin ? (
+                                    <Nav.Link
+                                        onClick={() => navigate("/login")}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그인
+                                    </Nav.Link>
+                                ) : (
+                                    <Nav.Link
+                                        onClick={() => handleLogout()}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그아웃
+                                    </Nav.Link>
+                                )}
+
+                                {/* <Nav.Link
+                  onClick={() => {
+                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  {state.login.isLogin ? "로그아웃" : "로그인"}
+                </Nav.Link>
+
+                <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                                 <Nav.Link
                                     onClick={() => {
                                         navigate("/cart");

@@ -60,7 +60,8 @@ function Cart({theme}) {
         const newQuantity = e.target.value < 0 ? 0 : e.target.value;
         dispatch(updateQuantity({ newQuantity, i }));
     };
-
+    console.log(state.cart.length);
+    console.log(state.cart);
     return (
         <div>
             {/* <Nav /> */}

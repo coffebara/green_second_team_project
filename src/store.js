@@ -16,6 +16,8 @@ let cart = createSlice({
         },
         removeCart(state, action) {
             let newState = state.filter((item) => item.id !== Number(action.payload));
+            let jsonString = JSON.stringify(newState);
+            sessionStorage.setItem("cart", jsonString);
             return newState;
         },
         updateQuantity(state, action) {
@@ -23,12 +25,23 @@ let cart = createSlice({
             state[i].quantity = newQuantity;
         },
         refreshCart(state, action) {
-          console.log("기존 state 값: " + state);
-            if(action.payload && state.length === 0){
-              state.push(action.payload);
+            console.log("기존 state 값: " + state);
+            if (action.payload && state.length === 0) {
+                state.push(action.payload);
             }
             console.log("세션에서 가져와야하는 값: " + action.payload);
-            console.log("최종 state: " + state);  
+            console.log("최종 state: " + state);
+        },
+        refreshCart(state, action) {
+            console.log("기존 state 값: " + state);
+            if (action.payload && state.length === 0) {
+                for (let i = 0; i < action.payload.length; i++) {
+                    state.push(action.payload[i]);
+                }
+            }
+            // console.log("세션에서 가져와야하는 값: " + action.payload);
+            // console.log("최종 state: " + state);
+            // state.map((item) => {console.log(item)});
         },
     },
 });

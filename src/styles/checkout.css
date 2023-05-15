@@ -56,6 +56,10 @@ ul,li{
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
+    outline: none;
+}
+#light .checkout_area:focus{
+    border-bottom-width: 2px;
 }
 #dark .checkout_input{
     width: 100%;
@@ -69,13 +73,25 @@ ul,li{
 }
 #dark .checkout_area{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
     color: #c5c5c5;
     background-color: white;
+    outline: none;
 }
+#dark .checkout_area:focus{
+    border-bottom-width: 2px;
+}
+/* 에러 메세지 */
+.errorMessage{
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
+
 /* 신청한 강좌 목록 */
 .checkout_table{
     width: 100%;
@@ -197,4 +213,12 @@ ul,li{
 #dark .payment_btn:hover{
     background-color: #FF4949;
     color: white;
+}
+.payment_TermsOfUse{
+    margin: 15px;
+    max-height: 200px;
+    overflow: auto;
+    display: none;
+    font-weight: normal;
+    color: #c5c5c5;
 }
