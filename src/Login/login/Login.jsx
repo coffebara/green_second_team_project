@@ -237,12 +237,17 @@ export default function Test_Login() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/" className="Nav_Toggletheme">
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
                 <img
-                  src={process.env.PUBLIC_URL + "../..//favicon.ico"}
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
                   style={imageStyle}
                 />
-              </Navbar.Brand>
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch

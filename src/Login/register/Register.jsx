@@ -287,12 +287,17 @@ export default function Register() {
         <div className="Nav_Theme">
           <Navbar>
             <Container>
-              <Navbar.Brand href="/home" className="Nav_Toggletheme">
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
                 <img
                   src={process.env.PUBLIC_URL + "/favicon.ico"}
                   style={imageStyle}
                 />
-              </Navbar.Brand>
+              </Nav.Link>
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
