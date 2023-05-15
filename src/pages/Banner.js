@@ -1,38 +1,41 @@
+
+
 import ReactSwitch from "react-switch";
-import { Navbar, Container, Nav, Badge, Button } from "react-bootstrap";
+import { Navbar, Container, Nav, Badge} from "react-bootstrap";
 import { createContext, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+
 import Banner_setting1 from "../pages/Banner_setting1";
 import Banner_setting3 from "../pages/Banner_setting3";
-import Banner_setting2 from "../pages/Banner_setting2.js";
-import Footer from "../components/Footer";
+import Banner_setting2 from '../pages/Banner_setting2.js'
+import Footer from '../components/Footer'
 import { logout } from "../store";
+
+
 
 export const ThemeContext = createContext(null);
 
+
 export default function Test_ThemeDark() {
-  //여기서부터
+
+  //여기서부터 
+  let navigate = useNavigate();
+  const dispatch = useDispatch();
   let state = useSelector((state) => state);
+
   const [theme, setTheme] = useState("dark");
 
-  const handleButtonClick = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  let navigate = useNavigate();
-
-  const imageStyle = {
-    width: 100,
-    height: 25,
-    filter: theme === "dark" ? "invert(100%)" : "none",
-  };
+  function handleLogout() {
+    dispatch(logout());
+  }
 
   const setMode = (mode) => {
     window.localStorage.setItem("theme", mode);
     setTheme(mode);
   };
+
   const toggleTheme = () => {
     setTheme((themeMode) => {
       const newTheme = themeMode === "dark" ? "light" : "dark";
@@ -40,16 +43,19 @@ export default function Test_ThemeDark() {
       return newTheme;
     });
   };
+
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
     localTheme ? setTheme(localTheme) : setTheme("light");
   }, []);
+  
+  const imageStyle = {
+    width: 100,
+    height: 25,
+    filter: theme === "dark" ? "invert(100%)" : "none",
+  };
+  //여기까지
 
-  const dispatch = useDispatch();
-
-  function handleLogout() {
-    dispatch(logout());
-  }
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
@@ -67,6 +73,7 @@ export default function Test_ThemeDark() {
                   style={imageStyle}
                 />
               </Nav.Link>
+
               <Nav>
                 <div className="Nav_Switch">
                   <ReactSwitch
@@ -83,6 +90,7 @@ export default function Test_ThemeDark() {
                 >
                   강의
                 </Nav.Link>
+
                 <Nav.Link
                   onClick={() => {
                     navigate("/reference");
@@ -91,32 +99,9 @@ export default function Test_ThemeDark() {
                 >
                   레퍼런스
                 </Nav.Link>
-                {!state.login.isLogin ? (
-                  <Nav.Link
-                    onClick={() => navigate("/login")}
-                    className="Nav_Toggletheme"
-                  >
-                    로그인
-                  </Nav.Link>
-                ) : (
-                  <Nav.Link
-                    onClick={() => handleLogout()}
-                    className="Nav_Toggletheme"
-                  >
-                    로그아웃
-                  </Nav.Link>
-                )}
+                {!state.login.isLogin ? <Nav.Link onClick={() => navigate('/login')} className="Nav_Toggletheme">로그인</Nav.Link> :
+                  <Nav.Link onClick={() => handleLogout()} className="Nav_Toggletheme">로그아웃</Nav.Link>}
 
-                {/* <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
-
-                <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                 <Nav.Link
                   onClick={() => {
                     navigate("/cart");
@@ -132,6 +117,7 @@ export default function Test_ThemeDark() {
             </Container>
           </Navbar>
         </div>
+
 
         <Banner_setting1 />
         <Banner_setting2 />

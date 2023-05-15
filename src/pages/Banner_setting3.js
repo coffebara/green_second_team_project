@@ -3,7 +3,7 @@ export default function Banner_setting3() {
         <div>
             <div id="Banner_bg3">
                 <div id="Banner_bg3_center1">
-                    <img src={process.env.PUBLIC_URL + '/nugulman.png'} width="200px" />
+                    <img src={process.env.PUBLIC_URL + "/favicon.ico"} width="200px" />
                 </div>
                 <h2 id="Banner_bg3_center2">IT-DA가 알려주는 코딩 강의</h2>
                 <div id="Banner_bg3_center3"> 

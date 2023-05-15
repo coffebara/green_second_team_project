@@ -79,6 +79,7 @@ import Detail1 from './pages/lecture2';
 // 서버용
 import axios from 'axios';
 import { useState } from 'react';
+import TermsOfUse from './components/TermsOfUse';
 
 function App() {
   // 디테일 페이지 용
@@ -101,6 +102,7 @@ function App() {
         <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
         <Route path="/Lecture2" element={<Lecture2 />} />
+        <Route path='/terms' element={<TermsOfUse/>}/>
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />
