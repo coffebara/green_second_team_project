@@ -50,6 +50,10 @@
   margin: 10px;
 }
 
+.lecture-btn {
+  margin-right: 20px;
+}
+
 .lecture-varil h2 {
   font-size: 60px;
 }
@@ -59,12 +63,19 @@
 }
 
 .App-lecture {
-  padding: 0px 330px 800px 300px;
+  padding: 0px 300px 800px 340px;
   cursor: pointer;
 }
 
 .lecture-container {
-  float: right;
+  float: left;
+}
+
+.App-lecture img {
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 25px;
 }
 
 #light .App-lecture p:hover {

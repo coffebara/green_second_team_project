@@ -134,7 +134,7 @@ function Lecture() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="lecture-btn">
               <Button
                 id="lt-btn"
                 variant="outlined"
