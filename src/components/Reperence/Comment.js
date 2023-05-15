@@ -23,7 +23,6 @@ export default function Comment() {
   // 서버용
   let state = useSelector((state) => state);
   const [comment, setComment] = useState([]);
-  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
@@ -31,7 +30,6 @@ export default function Comment() {
       .then((res) => setComment(res.data))
       .catch((err) => console.log(err));
   });
-
   const comment_btn = () => {
     if (state.login.isLogin === false) {
       console.log(window.location.href);

@@ -175,11 +175,11 @@ function Lecture() {
               </Button>
             </div>
             <div className="App-lecture">
-              <div className="lecture">
-                {handButtonClick.map((product, index) => (
+              {handButtonClick.map((product, index) => (
+                <div key={index} className="lecture-container">
                   <Hhs key={index} products={product} i={index + 1} />
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
