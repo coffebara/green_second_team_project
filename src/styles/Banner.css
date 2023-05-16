@@ -14,10 +14,15 @@
     line-height: 1.5;
 }
 
-#Banner_bg1_button {
+#light #Banner_bg1_button {
     margin: 2em 0 4em;
+    background-color: white;
 }
 
+#dark #Banner_bg1_button {
+    margin: 2em 0 4em;
+    background-color: black;
+}
 
 
 
@@ -31,16 +36,29 @@
 }
 
 #Banner_bg3_center2 {
-    margin: 1em 0 0.67em;
+    margin: 2.5em 0 0.67em;
+
 }
 
 #Banner_bg3_center3 {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
     max-width: 32rem;
     line-height: 1.5;
 }
+
+
+#light #Banner_bg3_button {
+    margin: 1em 0 4em;
+    background-color: white;
+}
+
+#dark #Banner_bg3_button {
+    margin: 1em 0 4em;
+    background-color: black;
+}
+
 
 #cursor{
     cursor: pointer;
