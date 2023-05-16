@@ -11,6 +11,7 @@ const ReferenceList = () => {
   const [showNav3, setShowNav3] = useState(false);
   const [showNav4, setShowNav4] = useState(false);
   const [showNav5, setShowNav5] = useState(false);
+  const [showNav6, setShowNav6] = useState(false);
 
   const toggleReact01 = () => {
     /* 추가부분 */
@@ -28,6 +29,9 @@ const ReferenceList = () => {
   };
   const toggleNav5 = () => {
     setShowNav5(!showNav5);
+  };
+  const toggleNav6 = () => {
+    setShowNav6(!showNav6);
   };
   let react01 /* 추가부분 */ = [
     { id: 0, value: "리액트 란?", url: "/reference/react01" },
@@ -49,6 +53,9 @@ const ReferenceList = () => {
       value: "Firebase 실시간 데이터베이스 이해",
       url: "/reference/Firebase02",
     },
+  ];
+  let ReduxToolkit01 = [
+    { id: 0, value: "ReduxToolkit 이란?", url: "/reference/ReduxToolkit01" },
   ];
 
   let underlist01 /* 수정부분 */ = react01 /* 수정부분 */
@@ -105,6 +112,19 @@ const ReferenceList = () => {
     );
   });
   let underlist05 = Firebase01.map((list) => {
+    return (
+      <a
+        className="nav-link Reference_navbar_list"
+        key="id"
+        onClick={() => {
+          navigate(list.url);
+        }}
+      >
+        {list.value}
+      </a>
+    );
+  });
+  let underlist06 = ReduxToolkit01.map((list) => {
     return (
       <a
         className="nav-link Reference_navbar_list"
@@ -210,6 +230,24 @@ const ReferenceList = () => {
       </nav>
     </div>
   );
+  let list6 = (
+    <div>
+      <nav
+        id="navbar-example3"
+        className="navbar flex-column align-items-stretch"
+      >
+        <a
+          className="navbar-brand Reference_navbar_title"
+          onClick={toggleNav6}
+        >
+          ReduxToolkit 이론
+        </a>
+        {showNav6 && (
+          <nav className="nav nav-pills flex-column">{underlist06}</nav>
+        )}
+      </nav>
+    </div>
+  );
   return (
     <div className="Reference_nav">
       <Search_setting />
@@ -218,6 +256,7 @@ const ReferenceList = () => {
       {list3}
       {list4}
       {list5}
+      {list6}
       {/* 추가부분 */}
     </div>
   );

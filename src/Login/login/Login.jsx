@@ -160,6 +160,7 @@ import { Navbar, Container, Nav, Badge } from "react-bootstrap";
 import { createContext } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom"; // 네이게이션 경로확인을 위한 import
+import { logout } from '../../store'
 
 export const ThemeContext = createContext(null);
 //class
@@ -220,6 +221,7 @@ export default function Test_Login() {
       });
   };
 
+  // 네비영역
   let state = useSelector((state) => state);
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
@@ -231,69 +233,82 @@ export default function Test_Login() {
     filter: theme === "dark" ? "invert(100%)" : "none",
   };
   // console.log(inputs);
+    function handleLogout() {
+        dispatch(logout());
+    }
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div className="Nav_Theme">
-          <Navbar>
-            <Container>
-              <Nav.Link
-                onClick={() => {
-                  navigate("/");
-                }}
-                className="Nav_Toggletheme"
-              >
-                <img
-                  src={process.env.PUBLIC_URL + "/favicon.ico"}
-                  style={imageStyle}
-                />
-              </Nav.Link>
-              <Nav>
-                <div className="Nav_Switch">
-                  <ReactSwitch
-                    onChange={toggleTheme}
-                    checked={theme === "dark"}
-                    className="mt-2"
-                  />
-                </div>
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/class");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  강의
-                </Nav.Link>
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/reference");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  레퍼런스
-                </Nav.Link>
-                <Nav.Link
-                  onClick={() => {
-                    navigate(`${state.login.isLogin ? "/checkout" : "/login"}`);
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  {state.login.isLogin ? "로그아웃" : "로그인"}
-                </Nav.Link>
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/cart");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  장바구니
-                  <Badge className="ms-2" bg="secondary">
-                    0
-                  </Badge>
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
+        <Navbar>
+                        <Container>
+                            <Nav.Link
+                                onClick={() => {
+                                    navigate("/");
+                                }}
+                                className="Nav_Toggletheme"
+                            >
+                                <img
+                                    src={process.env.PUBLIC_URL + "/favicon.ico"}
+                                    style={imageStyle}
+                                />
+                            </Nav.Link>
+
+                            <Nav>
+                                <div className="Nav_Switch">
+                                    <ReactSwitch
+                                        onChange={toggleTheme}
+                                        checked={theme === "dark"}
+                                        className="mt-2"
+                                    />
+                                </div>
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/class");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    강의
+                                </Nav.Link>
+
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/reference");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    레퍼런스
+                                </Nav.Link>
+                                {!state.login.isLogin ? (
+                                    <Nav.Link
+                                        onClick={() => navigate("/login")}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그인
+                                    </Nav.Link>
+                                ) : (
+                                    <Nav.Link
+                                        onClick={() => handleLogout()}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그아웃
+                                    </Nav.Link>
+                                )}
+
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/cart");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    장바구니
+                                    <Badge className="ms-2" bg="secondary">
+                                        {state.cart.length}
+                                    </Badge>
+                                </Nav.Link>
+                            </Nav>
+                        </Container>
+                    </Navbar>
         </div>
         <div className="login">
           <form className="Login_form">

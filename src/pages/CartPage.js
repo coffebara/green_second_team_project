@@ -120,11 +120,9 @@ export default function CartPage() {
                                     className="Nav_Toggletheme"
                                 >
                                     장바구니
-                                    {state.cart.length ? (
-                                        <Badge className="ms-2" bg="secondary">
-                                            {state.cart.length}
-                                        </Badge>
-                                    ) : null}
+                                    <Badge className="ms-2" bg="secondary">
+                                        {state.cart.length}
+                                    </Badge>
                                 </Nav.Link>
                             </Nav>
                         </Container>

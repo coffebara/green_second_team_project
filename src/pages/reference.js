@@ -15,6 +15,7 @@ import Bootstrap01 from '../components/Reperence/Bootstrap01'; /* 추가부분 *
 import Firebase01 from '../components/Reperence/Firebase01';
 import Firebase02 from '../components/Reperence/Firebase02';
 import Comment from '../components/Reperence/Comment';
+import ReduxToolkit01 from '../components/Reperence/ReduxToolkit01';
 
 function Reference({ comment }) {
   return (
@@ -33,6 +34,7 @@ function Reference({ comment }) {
             <Route path="/Firebase01" element={<Firebase01 />} />
             <Route path="/Firebase02" element={<Firebase02 />} />
             <Route path="/bootstrap01" element={<Bootstrap01 />} />
+            <Route path="/reduxtoolkit01" element={<ReduxToolkit01 />} />
             {/* 추가부분 */}
           </Routes>
           <Comment/>

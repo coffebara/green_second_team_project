@@ -46,11 +46,12 @@ export default function PrivacyPolicy() {
     function handleLogout() {
         dispatch(logout());
     }
+    
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <div id={theme}>
                 <div className="Nav_Theme">
-                    <Navbar>
+                <Navbar>
                         <Container>
                             <Nav.Link
                                 onClick={() => {
@@ -63,6 +64,7 @@ export default function PrivacyPolicy() {
                                     style={imageStyle}
                                 />
                             </Nav.Link>
+
                             <Nav>
                                 <div className="Nav_Switch">
                                     <ReactSwitch
@@ -79,6 +81,7 @@ export default function PrivacyPolicy() {
                                 >
                                     강의
                                 </Nav.Link>
+
                                 <Nav.Link
                                     onClick={() => {
                                         navigate("/reference");
@@ -103,16 +106,6 @@ export default function PrivacyPolicy() {
                                     </Nav.Link>
                                 )}
 
-                                {/* <Nav.Link
-                    onClick={() => {
-                      navigate(`${state.login.isLogin ? "/" : "/login"}`);
-                    }}
-                    className="Nav_Toggletheme"
-                  >
-                    {state.login.isLogin ? "로그아웃" : "로그인"}
-                  </Nav.Link>
-  
-                  <Button onClick={handleLogout}>{state.login.isLogin ? "로그아웃" : "로그인"}</Button> */}
                                 <Nav.Link
                                     onClick={() => {
                                         navigate("/cart");
@@ -120,11 +113,9 @@ export default function PrivacyPolicy() {
                                     className="Nav_Toggletheme"
                                 >
                                     장바구니
-                                    {state.cart.length ? (
-                                        <Badge className="ms-2" bg="secondary">
-                                            {state.cart.length}
-                                        </Badge>
-                                    ) : null}
+                                    <Badge className="ms-2" bg="secondary">
+                                        {state.cart.length}
+                                    </Badge>
                                 </Nav.Link>
                             </Nav>
                         </Container>

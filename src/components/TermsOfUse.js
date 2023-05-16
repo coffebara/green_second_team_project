@@ -49,13 +49,16 @@ export default function TermsOfUse() {
         height: 25,
         filter: theme === "dark" ? "invert(100%)" : "none",
     };
+    function handleLogout() {
+        dispatch(logout());
+    }
 
     return (
 
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <div id={theme}>
                 <div className="Nav_Theme">
-                    <Navbar>
+                <Navbar>
                         <Container>
                             <Nav.Link
                                 onClick={() => {
@@ -94,8 +97,21 @@ export default function TermsOfUse() {
                                 >
                                     레퍼런스
                                 </Nav.Link>
-                                {!state.login.isLogin ? <Nav.Link onClick={() => navigate('/login')} className="Nav_Toggletheme">로그인</Nav.Link> :
-                                    <Nav.Link onClick={() => handleLogout()} className="Nav_Toggletheme">로그아웃</Nav.Link>}
+                                {!state.login.isLogin ? (
+                                    <Nav.Link
+                                        onClick={() => navigate("/login")}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그인
+                                    </Nav.Link>
+                                ) : (
+                                    <Nav.Link
+                                        onClick={() => handleLogout()}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그아웃
+                                    </Nav.Link>
+                                )}
 
                                 <Nav.Link
                                     onClick={() => {
@@ -105,7 +121,7 @@ export default function TermsOfUse() {
                                 >
                                     장바구니
                                     <Badge className="ms-2" bg="secondary">
-                                        0
+                                        {state.cart.length}
                                     </Badge>
                                 </Nav.Link>
                             </Nav>

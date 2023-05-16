@@ -84,77 +84,75 @@ function Lecture2(props) {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div className="Nav_Theme">
-          <Navbar>
-            <Container>
-              <Nav.Link
-                onClick={() => {
-                  navigate("/");
-                }}
-                className="Nav_Toggletheme"
-              >
-                <img
-                  src={process.env.PUBLIC_URL + "/favicon.ico"}
-                  style={imageStyle}
-                />
-              </Nav.Link>
+        <Navbar>
+                        <Container>
+                            <Nav.Link
+                                onClick={() => {
+                                    navigate("/");
+                                }}
+                                className="Nav_Toggletheme"
+                            >
+                                <img
+                                    src={process.env.PUBLIC_URL + "/favicon.ico"}
+                                    style={imageStyle}
+                                />
+                            </Nav.Link>
 
-              <Nav>
-                <div className="Nav_Switch">
-                  <ReactSwitch
-                    onChange={toggleTheme}
-                    checked={theme === "dark"}
-                    className="mt-2"
-                  />
-                </div>
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/class");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  강의
-                </Nav.Link>
+                            <Nav>
+                                <div className="Nav_Switch">
+                                    <ReactSwitch
+                                        onChange={toggleTheme}
+                                        checked={theme === "dark"}
+                                        className="mt-2"
+                                    />
+                                </div>
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/class");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    강의
+                                </Nav.Link>
 
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/reference");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  레퍼런스
-                </Nav.Link>
-                {!state.login.isLogin ? (
-                  <Nav.Link
-                    onClick={() => navigate("/login")}
-                    className="Nav_Toggletheme"
-                  >
-                    로그인
-                  </Nav.Link>
-                ) : (
-                  <Nav.Link
-                    onClick={() => handleLogout()}
-                    className="Nav_Toggletheme"
-                  >
-                    로그아웃
-                  </Nav.Link>
-                )}
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/reference");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    레퍼런스
+                                </Nav.Link>
+                                {!state.login.isLogin ? (
+                                    <Nav.Link
+                                        onClick={() => navigate("/login")}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그인
+                                    </Nav.Link>
+                                ) : (
+                                    <Nav.Link
+                                        onClick={() => handleLogout()}
+                                        className="Nav_Toggletheme"
+                                    >
+                                        로그아웃
+                                    </Nav.Link>
+                                )}
 
-                <Nav.Link
-                  onClick={() => {
-                    navigate("/cart");
-                  }}
-                  className="Nav_Toggletheme"
-                >
-                  장바구니
-                  {state.cart.length ? (
-                    <Badge className="ms-2" bg="secondary">
-                      {state.cart.length}
-                    </Badge>
-                  ) : null}
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
+                                <Nav.Link
+                                    onClick={() => {
+                                        navigate("/cart");
+                                    }}
+                                    className="Nav_Toggletheme"
+                                >
+                                    장바구니
+                                    <Badge className="ms-2" bg="secondary">
+                                        {state.cart.length}
+                                    </Badge>
+                                </Nav.Link>
+                            </Nav>
+                        </Container>
+                    </Navbar>
         </div>
 
         {modal === true ? (

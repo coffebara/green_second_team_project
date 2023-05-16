@@ -68,3 +68,153 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```
+green
+├─ .gitignore
+├─ folder_structure.txt
+├─ folder_structure1.txt
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ assets
+│  │  ├─ DefaultProfile.jpg
+│  │  └─ google.png
+│  ├─ CSS.png
+│  ├─ favicon.ico
+│  ├─ github.png
+│  ├─ html&css.png
+│  ├─ HTML.png
+│  ├─ index.html
+│  ├─ javascript.png
+│  ├─ JS.png
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  ├─ NEXTjs.png
+│  ├─ npm.png
+│  ├─ react.png
+│  └─ robots.txt
+├─ README.md
+├─ server
+│  ├─ package.json
+│  ├─ Router
+│  │  └─ test.js
+│  └─ server.js
+├─ src
+│  ├─ App.css
+│  ├─ App.js
+│  ├─ App.test.js
+│  ├─ assets
+│  │  ├─ 1.txt
+│  │  └─ data.js
+│  ├─ components
+│  │  ├─ 1.txt
+│  │  ├─ Auth.js
+│  │  ├─ AuthContext.js
+│  │  ├─ Cart.js
+│  │  ├─ CartRefresh.js
+│  │  ├─ Checkout.js
+│  │  ├─ checkoutForm
+│  │  │  ├─ COFormInput.jsx
+│  │  │  └─ COFormInput.scss
+│  │  ├─ Footer.js
+│  │  ├─ forget.js
+│  │  ├─ formInput
+│  │  │  ├─ FormInput.jsx
+│  │  │  └─ formInput.scss
+│  │  ├─ login.js
+│  │  ├─ Nav_Dark.js
+│  │  ├─ Nav_Light.js
+│  │  ├─ Reperence
+│  │  │  ├─ Bootstrap01.js
+│  │  │  ├─ CodeTextarea.js
+│  │  │  ├─ Comment.js
+│  │  │  ├─ comment_test.js
+│  │  │  ├─ Firebase01.js
+│  │  │  ├─ Firebase02.js
+│  │  │  ├─ Firebase03.js
+│  │  │  ├─ Home.js
+│  │  │  ├─ Js01.js
+│  │  │  ├─ Js02.js
+│  │  │  ├─ Js03.js
+│  │  │  ├─ Lists.js
+│  │  │  ├─ Next01.js
+│  │  │  ├─ React01.js
+│  │  │  └─ React02.js
+│  │  ├─ Search_font.js
+│  │  ├─ Search_setting.js
+│  │  ├─ SignUp.js
+│  │  └─ Slices
+│  │     ├─ itemSlice.js
+│  │     └─ loginSlice.js
+│  ├─ constants
+│  │  └─ 1.txt
+│  ├─ context
+│  │  ├─ AuthContext.js
+│  │  └─ AuthReducer.js
+│  ├─ contexts
+│  │  └─ 1.txt
+│  ├─ firebase.js
+│  ├─ index.css
+│  ├─ index.js
+│  ├─ lectureApp.jsx
+│  ├─ Login
+│  │  ├─ login
+│  │  │  ├─ Login.jsx
+│  │  │  └─ login.scss
+│  │  └─ register
+│  │     ├─ Register.jsx
+│  │     └─ register.scss
+│  ├─ pages
+│  │  ├─ 1.txt
+│  │  ├─ Banner.js
+│  │  ├─ Banner_setting1.js
+│  │  ├─ Banner_setting2.js
+│  │  ├─ Banner_setting3.js
+│  │  ├─ Banner_test3.js
+│  │  ├─ CartPage.js
+│  │  ├─ CheckoutPage.js
+│  │  ├─ Detail.js
+│  │  ├─ lecture.js
+│  │  ├─ lecture2.js
+│  │  ├─ List.js
+│  │  ├─ login.js
+│  │  ├─ pages.js
+│  │  ├─ PrivacyPolicy.js
+│  │  ├─ reference.js
+│  │  └─ Referencepage.js
+│  ├─ store.js
+│  ├─ styles
+│  │  ├─ 1.txt
+│  │  ├─ Banner.css
+│  │  ├─ cart.css
+│  │  ├─ checkout.css
+│  │  ├─ Darkmode.css
+│  │  ├─ Footer.css
+│  │  ├─ lecture.css
+│  │  ├─ lecture2.css
+│  │  ├─ Nav.css
+│  │  ├─ page_lecture.css
+│  │  ├─ privacyPolicy.css
+│  │  ├─ reference.css
+│  │  └─ Sorry.css
+│  ├─ test2
+│  │  ├─ Test2.css
+│  │  ├─ Test2_ThemeDark.js
+│  │  ├─ Test2_ThemeDark2.js
+│  │  ├─ Test_cart.css
+│  │  ├─ Test_cart.js
+│  │  ├─ Test_lecture.css
+│  │  ├─ Test_lecture.js
+│  │  ├─ Test_Lists.js
+│  │  ├─ Test_Login.jsx
+│  │  ├─ Test_login.scss
+│  │  ├─ Test_React01.js
+│  │  ├─ Test_reference.css
+│  │  ├─ Test_reference.js
+│  │  ├─ Test_Register.jsx
+│  │  └─ Test_register.scss
+└─ 실행방법.txt
+
+```
