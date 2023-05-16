@@ -90,7 +90,7 @@
   font-weight: bold;
 }
 
-.price1-lecture {
+#light .price1-lecture {
   text-decoration: line-through;
   color: #d2d2d7;
   font-size: 14px;
@@ -98,8 +98,21 @@
   font-weight: normal;
 }
 
-.pr-le {
+#dark .price1-lecture {
+  text-decoration: line-through;
+  color: #777777;
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+#light .pr-le {
   color: #444444;
+  /* font-weight: normal; */
+}
+
+#dark .pr-le {
+  color: #fafafa;
   /* font-weight: normal; */
 }
 
