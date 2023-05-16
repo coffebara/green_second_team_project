@@ -26,7 +26,6 @@ function findObjectsBykey(objArray, key, value) {
 }
 
 const aliceObjects = findObjectsBykey(data, "all"); // 카테고리 초기 값
-console.log(aliceObjects);
 
 function Lecture() {
   let { id } = useParams();
@@ -71,75 +70,77 @@ function Lecture() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div className="Nav_Theme">
-        <Navbar>
-                        <Container>
-                            <Nav.Link
-                                onClick={() => {
-                                    navigate("/");
-                                }}
-                                className="Nav_Toggletheme"
-                            >
-                                <img
-                                    src={process.env.PUBLIC_URL + "/favicon.ico"}
-                                    style={imageStyle}
-                                />
-                            </Nav.Link>
+          <Navbar>
+            <Container>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
 
-                            <Nav>
-                                <div className="Nav_Switch">
-                                    <ReactSwitch
-                                        onChange={toggleTheme}
-                                        checked={theme === "dark"}
-                                        className="mt-2"
-                                    />
-                                </div>
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/class");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    강의
-                                </Nav.Link>
+              <Nav>
+                <div className="Nav_Switch">
+                  <ReactSwitch
+                    onChange={toggleTheme}
+                    checked={theme === "dark"}
+                    className="mt-2"
+                  />
+                </div>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/class");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  강의
+                </Nav.Link>
 
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/reference");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    레퍼런스
-                                </Nav.Link>
-                                {!state.login.isLogin ? (
-                                    <Nav.Link
-                                        onClick={() => navigate("/login")}
-                                        className="Nav_Toggletheme"
-                                    >
-                                        로그인
-                                    </Nav.Link>
-                                ) : (
-                                    <Nav.Link
-                                        onClick={() => handleLogout()}
-                                        className="Nav_Toggletheme"
-                                    >
-                                        로그아웃
-                                    </Nav.Link>
-                                )}
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/reference");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  레퍼런스
+                </Nav.Link>
+                {!state.login.isLogin ? (
+                  <Nav.Link
+                    onClick={() => navigate("/login")}
+                    className="Nav_Toggletheme"
+                  >
+                    로그인
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link
+                    onClick={() => handleLogout()}
+                    className="Nav_Toggletheme"
+                  >
+                    로그아웃
+                  </Nav.Link>
+                )}
 
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/cart");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    장바구니
-                                    <Badge className="ms-2" bg="secondary">
-                                        {state.cart.length}
-                                    </Badge>
-                                </Nav.Link>
-                            </Nav>
-                        </Container>
-                    </Navbar>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/cart");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  장바구니
+                  {state.cart.length ? (
+                    <Badge className="ms-2" bg="secondary">
+                      {state.cart.length}
+                    </Badge>
+                  ) : null}
+                </Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
         </div>
 
         <div className="lecture-App">
@@ -209,9 +210,9 @@ function Lecture() {
               </Button>
             </div>
             <div className="App-lecture">
-              {handButtonClick.map((product, index) => (
-                <div key={index} className="lecture-container">
-                  <Hhs key={index} products={product} i={index + 1} />
+              {handButtonClick.map((product, id) => (
+                <div key={id} className="lecture-container">
+                  <Hhs key={id} products={product} i={id + 1} />
                 </div>
               ))}
             </div>

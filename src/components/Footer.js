@@ -108,7 +108,7 @@ export default function Footer() {
               <li>
                 <a href="https://www.npmjs.com/" target="_blank">
                   <img
-                    src={process.env.PUBLIC_URL + "npm.png"}
+                    src={process.env.PUBLIC_URL + "/npm.png"}
                     id="Footer_img1"
                   ></img>
                 </a>
@@ -116,7 +116,7 @@ export default function Footer() {
               <li>
                 <a href="https://github.com/" target="_blank">
                   <img
-                    src={process.env.PUBLIC_URL + "github.png"}
+                    src={process.env.PUBLIC_URL + "/github.png"}
                     id="Footer_img2"
                   ></img>
                 </a>

@@ -12,18 +12,6 @@ import { createContext, useState } from "react";
 import { useSelector } from "react-redux";
 import { Button } from "react-bootstrap";
 import { useEffect } from "react";
-import {
-  TextField,
-  Grid,
-  Box,
-  Typography,
-  Avatar,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-} from "@mui/material";
 
 export const ThemeContext = createContext(null);
 
@@ -84,84 +72,84 @@ function Lecture2(props) {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div id={theme}>
         <div className="Nav_Theme">
-        <Navbar>
-                        <Container>
-                            <Nav.Link
-                                onClick={() => {
-                                    navigate("/");
-                                }}
-                                className="Nav_Toggletheme"
-                            >
-                                <img
-                                    src={process.env.PUBLIC_URL + "/favicon.ico"}
-                                    style={imageStyle}
-                                />
-                            </Nav.Link>
+          <Navbar>
+            <Container>
+              <Nav.Link
+                onClick={() => {
+                  navigate("/");
+                }}
+                className="Nav_Toggletheme"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/favicon.ico"}
+                  style={imageStyle}
+                />
+              </Nav.Link>
 
-                            <Nav>
-                                <div className="Nav_Switch">
-                                    <ReactSwitch
-                                        onChange={toggleTheme}
-                                        checked={theme === "dark"}
-                                        className="mt-2"
-                                    />
-                                </div>
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/class");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    강의
-                                </Nav.Link>
+              <Nav>
+                <div className="Nav_Switch">
+                  <ReactSwitch
+                    onChange={toggleTheme}
+                    checked={theme === "dark"}
+                    className="mt-2"
+                  />
+                </div>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/class");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  강의
+                </Nav.Link>
 
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/reference");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    레퍼런스
-                                </Nav.Link>
-                                {!state.login.isLogin ? (
-                                    <Nav.Link
-                                        onClick={() => navigate("/login")}
-                                        className="Nav_Toggletheme"
-                                    >
-                                        로그인
-                                    </Nav.Link>
-                                ) : (
-                                    <Nav.Link
-                                        onClick={() => handleLogout()}
-                                        className="Nav_Toggletheme"
-                                    >
-                                        로그아웃
-                                    </Nav.Link>
-                                )}
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/reference");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  레퍼런스
+                </Nav.Link>
+                {!state.login.isLogin ? (
+                  <Nav.Link
+                    onClick={() => navigate("/login")}
+                    className="Nav_Toggletheme"
+                  >
+                    로그인
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link
+                    onClick={() => handleLogout()}
+                    className="Nav_Toggletheme"
+                  >
+                    로그아웃
+                  </Nav.Link>
+                )}
 
-                                <Nav.Link
-                                    onClick={() => {
-                                        navigate("/cart");
-                                    }}
-                                    className="Nav_Toggletheme"
-                                >
-                                    장바구니
-                                    <Badge className="ms-2" bg="secondary">
-                                        {state.cart.length}
-                                    </Badge>
-                                </Nav.Link>
-                            </Nav>
-                        </Container>
-                    </Navbar>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/cart");
+                  }}
+                  className="Nav_Toggletheme"
+                >
+                  장바구니
+                  <Badge className="ms-2" bg="secondary">
+                    {state.cart.length}
+                  </Badge>
+                </Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
         </div>
 
         {modal === true ? (
           <CartModal modal={modal} setModal={setModal} />
         ) : null}
-        <div class="container" id="lecture-container">
+        <div className="container" id="lecture-container">
           <div className="lture">
-            <div class="row">
-              <div class="col-sm-12">
+            <div className="row">
+              <div className="col-sm-12">
                 <h1 id="html-lecture">{item.title}</h1>
                 <div id="lecture-star">
                   <p>
@@ -180,12 +168,12 @@ function Lecture2(props) {
               </div>
               <div className="Card-lecture">
                 <div className="Card-lecture-1">
-                  <div class="col-sm-12">
+                  <div className="col-sm-12">
                     <img src={item.image} />
                   </div>
                 </div>
                 <div className="lecture-btn-main">
-                  <div class="col-sm-12">
+                  <div className="col-sm-12">
                     <input
                       type="button"
                       id="lecture-btn"
@@ -235,17 +223,17 @@ function Lecture2(props) {
                 </div>
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="home-lecture">
                 <li id="hl1">홈</li> <li>게시판</li>
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="image-lecture-detail">
                 <img src={item.detailImage} />
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="text-lecture">
                 <p>
                   {" "}
@@ -280,7 +268,7 @@ function Lecture2(props) {
                 <p>&nbsp;</p>{" "}
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="text-lecture">
                 <h3> [커리큘럼 요약]</h3>
                 <p>- HTML5 기초</p>
@@ -304,7 +292,7 @@ function Lecture2(props) {
                 <p>&nbsp;</p>
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="text-lecture">
                 <h3>[필요한 사전지식]</h3>
                 <p>{item.pztext}</p>
@@ -313,7 +301,7 @@ function Lecture2(props) {
                 <p>&nbsp;</p>
               </div>
             </div>
-            <div class="col-sm-12">
+            <div className="col-sm-12">
               <div className="text-lecture">
                 <h3>[업데이트 사항]</h3>
                 <p> - 3D 애니메이션 강의 추가</p>

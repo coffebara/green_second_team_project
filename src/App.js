@@ -51,40 +51,39 @@
 //   );
 // }
 // export default App;
-import './App.css';
+import "./App.css";
 
-import './styles/Nav.css';
-import './styles/Banner.css';
-import './styles/Footer.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Banner from './pages/Banner.js';
-import CartPage from './pages/CartPage';
-import PrivacyPolicy from './pages/PrivacyPolicy.js';
-import Referencepage from './pages/Referencepage';
-import CheckoutPage from './pages/CheckoutPage.js';
+import "./styles/Nav.css";
+import "./styles/Banner.css";
+import "./styles/Footer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Banner from "./pages/Banner.js";
+import CartPage from "./pages/CartPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy.js";
+import Referencepage from "./pages/Referencepage";
+import CheckoutPage from "./pages/CheckoutPage.js";
 
-import Lecture from './pages/lecture.js';
-import Login from './pages/login';
-import Register from './Login/register/Register';
-import Lecture2 from './pages/lecture2.js';
-import List from './pages/List.js'; // 임시 리스트
-import Detail from './pages/Detail.js'; // 임시 상세
-import data from './assets/data.js';
-import { Routes, Route } from 'react-router-dom';
-import SignUp from './components/SignUp';
+import Lecture from "./pages/lecture.js";
+import Login from "./pages/login";
+import Register from "./Login/register/Register";
+import Lecture2 from "./pages/lecture2.js";
+import List from "./pages/List.js"; // 임시 리스트
+import Detail from "./pages/Detail.js"; // 임시 상세
+import data from "./assets/data.js";
+import { Routes, Route } from "react-router-dom";
+import SignUp from "./components/SignUp";
 
-import Forget from './components/forget';
-import Detail1 from './pages/lecture2';
+import Forget from "./components/forget";
+import Detail1 from "./pages/lecture2";
 
 // 서버용
-import axios from 'axios';
-import { useState } from 'react';
-import TermsOfUse from './components/TermsOfUse';
+import axios from "axios";
+import { useState } from "react";
+import TermsOfUse from "./components/TermsOfUse";
 
 function App() {
   // 디테일 페이지 용
   const items = data;
-
 
   return (
     <div className="App">
@@ -101,8 +100,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/*" element={<div>잘못된 경로임</div>} />
-        <Route path="/Lecture2" element={<Lecture2 />} />
-        <Route path='/terms' element={<TermsOfUse/>}/>
+        <Route path="/terms" element={<TermsOfUse />} />
 
         {/* 임시 리스트 */}
         <Route path="/list" element={<List />} />
