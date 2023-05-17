@@ -1,79 +1,77 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 프로젝트 소개
+2. 팀 소개
+3. 개발환경
+4. 폴더구조
+5. 프로젝트 설치하는 방법
+6. 발표 순서
+--------------------------------------------------
 
 
-```
-```
-green
-├─ .gitignore
+1. 웹 개발 2차 프로젝트 
+
+ 1-1) 프로젝트명 : it-da 와 함께하는 코딩공부
+ 1-2) 프로젝트 소개  : 프론트엔드 강의를 레퍼런스와 함께 제공하는 웹 사이트
+ 1-3) 개발 기간 : 2023.04.21 ~ 2023.05.16 (현재) 
+
+
+2. 팀 소개
+
+ 2-1) 팀명 : it-da
+ 2-2) 팀장 : 김상준  	
+ 2-3) 팀원 : 김주홍 박철준 지성현 한현승 
+
+
+3. 개발 환경
+
+ 3.1) 프론트엔드 개발 환경:
+React (react@18.2.0)
+React DOM (react-dom@18.2.0)
+React Router (react-router-dom@6.10.0)
+Redux (redux@4.2.1)
+React Redux (react-redux@8.0.5)
+Redux Toolkit (reduxjs/toolkit@1.9.5)
+Axios (axios@1.3.6)
+Emotion (emotion@11.10.6)
+Material-UI (mui@5.12.2)
+React Icons (react-icons@4.8.0)
+Bootstrap (bootstrap@5.2.3)
+Styled Components (styled-components@5.3.10)
+Sass (sass@1.62.1)
+
+
+ 3-2) 백엔드 개발 환경:
+Node.js (Node.js가 설치되어 있다고 가정)
+Express.js (express@4.18.2)
+Firebase (firebase@9.21.0)
+MongoDB (mongodb@5.5.0)
+Mongoose (mongoose@7.1.0)
+
+
+ 3-3) 테스팅 및 개발 도구:
+Jest (테스트 프레임워크) (@testing-library/jest-dom@5.16.5, @testing-library/react@13.4.0, @testing-library/user-event@13.5.0)
+Nodemon (nodemon@2.0.22)
+React Scripts (react-scripts@5.0.1)
+Concurrently (concurrently@8.0.1)
+CORS (cors@2.8.5)
+Delete (delete@1.1.0)
+Lodash (lodash@4.17.21)
+Update (update@0.7.4)
+Web Vitals (web-vitals@2.1.4)
+
+
+4. 설치 방법
+
+ 4-1) 필수 프로그램 
+	가) Visual Studio Code
+	나) Nodejs		 
+ 4-2) vsCode 실행 -> 아무 폴더 열기 -> 터미널에 다음 코드 입력하여 리액트 설치 'npm react-create-app .'
+ 4-3) 해당 폴더에 첨부한 itda.zip 을 2번 압축해제 후 넣기 
+ 4-4) 터미널에 'npm install'을 입력하여 필요한 필요한 npm들을 설치
+ 4-5) 터미널에 'npm start' 를 입력하여 실행
+
+5. 폴더 구조
+
+it-da
 ├─ package-lock.json
 ├─ package.json
 ├─ public
@@ -220,4 +218,11 @@ green
 │  └─ 로그인토글 사용법.js
 └─ 실행방법.txt
 
-```
+
+6. 발표 순서
+
+ 2-1) 팀원소개 및 기획 동기 및 의도 - 김주홍
+ 2-3) 각자 개발 페이지 설명  - 김상준
+ 2-4) 기능 시연 및  후기 발표 - 각 담당자 
+ 2-5) 향후 계획 - 한현승
+ 2-6) QnA
