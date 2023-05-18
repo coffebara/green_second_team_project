@@ -1,8 +1,8 @@
 /* eslint-disable*/
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../../styles/reference.css";
-import Search_setting from "../Search_setting";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/reference.css';
+import Search_setting from '../Search_setting';
 
 const ReferenceList = () => {
   let navigate = useNavigate();
@@ -34,28 +34,32 @@ const ReferenceList = () => {
     setShowNav6(!showNav6);
   };
   let react01 /* 추가부분 */ = [
-    { id: 0, value: "리액트 란?", url: "/reference/react01" },
-    { id: 1, value: "리액트의 특징", url: "/reference/react02" },
+    { id: 0, value: '리액트 란?', url: '/reference/react01' },
+    { id: 1, value: '리액트의 특징', url: '/reference/react02' },
   ];
   let js01 = [
-    { id: 0, value: "JavaScript 란?", url: "/reference/js01" },
-    { id: 1, value: "JS 변수", url: "/reference/js02" },
-    { id: 2, value: "JS 객체", url: "/reference/js03" },
+    { id: 0, value: 'JavaScript 란?', url: '/reference/js01' },
+    { id: 1, value: 'JS 변수', url: '/reference/js02' },
+    { id: 2, value: 'JS 객체', url: '/reference/js03' },
   ];
-  let next01 = [{ id: 0, value: "Next.js 란?", url: "/reference/next01" }];
+  let next01 = [
+    { id: 0, value: 'Next.js 란?', url: '/reference/next01' },
+    { id: 1, value: '자동 라우팅', url: '/reference/next02' },
+    { id: 2, value: '다이내믹 라우트', url: '/reference/next03' },
+  ];
   let bootstrap01 = [
-    { id: 0, value: "Bootstrap 이란?", url: "/reference/Bootstrap01" },
+    { id: 0, value: 'Bootstrap 이란?', url: '/reference/Bootstrap01' },
   ];
   let Firebase01 = [
-    { id: 0, value: "Firebase 란?", url: "/reference/Firebase01" },
+    { id: 0, value: 'Firebase 란?', url: '/reference/Firebase01' },
     {
       id: 1,
-      value: "Firebase 실시간 데이터베이스 이해",
-      url: "/reference/Firebase02",
+      value: 'Firebase 실시간 데이터베이스 이해',
+      url: '/reference/Firebase02',
     },
   ];
   let ReduxToolkit01 = [
-    { id: 0, value: "ReduxToolkit 이란?", url: "/reference/ReduxToolkit01" },
+    { id: 0, value: 'ReduxToolkit 이란?', url: '/reference/ReduxToolkit01' },
   ];
 
   let underlist01 /* 수정부분 */ = react01 /* 수정부분 */
@@ -164,10 +168,7 @@ const ReferenceList = () => {
         id="navbar-example3"
         className="navbar flex-column align-items-stretch"
       >
-        <a
-          className="navbar-brand Reference_navbar_title"
-          onClick={toggleNav2}
-        >
+        <a className="navbar-brand Reference_navbar_title" onClick={toggleNav2}>
           JavaScript 이론
         </a>
         {showNav2 && (
@@ -182,10 +183,7 @@ const ReferenceList = () => {
         id="navbar-example3"
         className="navbar flex-column align-items-stretch"
       >
-        <a
-          className="navbar-brand Reference_navbar_title"
-          onClick={toggleNav3}
-        >
+        <a className="navbar-brand Reference_navbar_title" onClick={toggleNav3}>
           Next.js 이론
         </a>
         {showNav3 && (
@@ -200,10 +198,7 @@ const ReferenceList = () => {
         id="navbar-example3"
         className="navbar flex-column align-items-stretch"
       >
-        <a
-          className="navbar-brand Reference_navbar_title"
-          onClick={toggleNav4}
-        >
+        <a className="navbar-brand Reference_navbar_title" onClick={toggleNav4}>
           Bootstrap 이론
         </a>
         {showNav4 && (
@@ -218,10 +213,7 @@ const ReferenceList = () => {
         id="navbar-example3"
         className="navbar flex-column align-items-stretch"
       >
-        <a
-          className="navbar-brand Reference_navbar_title"
-          onClick={toggleNav5}
-        >
+        <a className="navbar-brand Reference_navbar_title" onClick={toggleNav5}>
           Firebase 이론
         </a>
         {showNav5 && (
@@ -236,10 +228,7 @@ const ReferenceList = () => {
         id="navbar-example3"
         className="navbar flex-column align-items-stretch"
       >
-        <a
-          className="navbar-brand Reference_navbar_title"
-          onClick={toggleNav6}
-        >
+        <a className="navbar-brand Reference_navbar_title" onClick={toggleNav6}>
           ReduxToolkit 이론
         </a>
         {showNav6 && (

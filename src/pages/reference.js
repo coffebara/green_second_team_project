@@ -11,6 +11,8 @@ import Js01 from '../components/Reperence/Js01';
 import Js02 from '../components/Reperence/Js02';
 import Js03 from '../components/Reperence/Js03';
 import Next01 from '../components/Reperence/Next01';
+import Next02 from '../components/Reperence/Next02';
+import Next03 from '../components/Reperence/Next03';
 import Bootstrap01 from '../components/Reperence/Bootstrap01'; /* 추가부분 */
 import Firebase01 from '../components/Reperence/Firebase01';
 import Firebase02 from '../components/Reperence/Firebase02';
@@ -31,6 +33,8 @@ function Reference({ comment }) {
             <Route path="/js02" element={<Js02 />} />
             <Route path="/js03" element={<Js03 />} />
             <Route path="/next01" element={<Next01 />} />
+            <Route path="/next02" element={<Next02 />} />
+            <Route path="/next03" element={<Next03 />} />
             <Route path="/Firebase01" element={<Firebase01 />} />
             <Route path="/Firebase02" element={<Firebase02 />} />
             <Route path="/bootstrap01" element={<Bootstrap01 />} />

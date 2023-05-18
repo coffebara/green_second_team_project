@@ -8,7 +8,6 @@ app.use(express.json());
 var cors = require('cors');
 app.use(cors());
 
-// const uri ="mongodb+srv://admin:1q2w3e4r@joon.seyvdep.mongodb.net/?retryWrites=true&w=majority";
 const uri =
   'mongodb+srv://admin:1q2w3e4r@joon.zmizrin.mongodb.net/?retryWrites=true&w=majority';
 
