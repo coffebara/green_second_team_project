@@ -65,7 +65,7 @@ function Next01() {
         이는 이 대괄호 부분에 어떤 주소든 입력하면 page.js 화면을 라우팅시켜준다는 말과 같죠.
       </p>
       <p>
-       /my-profile/ray-kim 을 입력하든, /my-profile/jake-seo 를 입력하든 이제 같은 페이지를 보여주게 된다는 말입니다.
+       /my-profile/ray-kim 을 입력하든, /my-profile/jake-seo 를 입력하든 이제 같은 페이지를 보여주게 됩니다.
       </p>
       <p>
        다만 무조건 같은 페이지를 보여주기만 하면 의미가 없겠죠? 이때 다이내믹 라우트로 연결된 page.js 페이지는 props로 그 대괄호 내용을 가져올 수 있게 됩니다.
