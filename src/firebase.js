@@ -5,7 +5,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCRVakPzw3ilCbLDGKlo-F2rucrCEfYNTI",
+  apiKey: "AIzaSyCRVakPzw3ilCbLDGKlo-F2rucrCEfYNTI1",
   authDomain: "itda-e5530.firebaseapp.com",
   projectId: "itda-e5530",
   storageBucket: "itda-e5530.appspot.com",
